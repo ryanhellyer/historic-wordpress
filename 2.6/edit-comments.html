@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0066)edit-comments.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › Edit Comments — WordPress</title>
+<script type="text/javascript">
+//<![CDATA[
+addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document).ready(func); else if (typeof wpOnload!='function'){wpOnload=func;} else {var oldonload=wpOnload; wpOnload=function(){oldonload();func();}}};
+//]]>
+</script>
+<style type="text/css">* html { overflow-x: hidden; }</style>
+<link rel="stylesheet" href="files/global.css" type="text/css" media="all">
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css" media="all">
+<link rel="stylesheet" href="files/colors-fresh.css" type="text/css" media="all">
+<!--[if gte IE 6]>
+<link rel='stylesheet' href='css/ie.css?ver=2.6' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="files/jquery.js"></script>
+<script type="text/javascript" src="files/common.js"></script>
+<script type="text/javascript" src="files/jquery.color.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpAjax = {
+		noPerm: "You do not have permission to do that.",
+		broken: "An unidentified error has occurred."
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/wp-ajax-response.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpListL10n = {
+		url: "admin-ajax.php"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/wp-lists.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	adminCommentsL10n = {
+		pending: "%i% pending"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/edit-comments.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="files/forms.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpGearsL10n = {
+		updateCompleted: "Update completed.",
+		error: "Error:"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/wp-gears.js"></script>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<body class="wp-admin ">
+<div id="wpwrap">
+<div id="wpcontent">
+<div id="wphead">
+<h1>Test blog<span id="viewsite"><a href="home-page.html">Visit Site</a></span></h1>
+</div>
+
+
+<div id="user_info"><p>Howdy, <a href="#">admin</a>! | <a href="wp-login.html" title="Log Out">Log Out</a> | <a href="http://codex.wordpress.org/">Help</a> | <a href="http://wordpress.org/support/">Forums</a></p></div>
+
+
+<ul id="dashmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li></ul>
+
+<ul id="adminmenu">
+
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="themes.html">Design</a></li>
+	<li><a href="edit-comments.html" class="current">Comments <span id="awaiting-mod" class="count-0"><span class="comment-count">0</span></span></a></li></ul>
+
+<ul id="sidemenu">
+
+	<li><a href="options-general.html">Settings</a> </li>
+	<li><a href="plugins.html">Plugins <span id="update-plugins" class="count-0"><span class="plugin-count">0</span></span></a> </li>
+	<li><a href="users.html">Users</a></li></ul>
+
+
+<ul id="submenu">
+
+	<li><a href="edit-comments.html" class="current">Comments</a></li>
+</ul>
+<div id="update-nag">WordPress 3.5.1 is available! <a href="http://wordpress.org/download/">Please update now</a>.</div><div id="wpbody">
+<div class="wrap">
+<form id="posts-filter" action="" method="get">
+<h2>Manage Comments</h2>
+
+<ul class="subsubsub">
+<li><a href="edit-comments.html" class="current">Show All Comments</a> | </li><li><a href="edit-comments.php?comment_status=moderated">Awaiting Moderation (<span class="comment-count">0</span>)</a> | </li><li><a href="edit-comments.php?comment_status=approved">Approved</a></li></ul>
+
+<p id="post-search">
+	<label class="hidden" for="post-search-input">Search Comments:</label>
+	<input type="text" id="post-search-input" name="s" value="">
+	<input type="submit" value="Search Comments" class="button">
+</p>
+
+<input type="hidden" name="mode" value="detail">
+<input type="hidden" name="comment_status" value="">
+</form>
+
+<ul class="view-switch">
+	<li class="current"><a href="edit-comments.php?mode=detail">Detail View</a></li>
+	<li><a href="edit-comments.php?mode=list">List View</a></li>
+</ul>
+
+
+<form id="comments-form" action="" method="post">
+
+<div class="tablenav">
+
+
+<div class="alignleft">
+<input type="submit" value="Approve" name="approveit" class="button-secondary">
+<input type="submit" value="Mark as Spam" name="spamit" class="button-secondary">
+<input type="submit" value="Unapprove" name="unapproveit" class="button-secondary">
+<input type="submit" value="Delete" name="deleteit" class="button-secondary delete">
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="8f3e537686"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.6/wp-admin/edit-comments.php"></div>
+
+<br class="clear">
+
+</div>
+
+<br class="clear">
+<table class="widefat">
+<thead>
+  <tr>
+    <th scope="col" class="check-column"><input type="checkbox"></th>
+    <th scope="col">Comment</th>
+    <th scope="col">Date</th>
+    <th scope="col" class="action-links">Actions</th>
+  </tr>
+</thead>
+<tbody id="the-comment-list" class="list:comment">
+  <tr id="comment-1" class="">
+    <td class="check-column"><input type="checkbox" name="delete_comments[]" value="1"></td>
+    <td class="comment">
+    <p class="comment-author"><strong><a class="row-title" href="#" title="Edit comment"> Mr WordPress</a></strong><br>
+        <a href="http://wordpress.org/">http://wordpress.org/</a> |
+                <a href="edit-comments.php?s=&mode=detail"></a>
+	    
+    </p>
+   	<p>Hi, this is a comment.<br>To delete a comment, just log in and view the post's comments. There you will have the option to edit or delete them.</p>
+   	<p>From <a href="hello-world.html#comment-1">Hello world!</a>, 2013/05/23 at 3:25 PM</p>
+    </td>
+    <td>2013/05/23</td>
+    <td class="action-links">
+<span class="approve"><a href="#21c7c67693" class="dim:the-comment-list:comment-1:unapproved:e7e7d3:e7e7d3:new=approved" title="Approve this comment">Approve</a> | </span><span class="unapprove"><a href="#d7350b85ca" class="dim:the-comment-list:comment-1:unapproved:e7e7d3:e7e7d3:new=unapproved" title="Unapprove this comment">Unapprove</a> | </span><span class="spam"><a href="#b2917b249c" class="delete:the-comment-list:comment-1::spam=1" title="Mark this comment as spam">Spam</a> | </span><span class="delete"><a href="#b2917b249c" class="delete:the-comment-list:comment-1 delete">Delete</a></span>	</td>
+  </tr>
+	</tbody>
+<tbody id="the-extra-comment-list" class="list:comment" style="display: none;">
+</tbody>
+</table>
+
+</form>
+
+<form id="get-extra-comments" method="post" action="" class="add:the-extra-comment-list:" style="display: none;">
+	<input type="hidden" name="s" value="">
+	<input type="hidden" name="mode" value="detail">
+	<input type="hidden" name="comment_status" value="">
+	<input type="hidden" name="page" value="1">
+	<input type="hidden" id="_ajax_nonce" name="_ajax_nonce" value="dd0a4a1147"></form>
+
+<div id="ajax-response"></div>
+<div class="tablenav">
+<br class="clear">
+</div>
+
+</div>
+
+</div><!-- wpbody -->
+</div><!-- wpcontent -->
+</div><!-- wpwrap -->
+<div id="footer">
+<p>Thank you for creating with <a href="http://wordpress.org/">WordPress</a> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a> | <strong><a href="http://wordpress.org/download/">Get Version 3.5.1</a></strong></p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+<div id="tTips"><p id="tTips_inside"></p></div></body></html>

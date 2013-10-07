@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0068)options-general.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › General Settings — WordPress</title>
+<script type="text/javascript">
+//<![CDATA[
+addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document).ready(func); else if (typeof wpOnload!='function'){wpOnload=func;} else {var oldonload=wpOnload; wpOnload=function(){oldonload();func();}}};
+//]]>
+</script>
+<link rel="stylesheet" href="files/global.css" type="text/css" media="all">
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css" media="all">
+<link rel="stylesheet" href="files/colors-fresh.css" type="text/css" media="all">
+<!--[if gte IE 6]>
+<link rel='stylesheet' href='css/ie.css?ver=2.6' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="files/jquery.js"></script>
+<script type="text/javascript" src="files/common.js"></script>
+<script type="text/javascript" src="files/jquery.color.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpGearsL10n = {
+		updateCompleted: "Update completed.",
+		error: "Error:"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/wp-gears.js"></script>
+</head>
+<body class="wp-admin ">
+<div id="wpwrap">
+<div id="wpcontent">
+<div id="wphead">
+<h1>Test blog<span id="viewsite"><a href="home-page.html">Visit Site</a></span></h1>
+</div>
+
+
+<div id="user_info"><p>Howdy, <a href="#">admin</a>! | <a href="wp-login.html" title="Log Out">Log Out</a> | <a href="http://codex.wordpress.org/">Help</a> | <a href="http://wordpress.org/support/">Forums</a></p></div>
+
+
+<ul id="dashmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li></ul>
+
+<ul id="adminmenu">
+
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="themes.html">Design</a></li>
+	<li><a href="edit-comments.html">Comments <span id="awaiting-mod" class="count-0"><span class="comment-count">0</span></span></a></li></ul>
+
+<ul id="sidemenu">
+
+	<li><a href="options-general.html" class="current">Settings</a> </li>
+	<li><a href="plugins.html">Plugins <span id="update-plugins" class="count-0"><span class="plugin-count">0</span></span></a> </li>
+	<li><a href="users.html">Users</a></li></ul>
+
+
+<ul id="submenu">
+
+	<li><a href="options-general.html" class="current">General</a></li>
+	<li><a href="#">Writing</a></li>
+	<li><a href="#">Reading</a></li>
+	<li><a href="#">Discussion</a></li>
+	<li><a href="#">Privacy</a></li>
+	<li><a href="#">Permalinks</a></li>
+	<li><a href="#">Miscellaneous</a></li>
+</ul>
+<div id="update-nag">WordPress 3.5.1 is available! <a href="http://wordpress.org/download/">Please update now</a>.</div>
+<div id="wpbody">
+
+<div class="wrap">
+<h2>General Settings</h2>
+<form method="post" action="#">
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="13e3a73b54"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.6/wp-admin/options-general.php"><table class="form-table">
+<tbody><tr valign="top">
+<th scope="row"><label for="blogname">Blog Title</label></th>
+<td><input name="blogname" type="text" id="blogname" value="Test blog" size="40"></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="blogdescription">Tagline</label></th>
+<td><input name="blogdescription" type="text" id="blogdescription" style="width: 95%" value="Just another WordPress weblog" size="45">
+<br>
+In a few words, explain what this blog is about.</td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="siteurl">WordPress address (URL)</label></th>
+<td><input name="siteurl" type="text" id="siteurl" value="#" size="40" class="code"></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="home">Blog address (URL)</label></th>
+<td><input name="home" type="text" id="home" value="#" size="40" class="code"><br>Enter the address here if you want your blog homepage <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">to be different from the directory</a> you installed WordPress.</td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="admin_email">E-mail address </label></th>
+<td><input name="admin_email" type="text" id="admin_email" value="admin@admin.com" size="40" class="code">
+<br>
+This address is used for admin purposes, like new user notification.</td>
+</tr>
+<tr valign="top">
+<th scope="row">Membership</th>
+<td> <fieldset><legend class="hidden">Membership</legend><label for="users_can_register">
+<input name="users_can_register" type="checkbox" id="users_can_register" value="1">
+Anyone can register</label><br>
+<label for="comment_registration">
+<input name="comment_registration" type="checkbox" id="comment_registration" value="1">
+Users must be registered and logged in to comment</label>
+</fieldset></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="default_role">New User Default Role</label></th>
+<td>
+<select name="default_role" id="default_role">
+	<option selected="selected" value="subscriber">Subscriber</option>
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option></select>
+</td>
+</tr>
+<tr>
+<th scope="row"><label for="gmt_offset">Timezone </label></th>
+<td>
+<select name="gmt_offset" id="gmt_offset">
+<option value="-12">UTC -12</option><option value="-11.5">UTC -11:30</option><option value="-11">UTC -11</option><option value="-10.5">UTC -10:30</option><option value="-10">UTC -10</option><option value="-9.5">UTC -9:30</option><option value="-9">UTC -9</option><option value="-8.5">UTC -8:30</option><option value="-8">UTC -8</option><option value="-7.5">UTC -7:30</option><option value="-7">UTC -7</option><option value="-6.5">UTC -6:30</option><option value="-6">UTC -6</option><option value="-5.5">UTC -5:30</option><option value="-5">UTC -5</option><option value="-4.5">UTC -4:30</option><option value="-4">UTC -4</option><option value="-3.5">UTC -3:30</option><option value="-3">UTC -3</option><option value="-2.5">UTC -2:30</option><option value="-2">UTC -2</option><option value="-1.5">UTC -1:30</option><option value="-1">UTC -1</option><option value="-0.5">UTC -0:30</option><option value="0">UTC </option><option value="0.5">UTC +0:30</option><option value="1">UTC +1</option><option value="1.5">UTC +1:30</option><option value="2" selected="selected">UTC +2</option><option value="2.5">UTC +2:30</option><option value="3">UTC +3</option><option value="3.5">UTC +3:30</option><option value="4">UTC +4</option><option value="4.5">UTC +4:30</option><option value="5">UTC +5</option><option value="5.5">UTC +5:30</option><option value="5.75">UTC +5:45</option><option value="6">UTC +6</option><option value="6.5">UTC +6:30</option><option value="7">UTC +7</option><option value="7.5">UTC +7:30</option><option value="8">UTC +8</option><option value="8.5">UTC +8:30</option><option value="8.75">UTC +8:45</option><option value="9">UTC +9</option><option value="9.5">UTC +9:30</option><option value="10">UTC +10</option><option value="10.5">UTC +10:30</option><option value="11">UTC +11</option><option value="11.5">UTC +11:30</option><option value="12">UTC +12</option><option value="12.75">UTC +12:45</option><option value="13">UTC +13</option><option value="13.75">UTC +13:45</option><option value="14">UTC +14</option></select>
+hours<br>
+<abbr title="Coordinated Universal Time">UTC</abbr> time is <code>2013-05-23 13:26:28</code><br>
+UTC +2 is <code>2013-05-23 15:26:28</code><br>
+Unfortunately, you have to manually update this for Daylight Savings Time. Lame, we know, but will be fixed in the future.</td>
+</tr>
+<tr>
+<th scope="row"><label for="date_format">Date Format</label></th>
+<td><input name="date_format" type="text" id="date_format" size="30" value="F j, Y"><br>
+Output: <strong>May 23, 2013</strong></td>
+</tr>
+<tr>
+<th scope="row"><label for="time_format">Time Format</label></th>
+<td><input name="time_format" type="text" id="time_format" size="30" value="g:i a"><br>
+Output: <strong>3:26 pm</strong><br>
+<a href="http://codex.wordpress.org/Formatting_Date_and_Time">Documentation on date formatting</a>. Click "Save Changes" to update sample output.</td>
+</tr>
+<tr>
+<th scope="row"><label for="start_of_week">Week Starts On</label></th>
+<td><select name="start_of_week" id="start_of_week">
+
+	<option value="0">Sunday</option>
+	<option value="1" selected="selected">Monday</option>
+	<option value="2">Tuesday</option>
+	<option value="3">Wednesday</option>
+	<option value="4">Thursday</option>
+	<option value="5">Friday</option>
+	<option value="6">Saturday</option></select></td>
+</tr>
+</tbody></table>
+
+<p class="submit"><input type="submit" name="Submit" value="Save Changes">
+<input type="hidden" name="action" value="update">
+<input type="hidden" name="page_options" value="siteurl,home,blogname,blogdescription,admin_email,users_can_register,gmt_offset,date_format,time_format,start_of_week,comment_registration,default_role">
+</p>
+</form>
+
+</div>
+
+</div><!-- wpbody -->
+</div><!-- wpcontent -->
+</div><!-- wpwrap -->
+<div id="footer">
+<p>Thank you for creating with <a href="http://wordpress.org/">WordPress</a> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a> | <strong><a href="http://wordpress.org/download/">Get Version 3.5.1</a></strong></p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+<div id="tTips"><p id="tTips_inside"></p></div></body></html>
