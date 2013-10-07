@@ -7,10 +7,10 @@
 	<meta name="generator" content="WordPress 1.5"> <!-- leave this for stats -->
 
 	<link rel="stylesheet" href="files/style.css" type="text/css" media="screen">
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://localhost/historic-wordpress/1.5/wp-rss2.php">
-	<link rel="alternate" type="text/xml" title="RSS .92" href="http://localhost/historic-wordpress/1.5/wp-rss.php">
-	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://localhost/historic-wordpress/1.5/wp-atom.php">
-	<link rel="pingback" href="http://localhost/historic-wordpress/1.5/xmlrpc.php">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="#wp-rss2.php">
+	<link rel="alternate" type="text/xml" title="RSS .92" href="#wp-rss.php">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="#wp-atom.php">
+	<link rel="pingback" href="#xmlrpc.php">
 
 	<style type="text/css" media="screen">
 	
@@ -19,7 +19,7 @@
 				and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
 				not, then go right ahead and delete the following lines, and the image files. */
 			
-		body	 	{ background: url("files/images/kubrickbgcolor.jpg"); }				#page		{ background: url("http://localhost/historic-wordpress/1.5/files/images/kubrickbgwide.jpg") repeat-y top; border: none; } 			#header 	{ background: url("http://localhost/historic-wordpress/1.5/files/images/kubrickheader.jpg") no-repeat bottom center; }
+		body	 	{ background: url("files/images/kubrickbgcolor.jpg"); }				#page		{ background: url("files/images/kubrickbgwide.jpg") repeat-y top; border: none; } 			#header 	{ background: url("files/images/kubrickheader.jpg") no-repeat bottom center; }
 			#footer 	{ background: url("files/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
 			
 			
@@ -37,12 +37,12 @@
 			get cropped off of the image. */
 		
 		/*
-		#headerimg 	{ background: url('http://localhost/historic-wordpress/1.5/files/images/personalheader.jpg') no-repeat top;}
+		#headerimg 	{ background: url('files/images/personalheader.jpg') no-repeat top;}
 		*/
 
 	</style>
 
-		<link rel="archives" title="May 2013" href="http://localhost/historic-wordpress/1.5/?m=201305">
+		<link rel="archives" title="May 2013" href="#?m=201305">
 
 	</head>
 <body>
@@ -52,7 +52,7 @@
 
 <div id="header">
 	<div id="headerimg">
-		<h1><a href="http://localhost/historic-wordpress/1.5">Test blog</a></h1>
+		<h1><a href="home-page.html">Test blog</a></h1>
 		<div class="description">Just another WordPress weblog</div>
 	</div>
 </div>
@@ -67,7 +67,7 @@
 		</div>
 	
 		<div class="post">
-			<h2 id="post-1"><a href="./hello-world_files/hello-world.html" rel="bookmark" title="Permanent Link: Hello world!">Hello world!</a></h2>
+			<h2 id="post-1"><a href="hello-world.html" rel="bookmark" title="Permanent Link: Hello world!">Hello world!</a></h2>
 	
 			<div class="entrytext">
 					<p>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!
@@ -78,10 +78,10 @@
 					<small>
 						This entry was posted
 						 
-						on Thursday, May 23rd, 2013 at 10:51 am						and is filed under <a href="http://localhost/historic-wordpress/1.5/?cat=1" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a>.
-						You can follow any responses to this entry through the <a href="http://localhost/historic-wordpress/1.5/wp-commentsrss2.php?p=1">RSS 2.0</a> feed. 
+						on Thursday, May 23rd, 2013 at 10:51 am						and is filed under <a href="#?cat=1" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a>.
+						You can follow any responses to this entry through the <a href="#wp-commentsrss2.php?p=1">RSS 2.0</a> feed. 
 						
-													You can <a href="hello-world.html#respond">leave a response</a>, or <a href="http://localhost/historic-wordpress/1.5/wp-trackback.php?p=1">trackback</a> from your own site.
+													You can <a href="hello-world.html#respond">leave a response</a>, or <a href="#wp-trackback.php?p=1">trackback</a> from your own site.
 						
 						 <a href="post.html?action=edit&post=1">Edit this entry.</a> 						
 					</small>
@@ -119,7 +119,7 @@
 <h3 id="respond">Leave a Reply</h3>
 
 
-<form action="http://localhost/historic-wordpress/1.5/wp-comments-post.php" method="post" id="commentform">
+<form action="#wp-comments-post.php" method="post" id="commentform">
 
 
 <p>Logged in as <a href="profile.html">Administrator</a>. <a href="wp-login.html" title="Log out of this account">Logout »</a></p>
@@ -146,8 +146,8 @@
 	<p>
 		Test blog is proudly powered by 
 		<a href="http://wordpress.org/">WordPress</a>
-		<br><a href="feed:http://localhost/historic-wordpress/1.5/wp-rss2.php">Entries (RSS)</a>
-		and <a href="feed:http://localhost/historic-wordpress/1.5/wp-commentsrss2.php">Comments (RSS)</a>.
+		<br><a href="feed:#wp-rss2.php">Entries (RSS)</a>
+		and <a href="feed:#wp-commentsrss2.php">Comments (RSS)</a>.
 		<!-- 12 queries. 0.075 seconds. -->
 	</p>
 </div>

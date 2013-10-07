@@ -1,5 +1,11 @@
 1.0
-	Functional
 	Missing some minor templates
 1.2
 	Done
+1.5
+	Missing links
+	Missing sub-pages
+2.0
+	Missing links
+	Missing sub-pages
+2.1
