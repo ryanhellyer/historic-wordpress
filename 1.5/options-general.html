@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › General Options — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function customToggleLink() {
+	// TODO: Only show link if there's a hidden row
+	document.write('<small>(<a href="javascript:;" id="customtoggle" onclick="toggleHidden()">Show hidden</a>)</small>');
+	// TODO: Rotate link to say "show" or "hide"
+	// TODO: Use DOM
+}
+
+function toggleHidden() {
+	var allElements = document.getElementsByTagName('tr');
+	for (i = 0; i < allElements.length; i++) {
+		if ( allElements[i].className.indexOf('hidden') != -1 ) {
+			 allElements[i].className = allElements[i].className.replace('hidden', '');
+		}
+	}
+}
+
+
+//]]>
+</script>
+
+</head>
+<body>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html" class="current">Options</a></li>	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (Administrator)</a></li>
+</ul>
+
+<ul id="adminmenu2">
+
+	<li><a href="options-general.html" class="current">General</a></li>
+	<li><a href="#">Writing</a></li>
+	<li><a href="#">Reading</a></li>
+	<li><a href="#">Discussion</a></li>
+	<li><a href="#">Permalinks</a></li>
+	<li><a href="#">Miscellaneous</a></li>
+</ul>
+
+<br clear="all">
+
+ 
+<div class="wrap"> 
+  <h2>General Options</h2> 
+  <form name="form1" method="post" action="#"> 
+    <input type="hidden" name="action" value="update"> 
+	<input type="hidden" name="action" value="update"> <input type="hidden" name="page_options" value="&#39;blogname&#39;,&#39;blogdescription&#39;,&#39;siteurl&#39;,&#39;admin_email&#39;,&#39;users_can_register&#39;,&#39;gmt_offset&#39;,&#39;date_format&#39;,&#39;time_format&#39;,&#39;home&#39;,&#39;start_of_week&#39;,&#39;comment_registration&#39;"> 
+    <table width="100%" cellspacing="2" cellpadding="5" class="editform"> 
+      <tbody><tr valign="top"> 
+        <th width="33%" scope="row">Weblog title:</th> 
+        <td><input name="blogname" type="text" id="blogname" value="Test blog" size="40"></td> 
+      </tr> 
+      <tr valign="top"> 
+        <th scope="row">Tagline:</th> 
+        <td><input name="blogdescription" type="text" id="blogdescription" style="width: 95%" value="Just another WordPress weblog" size="45">
+        <br>
+In a few words, explain what this weblog is about.</td> 
+      </tr> 
+      <tr valign="top"> 
+        <th scope="row">WordPress address (URI):</th> 
+        <td><input name="siteurl" type="text" id="siteurl" value="#" size="40" class="code"></td> 
+      </tr> 
+      <tr valign="top">
+      	<th scope="row">Blog address (URI):</th>
+      	<td><input name="home" type="text" id="home" value="#" size="40" class="code"><br>If you want your blog homepage to be different than the directory you installed WordPress in, enter that address here. </td>
+      	</tr>
+      <tr valign="top"> 
+        <th scope="row">E-mail address: </th> 
+        <td><input name="admin_email" type="text" id="admin_email" value="admin@admin.com" size="40" class="code">
+        <br>
+This address is used only for admin purposes.</td> 
+      </tr>
+      <tr valign="top"> 
+        <th scope="row">Membership:</th> 
+        <td> <label for="users_can_register"> 
+          <input name="users_can_register" type="checkbox" id="users_can_register" value="1"> 
+          Anyone can register</label><br>
+		  <label for="comment_registration">
+			<input name="comment_registration" type="checkbox" id="comment_registration" value="1"> 
+				Users must be registered and logged in to comment			</label>
+</td> 
+      </tr> 
+    </tbody></table> 
+    <fieldset class="options"> 
+    <legend>Date and Time</legend> 
+	    <table width="100%" cellspacing="2" cellpadding="5" class="editform"> 
+      <tbody><tr> 
+          <th scope="row" width="33%"><abbr title="Coordinated Universal Time">UTC</abbr> time is: </th> 
+        <td><code>2013-05-23 8:53:31 am</code></td> 
+      </tr>
+      <tr>
+        <th scope="row">Times in the weblog should differ by: </th>
+        <td><input name="gmt_offset" type="text" id="gmt_offset" size="2" value="2"> 
+        hours </td>
+      </tr>
+      <tr>
+      	<th scope="row">&nbsp;</th>
+      	<td>The following use the same syntax as the <a href="http://php.net/date">PHP <code>date()</code> function</a>. Save option to update sample output. </td>
+      	</tr>
+      <tr>
+      	<th scope="row">Default date format:</th>
+      	<td><input name="date_format" type="text" id="date_format" size="30" value="F j, Y"><br>
+Output: <strong>May 23, 2013</strong></td>
+      	</tr>
+      <tr>
+        <th scope="row">Default time format:</th>
+      	<td><input name="time_format" type="text" id="time_format" size="30" value="g:i a"><br>
+Output: <strong>10:53 am</strong></td>
+      	</tr> 
+      <tr>
+        <th scope="row">Weeks in the calendar should start on:</th>
+        <td><select name="start_of_week" id="start_of_week">
+	
+	<option value="0">Sunday</option>
+	<option value="1" selected="selected">Monday</option>
+	<option value="2">Tuesday</option>
+	<option value="3">Wednesday</option>
+	<option value="4">Thursday</option>
+	<option value="5">Friday</option>
+	<option value="6">Saturday</option></select></td>
+       		</tr>
+
+</tbody></table>
+
+    </fieldset> 
+    <p class="submit">
+      <input type="submit" name="Submit" value="Update Options »">
+    </p>
+  </form> 
+</div> 
+
+<div id="footer"><p><a href="http://wordpress.org/"><img src="files/wp-small.png" alt="WordPress"></a><br>
+1.5 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.04 seconds</p>
+
+<p><a href="http://spreadfirefox.com/community/?q=affiliates&id=2490&t=1" title="WordPress recommends the open-source Firefox browser"><img src="files/get-firefox.png" alt="Get Firefox"></a></p>
+</div>
+
+
+
+</body></html>

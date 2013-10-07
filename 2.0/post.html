@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)post.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Create New Post — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function addLoadEvent(func) {
+  if ( typeof wpOnload != 'function' ) {
+    wpOnload = func;
+  } else {
+    var oldonload = wpOnload;
+    wpOnload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
+
+//]]>
+</script>
+<script type="text/javascript" src="files/fat.js"></script>
+<script type="text/javascript" src="files/tw-sack.js"></script>
+<script type="text/javascript" src="files/list-manipulation.js"></script>
+<script type="text/javascript" src="files/dbx.js"></script><style type="text/css"></style>
+<script type="text/javascript">
+//<![CDATA[
+	addLoadEvent( function() {
+        var manager = new dbxManager('postmeta');       //session ID [/-_a-zA-Z0-9/]
+	});
+//]]>
+</script>
+<script type="text/javascript" src="files/dbx-key.js"></script>
+
+<style type="text/css">
+#newcat { width: 120px; margin-right: 5px; }
+input#catadd { 	background: #a4a4a4;
+	border-bottom: 1px solid #898989;
+	border-left: 1px solid #bcbcbc;
+	border-right: 1px solid #898989;
+	border-top: 1px solid #bcbcbc;
+	color: #fff;
+	font-size: 10px;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	height: 20px;
+	margin-bottom: 2px;
+	text-align: center;
+	width: 37px; }
+#howto {
+	font-size: 11px;
+	margin: 0 5px;
+	display: block;
+}
+#jaxcat {
+	margin: 0;
+	padding: 0;
+}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var ajaxCat = new sack();
+var newcat;
+ 
+function newCatAddIn() {
+	if ( !document.getElementById('jaxcat') ) return false;
+	var ajaxcat = document.createElement('p');
+	ajaxcat.id = 'ajaxcat';
+
+	newcat = document.createElement('input');
+	newcat.type = 'text';
+	newcat.name = 'newcat';
+	newcat.id = 'newcat';
+	newcat.size = '16';
+	newcat.setAttribute('autocomplete', 'off');
+	newcat.onkeypress = ajaxNewCatKeyPress;
+
+	var newcatSub = document.createElement('input');
+	newcatSub.type = 'button';
+	newcatSub.name = 'Button';
+	newcatSub.id = 'catadd';
+	newcatSub.value = 'Add';
+	newcatSub.onclick = ajaxNewCat;
+
+	ajaxcat.appendChild(newcat);
+	ajaxcat.appendChild(newcatSub);
+	document.getElementById('jaxcat').appendChild(ajaxcat);
+
+	howto = document.createElement('span');
+	howto.innerHTML = 'Separate multiple categories with commas.';
+	howto.id = 'howto';
+	ajaxcat.appendChild(howto);
+}
+
+addLoadEvent(newCatAddIn);
+
+function getResponseElement() {
+	var p = document.getElementById('ajaxcatresponse');
+	if (!p) {
+		p = document.createElement('span');
+		document.getElementById('jaxcat').appendChild(p);
+		p.id = 'ajaxcatresponse';
+	}
+	return p;
+}
+
+function newCatLoading() {
+	var p = getResponseElement();
+	p.innerHTML = 'Sending Data...';
+}
+
+function newCatLoaded() {
+	var p = getResponseElement();
+	p.innerHTML = 'Data Sent...';
+}
+
+function newCatInteractive() {
+	var p = getResponseElement();
+	p.innerHTML = 'Processing Request...';
+}
+
+function newCatCompletion() {
+	var p = getResponseElement();
+	var id    = 0;
+	var ids   = new Array();
+	var names = new Array();
+	
+	ids   = myPload( ajaxCat.response );
+	names = myPload( newcat.value );
+	for ( i = 0; i < ids.length; i++ ) {
+		id = ids[i].replace(/[\n\r\l]+/g, "");
+		if ( id == '-1' ) {
+			p.innerHTML = "You don\'t have permission to do that.";
+			return;
+		}
+		if ( id == '0' ) {
+			p.innerHTML = "That category name is invalid.  Try something else.";
+			return;
+		}
+		
+		var exists = document.getElementById('category-' + id);
+		
+		if (exists) {
+			var moveIt = exists.parentNode;
+			var container = moveIt.parentNode;
+			container.removeChild(moveIt);
+			container.insertBefore(moveIt, container.firstChild);
+			moveIt.id = 'new-category-' + id;
+			exists.checked = 'checked';
+			var nowClass = moveIt.className;
+			moveIt.className = nowClass + ' fade';
+			Fat.fade_all();
+			moveIt.className = nowClass;
+		} else {
+			var catDiv = document.getElementById('categorychecklist');
+			var newLabel = document.createElement('label');
+			newLabel.setAttribute('for', 'category-' + id);
+			newLabel.id = 'new-category-' + id;
+			newLabel.className = 'selectit fade';
+	
+			var newCheck = document.createElement('input');
+			newCheck.type = 'checkbox';
+			newCheck.value = id;
+			newCheck.name = 'post_category[]';
+			newCheck.id = 'category-' + id;
+			newLabel.appendChild(newCheck);
+	
+			var newLabelText = document.createTextNode(' ' + names[i]);
+			newLabel.appendChild(newLabelText);
+	
+			catDiv.insertBefore(newLabel, catDiv.firstChild);
+			newCheck.checked = 'checked';
+	
+			Fat.fade_all();
+			newLabel.className = 'selectit';
+		}
+		newcat.value = '';
+	}
+	p.parentNode.removeChild(p);
+//	var id = parseInt(ajaxCat.response, 10);
+}
+
+function ajaxNewCatKeyPress(e) {
+	if (!e) {
+		if (window.event) {
+			e = window.event;
+		} else {
+			return;
+		}
+	}
+	if (e.keyCode == 13) {
+		ajaxNewCat();
+		e.returnValue = false;
+		e.cancelBubble = true;
+		return false;
+	}
+}
+
+function ajaxNewCat() {
+	var newcat = document.getElementById('newcat');
+	var split_cats = new Array(1);
+	var catString = '';
+
+	catString = 'ajaxnewcat=' + encodeURIComponent(newcat.value);
+	ajaxCat.requestFile = 'edit-form-ajax-cat.php';
+	ajaxCat.method = 'GET';
+	ajaxCat.onLoading = newCatLoading;
+	ajaxCat.onLoaded = newCatLoaded;
+	ajaxCat.onInteractive = newCatInteractive;
+	ajaxCat.onCompletion = newCatCompletion;
+	ajaxCat.runAJAX(catString);
+}
+
+function myPload( str ) {
+	var fixedExplode = new Array();
+	var comma = new String(',');
+	var count = 0;
+	var currentElement = '';
+
+	for( x=0; x < str.length; x++) {
+		andy = str.charAt(x);
+		if ( comma.indexOf(andy) != -1 ) {
+			currentElement = currentElement.replace(new RegExp('^\\s*(.*?)\\s*$', ''), '$1'); // trim
+			fixedExplode[count] = currentElement;
+			currentElement = "";
+			count++;
+		} else {
+			currentElement += andy;
+		}
+	}
+
+	if ( currentElement != "" )
+		fixedExplode[count] = currentElement;
+	return fixedExplode;
+}
+//]]>
+</script>
+
+
+<style type="text/css">* html { overflow-x: hidden; }</style>
+
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Account</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html" class="current">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="import.html">Import</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="post.html" class="current">Write Post</a></li>
+	<li><a href="page-new.php">Write Page</a></li>
+</ul>
+
+<form name="post" action="post.html" method="post" id="post">
+
+<div class="wrap">
+<h2 id="write-post">Write Post</h2>
+
+<input type="hidden" name="user_ID" value="1">
+<input type="hidden" name="action" value="post">
+<input type="hidden" name="post_author" value="">
+
+<input type="hidden" name="temp_ID" value="-1369314542"><div id="poststuff">
+
+<div id="moremeta">
+<div id="grabit" class="dbx-group" style="position: relative; display: block;">
+
+<fieldset id="commentstatusdiv" class="dbx-box dbx-box-closed dbxid0" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Discussion<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3>
+<div class="dbx-content">
+<input name="advanced_view" type="hidden" value="1">
+<label for="comment_status" class="selectit">
+<input name="comment_status" type="checkbox" id="comment_status" value="open" checked="checked">
+Allow Comments</label> 
+<label for="ping_status" class="selectit"><input name="ping_status" type="checkbox" id="ping_status" value="open" checked="checked"> Allow Pings</label>
+</div>
+</fieldset>
+
+<fieldset id="passworddiv" class="dbx-box dbx-box-closed dbxid1" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Password-Protect Post<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3> 
+<div class="dbx-content"><input name="post_password" type="text" size="13" id="post_password" value=""></div>
+</fieldset>
+
+<fieldset id="slugdiv" class="dbx-box dbx-box-closed dbxid2" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Post slug<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3> 
+<div class="dbx-content"><input name="post_name" type="text" size="13" id="post_name" value=""></div>
+</fieldset>
+
+<fieldset id="categorydiv" class="dbx-box dbx-box-closed dbxid3" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Categories<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3>
+<div class="dbx-content">
+<p id="jaxcat"><p id="ajaxcat"><input type="text" name="newcat" id="newcat" size="16" autocomplete="off"><input type="button" name="Button" id="catadd" value="Add"><span id="howto">Separate multiple categories with commas.</span></p></p>
+<div id="categorychecklist"><label for="category-1" class="selectit"><input value="1" type="checkbox" name="post_category[]" id="category-1" checked="checked"> Uncategorized</label>
+
+<span class="cat-nest">
+</span>
+</div></div>
+</fieldset>
+
+<fieldset class="dbx-box dbx-box-closed dbxid4" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Post Status<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3> 
+<div class="dbx-content"><label for="post_status_publish" class="selectit"><input id="post_status_publish" name="post_status" type="radio" value="publish"> Published</label>
+	  <label for="post_status_draft" class="selectit"><input id="post_status_draft" name="post_status" type="radio" value="draft" checked="checked"> Draft</label>
+	  <label for="post_status_private" class="selectit"><input id="post_status_private" name="post_status" type="radio" value="private"> Private</label></div>
+</fieldset>
+
+<fieldset class="dbx-box dbx-box-closed dbxid5" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Post Timestamp:<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3>
+<div class="dbx-content"><fieldset><legend><input type="checkbox" class="checkbox" name="edit_date" value="1" id="timestamp"> <label for="timestamp">Edit timestamp</label></legend><select name="mm">
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5" selected="selected">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+</select>
+<input type="text" id="jj" name="jj" value="23" size="2" maxlength="2">
+<input type="text" id="aa" name="aa" value="2013" size="4" maxlength="5"> @ 
+<input type="text" id="hh" name="hh" value="15" size="2" maxlength="2"> : 
+<input type="text" id="mn" name="mn" value="09" size="2" maxlength="2"> 
+<input type="hidden" id="ss" name="ss" value="02" size="2" maxlength="2"> 
+</fieldset>
+	</div>
+</fieldset>
+
+<fieldset id="authordiv" class="dbx-box dbx-box-closed dbxid6" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Post author:<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3>
+<div class="dbx-content">
+<select name="post_author_override" id="post_author_override">
+<option value="1" selected="selected">admin</option></select>
+</div>
+</fieldset>
+
+<span class="dbx-box dbx-dummy dbx-offdummy" style="display: block; width: 0px; height: 0px; overflow: hidden;"></span></div>
+</div>
+
+<fieldset id="titlediv">
+  <legend>Title</legend> 
+  <div><input type="text" name="post_title" size="30" tabindex="1" value="" id="title"></div>
+</fieldset>
+
+<fieldset id="postdiv">
+<legend>Post</legend>
+
+
+<script type="text/javascript">
+function edInsertContent(myField, myValue) {
+	//IE support
+	if (document.selection) {
+		myField.focus();
+		sel = document.selection.createRange();
+		sel.text = myValue;
+		myField.focus();
+	}
+	//MOZILLA/NETSCAPE support
+	else if (myField.selectionStart || myField.selectionStart == "0") {
+		var startPos = myField.selectionStart;
+		var endPos = myField.selectionEnd;
+		myField.value = myField.value.substring(0, startPos)
+		              + myValue 
+                      + myField.value.substring(endPos, myField.value.length);
+		myField.focus();
+		myField.selectionStart = startPos + myValue.length;
+		myField.selectionEnd = startPos + myValue.length;
+	} else {
+		myField.value += myValue;
+		myField.focus();
+	}
+}
+</script>
+
+<div><textarea rows="10" cols="40" name="content" tabindex="2" id="content"></textarea></div>
+</fieldset>
+
+<script type="text/javascript">
+<!--
+edCanvas = document.getElementById('content');
+//-->
+</script>
+
+<input type="hidden" name="post_pingback" value="1" id="post_pingback"><input type="hidden" name="prev_status" value="draft">
+
+<p class="submit"><input name="save" type="submit" id="save" tabindex="3" value="Save and Continue Editing"> <input type="submit" name="submit" value="Save" style="font-weight: bold;" tabindex="4"> 
+	<input name="publish" type="submit" id="publish" tabindex="5" accesskey="p" value="Publish"> 
+<input name="referredby" type="hidden" id="referredby" value="redo"></p>
+
+
+<iframe id="uploading" border="0" src="files/inline-uploading.html">This feature requires iframe support.</iframe>
+<div id="advancedstuff" class="dbx-group" style="position: relative; display: block;">
+
+<fieldset id="postexcerpt" class="dbx-box dbx-box-closed dbxid0" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Optional Excerpt<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3>
+<div class="dbx-content"><textarea rows="1" cols="40" name="excerpt" tabindex="6" id="excerpt"></textarea></div>
+</fieldset>
+
+<fieldset class="dbx-box dbx-box-closed dbxid1" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Trackbacks<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3>
+<div class="dbx-content">Send trackbacks to: <input type="text" name="trackback_url" style="width: 415px" id="trackback" tabindex="7" value=""> (Separate multiple URIs with spaces)
+</div>
+</fieldset>
+
+<fieldset id="postcustom" class="dbx-box dbx-box-closed dbxid2" style="position: relative; display: block;">
+<h3 class="dbx-handle dbx-handle-cursor" style="position: relative; display: block;" title="click-down and drag to move this box">Custom Fields<a style="cursor: pointer;" href="javascript:void(null)" class="dbx-toggle dbx-toggle-closed" title="click to open this box">&nbsp;</a></h3>
+<div id="postcustomstuff" class="dbx-content">
+<h3>Add a new custom field:</h3>
+<table cellspacing="3" cellpadding="3">
+	<tbody><tr>
+<th colspan="2">Key</th>
+<th>Value</th>
+</tr>
+	<tr valign="top">
+		<td align="right" width="18%">
+</td>
+<td><input type="text" id="metakeyinput" name="metakeyinput" tabindex="7"></td>
+		<td><textarea id="metavalue" name="metavalue" rows="3" cols="25" tabindex="8"></textarea></td>
+	</tr>
+
+</tbody></table>
+<p class="submit"><input type="submit" name="updatemeta" tabindex="9" value="Add Custom Field »"></p>
+</div>
+</fieldset>
+
+<span class="dbx-box dbx-dummy dbx-offdummy" style="display: block; width: 0px; height: 0px; overflow: hidden;"></span></div>
+
+
+</div>
+
+</div>
+
+</form>
+<div class="wrap">
+<h3>WordPress bookmarklet</h3>
+<p>Right click on the following link and choose "Add to favorites" to create a posting shortcut.</p><p>
+
+<a href="javascript:if(navigator.userAgent.indexOf('Safari') >= 0){Q=getSelection();}else{Q=document.selection?document.selection.createRange().text:document.getSelection();}location.href='post.php?text='+encodeURIComponent(Q)+'&popupurl='+encodeURIComponent(location.href)+'&popuptitle='+encodeURIComponent(document.title);">Press It - Test blog</a> 
+</p>
+</div>
+
+<div id="footer"><p><a href="http://wordpress.org/" id="wordpress-logo"><img src="files/wordpress-logo.png" alt="WordPress"></a></p>
+<p>
+<a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a> <br>
+2.0 — 0.08 seconds</p>
+
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Profile</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html" class="current">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+<div class="wrap">
+<h2>Profile</h2>
+<form name="profile" id="profile" action="profile.html" method="post">
+	<p>
+    <input type="hidden" name="action" value="update">
+    <input type="hidden" name="checkuser_id" value="1">
+  </p>
+
+	<style type="text/css" media="screen">
+	th { text-align: right; }
+	</style>
+  <table width="99%" border="0" cellspacing="2" cellpadding="3">
+    <tbody><tr>
+      <th width="33%" scope="row">Login:</th>
+      <td width="73%">admin</td>
+    </tr>
+    <tr>
+      <th scope="row">Level:</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th scope="row">Posts:</th>
+      <td>    1</td>
+    </tr>
+    <tr>
+      <th scope="row">First name:</th>
+      <td><input type="text" name="newuser_firstname" id="newuser_firstname" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">Last name:</th>
+      <td><input type="text" name="newuser_lastname" id="newuser_lastname2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">Profile:</th>
+      <td><textarea name="user_description" rows="5" id="textarea2" style="width: 99%; "></textarea></td>
+    </tr>
+    <tr>
+      <th scope="row">Nickname:</th>
+      <td><input type="text" name="newuser_nickname" id="newuser_nickname2" value="site admin"></td>
+    </tr>
+    <tr>
+      <th scope="row">Email:</th>
+      <td><input type="text" name="newuser_email" id="newuser_email2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">Website:</th>
+      <td><input type="text" name="newuser_url" id="newuser_url2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">ICQ:</th>
+      <td><input type="text" name="newuser_icq" id="newuser_icq2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">AIM:</th>
+      <td><input type="text" name="newuser_aim" id="newuser_aim2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">MSN IM: </th>
+      <td><input type="text" name="newuser_msn" id="newuser_msn2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">Yahoo IM: </th>
+      <td>        <input type="text" name="newuser_yim" id="newuser_yim2" value="">      </td>
+    </tr>
+    <tr>
+      <th scope="row">Identity on blog: </th>
+      <td><select name="newuser_idmode">
+        <option value="nickname" selected="">site admin</option>
+        <option value="login">admin</option>
+        <option value="firstname"></option>
+        <option value="lastname"></option>
+        <option value="namefl"> </option>
+        <option value="namelf"> </option>
+      </select>        </td>
+    </tr>
+    <tr>
+      <th scope="row">New <strong>Password</strong> (Leave blank to stay the same.)</th>
+      <td><input type="password" name="pass1" size="16" value="">
+      	<br>
+        <input type="password" name="pass2" size="16" value=""></td>
+    </tr>
+  </tbody></table>
+  <p class="submit">
+    <input type="submit" value="Update Profile »" name="submit">
+  </p>
+	</form></div>
+
+
+<div class="wrap">
+    <script language="JavaScript" type="text/javascript">
+function addPanel()
+        {
+          if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function"))
+            window.sidebar.addPanel("WordPress Post: my weblog","sidebar.php","");
+          else
+            alert();
+        }
+</script>
+    <strong>SideBar</strong><br>
+    Add the <a href="profile.html" onclick="addPanel()">WordPress Sidebar</a>! 
+    	
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.00 seconds</p>
+
+</div></body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Manage Plugins — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function customToggleLink() {
+	// TODO: Only show link if there's a hidden row
+	document.write('<small>(<a href="javascript:;" id="customtoggle" onclick="toggleHidden()">Show hidden</a>)</small>');
+	// TODO: Rotate link to say "show" or "hide"
+	// TODO: Use DOM
+}
+
+function toggleHidden() {
+	var allElements = document.getElementsByTagName('tr');
+	for (i = 0; i < allElements.length; i++) {
+		if ( allElements[i].className.indexOf('hidden') != -1 ) {
+			 allElements[i].className = allElements[i].className.replace('hidden', '');
+		}
+	}
+}
+
+
+//]]>
+</script>
+</head>
+<body>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html" class="current">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (Administrator)</a></li>
+</ul>
+
+<ul id="adminmenu2">
+
+	<li><a href="plugins.html" class="current">Plugins</a></li>
+	<li><a href="#">Plugin Editor</a></li>
+</ul>
+
+
+<div class="wrap">
+<h2>Plugin Management</h2>
+<p>Plugins are files you usually download separately from WordPress that add functionality. To install a plugin you generally just need to put the plugin file into your <code>wp-content/plugins</code> directory. Once a plugin is installed, you may activate it or deactivate it here. If something goes wrong with a plugin and you can’t use WordPress, delete that plugin from the <code>wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+<table width="100%" cellpadding="3" cellspacing="3">
+	<tbody><tr>
+		<th>Plugin</th>
+		<th>Version</th>
+		<th>Author</th>
+		<th>Description</th>
+		<th>Action</th>
+	</tr>
+
+	<tr class="alternate">
+		<td><a href="http://wordpress.org/#" title="Visit plugin homepage">Hello Dolly</a></td>
+		<td> 1.0</td>
+		<td><a href="http://photomatt.net/" title="Visit author homepage"> Matt Mullenweg</a></td>
+		<td> This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong. Hello, Dolly. This is, by the way, the world’s first official WordPress plugin. When enabled you will randomly see a lyric from Hello, Dolly in the upper right of your admin screen on every page.</td>
+		<td><a href="#" title="Activate this plugin" class="edit">Activate</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://www.michelf.com/projects/php-markdown/" title="Visit plugin homepage">Markdown</a></td>
+		<td> 1.0.1</td>
+		<td><a href="http://www.michelf.com/" title="Visit author homepage"> Michel Fortin</a></td>
+		<td> <a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> allows you to write using an easy-to-read, easy-to-write plain text format. Based on the original Perl version by <a href="http://daringfireball.net/">John Gruber</a>. <a href="http://www.michelf.com/projects/php-markdown/">More…</a></td>
+		<td><a href="#" title="Activate this plugin" class="edit">Activate</a></td>
+	</tr>
+	<tr class="alternate">
+		<td><a href="http://www.huddledmasses.org/" title="Visit plugin homepage">Textile 1</a></td>
+		<td> 1.0</td>
+		<td><a href="http://www.textism.com/?wp" title="Visit author homepage"> Dean Allen</a></td>
+		<td> This is a simple wrapper for <a href="http://textism.com/?wp">Dean Allen’s</a> Humane Web Text Generator, also known as <a href="http://www.textism.com/tools/textile/">Textile</a>. If you use this plugin you should disable Textile 2 and Markdown, as they don’t play well together.</td>
+		<td><a href="plugins.html?action=activate&plugin=textile1.php" title="Activate this plugin" class="edit">Activate</a></td>
+	</tr>
+</tbody></table>
+</div>
+
+
+<div id="footer"><p><a href="http://wordpress.org/"><img src="files/wp-small.png" alt="WordPress"></a><br>
+1.5 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.06 seconds</p>
+
+<p><a href="http://spreadfirefox.com/community/?q=affiliates&id=2490&t=1" title="WordPress recommends the open-source Firefox browser"><img src="files/get-firefox.png" alt="Get Firefox"></a></p>
+</div>
+
+
+
+</body></html>

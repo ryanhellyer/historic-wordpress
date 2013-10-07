@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)edit.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › Posts — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+ 
+<script type="text/javascript">
+//<![CDATA[
+function addLoadEvent(func) {if ( typeof wpOnload!='function'){wpOnload=func;}else{ var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}}
+//]]>
+</script>
+<style type="text/css">* html { overflow-x: hidden; }</style>
+<script type="text/javascript" src="files/fat.js"></script>
+<script type="text/javascript" src="files/prototype.js"></script>
+<script type="text/javascript" src="files/wp-ajax.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	WPAjaxL10n = {
+		defaultUrl: "admin-ajax.php",
+		permText: "You don\'t have permission to do that.",
+		strangeText: "Something strange happened.  Try refreshing the page.",
+		whoaText: "Slow down, I\'m still sending your data!"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/list-manipulation.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	listManL10n = {
+		jumpText: "Jump to new item",
+		delText: "Are you sure you want to delete this %thing%?"
+	}
+/* ]]> */
+</script>
+</head>
+<body>
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Profile</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html" class="current">Manage</a></li>
+	<li><a href="edit-comments.html">Comments</a></li>
+	<li><a href="link-manager.html">Blogroll</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="edit.html" class="current">Posts</a></li>
+	<li><a href="">Pages</a></li>
+	<li><a href="#">Uploads</a></li>
+	<li><a href="#">Categories</a></li>
+	<li><a href="#">Files</a></li>
+	<li><a href="import.html">Import</a></li>
+	<li><a href="#">Export</a></li>
+</ul>
+
+<div class="wrap">
+<h2>
+Last 15 Posts</h2>
+
+<form name="searchform" id="searchform" action="" method="get">
+  <fieldset> 
+  <legend>Search Posts…</legend> 
+  <input type="text" name="s" value="" size="17"> 
+  <input type="submit" name="submit" value="Search" class="button"> 
+  </fieldset>
+</form>
+
+
+<form name="viewarc" id="viewarc" action="" method="get">
+	<fieldset>
+	<legend>Browse Month…</legend>
+	<select name="m">
+	<option value="201305">May 2013</option>
+	</select>
+		<input type="submit" name="submit" value="Show Month" class="button"> 
+	</fieldset>
+</form>
+
+
+<form name="viewcat" id="viewcat" action="" method="get">
+	<fieldset>
+	<legend>Browse Category…</legend>
+	<select name="cat" id="cat" class="postform">
+	<option value="0">All</option>
+	<option value="1">Uncategorized&nbsp;&nbsp;(1)</option>
+</select>
+	<input type="submit" name="submit" value="Show Category" class="button"> 
+	</fieldset>
+</form>
+
+
+<br style="clear:both;">
+
+
+<table class="widefat">
+	<thead>
+	<tr>
+
+	<th scope="col"><div style="text-align: center">ID</div></th>
+	<th scope="col">When</th>
+	<th scope="col">Title</th>
+	<th scope="col">Categories</th>
+	<th scope="col"><div style="text-align: center">Comments</div></th>
+	<th scope="col">Author</th>
+	<th scope="col"></th>
+	<th scope="col"></th>
+	<th scope="col"></th>
+
+	</tr>
+	</thead>
+	<tbody id="the-list"><tr id="post-1" class="alternate">
+
+		<th scope="row" style="text-align: center">1</th>
+				<td>2013-05-23 <br> 3:14:01 pm</td>
+				<td>Hello world!		</td>
+				<td><a href="#/?cat=1" title="View all posts in Uncategorized" rel="category">Uncategorized</a></td>
+				<td style="text-align: center">
+			<a href="#">1</a>			</td>
+				<td>admin</td>
+				<td><a href="hello-world.html" rel="permalink" class="edit">View</a></td>
+				<td><a href="#" class="edit">Edit</a></td>
+				<td><a href="#4b0d479026" class="delete" onclick="return deleteSomething( &#39;post&#39;, 1, &#39;You are about to delete this post \&#39;Hello world!\&#39;.\n\&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39; );">Delete</a></td>
+			</tr></tbody>
+</table>
+
+<div id="ajax-response"></div>
+
+<div class="navigation">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+
+<h3 id="comments">Comments</h3>
+<ol id="the-comment-list" class="commentlist">
+<li id="comment-1" class=" alternate"><p><strong>Mr WordPress</strong>  | <a href="http://wordpress.org/" rel="external">wordpress.org</a> | IP: <a href="http://ws.arin.net/cgi-bin/whois.pl?queryinput="></a></p>
+
+<p>Hi, this is a comment.<br>To delete a comment, just log in and view the post's comments. There you will have the option to edit or delete them.</p>
+
+<p>May 23, 3:14 PM — [
+ <a href="#">Edit</a> | <a href="#843f626e59" onclick="return deleteSomething( &#39;comment&#39;, 1, &#39;You are about to delete this comment by \&#39;Mr WordPress\&#39;.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;, theCommentList );">Delete</a> <span class="unapprove"> | <a href="#874d4471fa" onclick="return dimSomething( &#39;comment&#39;, 1, &#39;unapproved&#39;, theCommentList );">Unapprove</a> </span><span class="approve"> | <a href="#0321325b1c" onclick="return dimSomething( &#39;comment&#39;, 1, &#39;unapproved&#39;, theCommentList );">Approve</a> </span> | <a href="#843f626e59" onclick="return deleteSomething( &#39;comment-as-spam&#39;, 1, &#39;You are about to mark as spam this comment by \&#39;Mr WordPress\&#39;.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to mark as spam.&#39;, theCommentList );">Spam</a> </p>
+		</li>
+
+</ol></div>
+
+<div id="footer">
+<p class="logo"><a href="http://wordpress.org/" id="wordpress-logo"><img src="files/wordpress-logo.png" alt="WordPress"></a></p>
+<p class="docs"><a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a><br>
+2.2 — 0.16 seconds</p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

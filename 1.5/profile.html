@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Profile — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function customToggleLink() {
+	// TODO: Only show link if there's a hidden row
+	document.write('<small>(<a href="javascript:;" id="customtoggle" onclick="toggleHidden()">Show hidden</a>)</small>');
+	// TODO: Rotate link to say "show" or "hide"
+	// TODO: Use DOM
+}
+
+function toggleHidden() {
+	var allElements = document.getElementsByTagName('tr');
+	for (i = 0; i < allElements.length; i++) {
+		if ( allElements[i].className.indexOf('hidden') != -1 ) {
+			 allElements[i].className = allElements[i].className.replace('hidden', '');
+		}
+	}
+}
+
+
+//]]>
+</script>
+
+</head>
+<body>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html" class="current">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (Administrator)</a></li>
+</ul>
+
+<ul id="adminmenu2">
+
+	<li><a href="profile.html" class="current">Your Profile</a></li>
+	<li><a href="#">Authors &amp; Users</a></li>
+</ul>
+<div class="wrap">
+<h2>Profile</h2>
+<form name="profile" id="profile" action="profile.html" method="post">
+	<p>
+    <input type="hidden" name="action" value="update">
+    <input type="hidden" name="checkuser_id" value="1">
+  </p>
+
+  <table width="99%" border="0" cellspacing="2" cellpadding="3" class="editform">
+    <tbody><tr>
+      <th width="33%" scope="row">Login:</th>
+      <td width="67%">admin</td>
+    </tr>
+    <tr>
+      <th scope="row">Level:</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th scope="row">Posts:</th>
+      <td>    1</td>
+    </tr>
+    <tr>
+      <th scope="row">First name:</th>
+      <td><input type="text" name="newuser_firstname" id="newuser_firstname" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">Last name:</th>
+      <td><input type="text" name="newuser_lastname" id="newuser_lastname2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">Nickname:</th>
+      <td><input type="text" name="newuser_nickname" id="newuser_nickname2" value="Administrator"></td>
+    </tr>
+    <tr>
+      <th scope="row">How to display name: </th>
+      <td><select name="newuser_idmode">
+        <option value="nickname" selected="selected">Administrator</option>
+        <option value="login">admin</option>
+				      </select>        </td>
+    </tr>
+    <tr>
+      <th scope="row">E-mail:</th>
+      <td><input type="text" name="newuser_email" id="newuser_email2" value="admin@admin.com"></td>
+    </tr>
+    <tr>
+      <th scope="row">Website:</th>
+      <td><input type="text" name="newuser_url" id="newuser_url2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">ICQ:</th>
+      <td><input type="text" name="newuser_icq" id="newuser_icq2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">AIM:</th>
+      <td><input type="text" name="newuser_aim" id="newuser_aim2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">MSN IM: </th>
+      <td><input type="text" name="newuser_msn" id="newuser_msn2" value=""></td>
+    </tr>
+    <tr>
+      <th scope="row">Yahoo IM: </th>
+      <td>        <input type="text" name="newuser_yim" id="newuser_yim2" value="">      </td>
+    </tr>
+    <tr>
+      <th scope="row">Profile:</th>
+      <td><textarea name="user_description" rows="5" id="textarea2" style="width: 99%; "></textarea></td>
+    </tr>
+    <tr>
+      <th scope="row">New <strong>Password</strong> (Leave blank to stay the same.)</th>
+      <td><input type="password" name="pass1" size="16" value="">
+      	<br>
+        <input type="password" name="pass2" size="16" value=""></td>
+    </tr>
+  </tbody></table>
+  <p class="submit">
+    <input type="submit" value="Update Profile »" name="submit">
+  </p>
+</form>
+</div>
+
+
+<div class="wrap">
+    <script type="text/javascript">
+//<![CDATA[
+function addPanel()
+        {
+          if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function"))
+            window.sidebar.addPanel("WordPress Post: Test blog","sidebar.php","");
+          else
+            alert();
+        }
+//]]>
+</script>
+    <strong>SideBar</strong><br>
+    Add the <a href="profile.html#" onclick="addPanel()">WordPress Sidebar</a>! 
+    </div>
+	
+<div id="footer"><p><a href="http://wordpress.org/"><img src="files/wp-small.png" alt="WordPress"></a><br>
+1.5 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.04 seconds</p>
+
+<p><a href="http://spreadfirefox.com/community/?q=affiliates&id=2490&t=1" title="WordPress recommends the open-source Firefox browser"><img src="files/get-firefox.png" alt="Get Firefox"></a></p>
+</div>
+
+
+
+</body></html>

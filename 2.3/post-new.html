@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+
+<title>Test blog › Create New Post — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<script type="text/javascript">
+//<![CDATA[
+function addLoadEvent(func) {if ( typeof wpOnload!='function'){wpOnload=func;}else{ var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}}
+//]]>
+</script>
+<style type="text/css">* html { overflow-x: hidden; }</style>
+<script type="text/javascript" src="files/fat00000.js"></script>
+<script type="text/javascript" src="files/prototyp.js"></script>
+<script type="text/javascript" src="files/jquery00.js"></script>
+<script type="text/javascript" src="files/interfac.js"></script>
+<script type="text/javascript" src="files/tw-sack0.js"></script>
+<script type="text/javascript" src="files/autosave.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	autosaveL10n = {
+		autosaveInterval: "120",
+		errorText: "Error: %response%",
+		saveText: "Saved at %time%.",
+		requestFile: "#",
+		savingText: "Saving Draft..."
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/dbx00000.js"></script>
+<script type="text/javascript" src="files/dbx-admi.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	dbxL10n = {
+		manager: "postmeta",
+		open: "open",
+		close: "close",
+		moveMouse: "click-down and drag to move this box",
+		toggleMouse: "click to %toggle% this box",
+		moveKey: "use the arrow keys to move this box",
+		toggleKey: ", or press the enter key to %toggle% it"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/wp-ajax0.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	WPAjaxL10n = {
+		defaultUrl: "admin-ajax.php",
+		permText: "You don\'t have permission to do that.",
+		strangeText: "Something strange happened.  Try refreshing the page.",
+		whoaText: "Slow down, I\'m still sending your data!"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/list-man.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	listManL10n = {
+		jumpText: "Jump to new item",
+		delText: "Are you sure you want to delete this %thing%?"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/custom-f.js"></script>
+<script type="text/javascript" src="files/cat00000.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	catL10n = {
+		add: "Add",
+		how: "Separate multiple categories with commas."
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/tiny_mce.js"></script>
+<script type="text/javascript" src="files/tiny_mcf.js"></script>
+</head>
+<body class="wp-admin ">
+<div id="wphead">
+<h1>Test blog <span id="viewsite">(<a href="http://localhost/historic-wordpress/2.3/">View site »</a>)</span></h1>
+</div>
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Profile</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post-new.html" class="current">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="edit-comments.html">Comments</a></li>
+	<li><a href="link-manager.html">Blogroll</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="#" class="current">Write Post</a></li>
+	<li><a href="#">Write Page</a></li>
+</ul>
+<div id="update-nag">A new version of WordPress is available! <a href="http://wordpress.org/download/">Please update now</a>.</div>
+
+
+
+
+<form name="post" action="#" method="post" id="post">
+
+<div class="wrap">
+<input type="hidden" name="_wpnonce" value="7d284e30e2"><input type="hidden" name="_wp_http_referer" value="#">
+<input type="hidden" name="user_ID" value="1">
+<input type="hidden" id="hiddenaction" name="action" value="post">
+<input type="hidden" id="originalaction" name="originalaction" value="post">
+<input type="hidden" name="post_author" value>
+<input type="hidden" id="post_type" name="post_type" value="post">
+
+<input type="hidden" id="post_ID" name="temp_ID" value="-1369339405"><script type="text/javascript">
+function focusit() {
+	// focus on first input field
+	document.post.title.focus();
+}
+addLoadEvent(focusit);
+</script>
+<div id="poststuff">
+
+<div id="moremeta">
+<div id="grabit" class="dbx-group">
+
+<fieldset id="categorydiv" class="dbx-box">
+<h3 class="dbx-handle">Categories</h3>
+<div class="dbx-content">
+<p id="jaxcat"></p>
+<ul id="categorychecklist"><li id="category-1"><label for="in-category-1" class="selectit"><input value="1" type="checkbox" name="post_category[]" id="in-category-1"> Uncategorized</label></li></ul></div>
+</fieldset>
+
+<fieldset id="commentstatusdiv" class="dbx-box">
+<h3 class="dbx-handle">Discussion</h3>
+<div class="dbx-content">
+<input name="advanced_view" type="hidden" value="1">
+<label for="comment_status" class="selectit">
+<input name="comment_status" type="checkbox" id="comment_status" value="open" checked="checked">
+Allow Comments</label>
+<label for="ping_status" class="selectit"><input name="ping_status" type="checkbox" id="ping_status" value="open" checked="checked"> Allow Pings</label>
+</div>
+</fieldset>
+
+<fieldset id="passworddiv" class="dbx-box">
+<h3 class="dbx-handle">Post Password</h3>
+<div class="dbx-content"><input name="post_password" type="text" size="13" id="post_password" value></div>
+</fieldset>
+
+<fieldset id="slugdiv" class="dbx-box">
+<h3 class="dbx-handle">Post Slug</h3>
+<div class="dbx-content"><input name="post_name" type="text" size="13" id="post_name" value></div>
+</fieldset>
+
+<fieldset id="poststatusdiv" class="dbx-box">
+<h3 class="dbx-handle">Post Status</h3>
+<div class="dbx-content">
+	<label for="post_status_publish" class="selectit"><input id="post_status_publish" name="post_status" type="radio" value="publish"> Published</label>
+	<label for="post_status_pending" class="selectit"><input id="post_status_pending" name="post_status" type="radio" value="pending"> Pending Review</label>
+	  <label for="post_status_draft" class="selectit"><input id="post_status_draft" name="post_status" type="radio" value="draft" checked="checked"> Draft</label>
+	  <label for="post_status_private" class="selectit"><input id="post_status_private" name="post_status" type="radio" value="private"> Private</label></div>
+</fieldset>
+
+<fieldset id="posttimestampdiv" class="dbx-box">
+<h3 class="dbx-handle">Post Timestamp</h3>
+<div class="dbx-content"><fieldset><legend><input type="checkbox" class="checkbox" name="edit_date" value="1" id="timestamp"> <label for="timestamp">Edit timestamp</label></legend><select name="mm" onchange="edit_date.checked=true">
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5" selected="selected">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+</select>
+<input type="text" id="jj" name="jj" value="23" size="2" maxlength="2" onchange="edit_date.checked=true">
+<input type="text" id="aa" name="aa" value="2013" size="4" maxlength="5" onchange="edit_date.checked=true"> @
+<input type="text" id="hh" name="hh" value="22" size="2" maxlength="2" onchange="edit_date.checked=true"> :
+<input type="text" id="mn" name="mn" value="03" size="2" maxlength="2" onchange="edit_date.checked=true">
+<input type="hidden" id="ss" name="ss" value="25" size="2" maxlength="2" onchange="edit_date.checked=true">
+</fieldset>
+	</div>
+</fieldset>
+
+
+
+</div>
+</div>
+
+<fieldset id="titlediv">
+	<legend>Title</legend>
+	<div><input type="text" name="post_title" size="30" tabindex="1" value id="title"></div>
+</fieldset>
+
+<fieldset id="postdivrich">
+<legend>Post
+</legend>
+
+		<style type="text/css">
+		#postdivrich table, #postdivrich #quicktags {border-top: none;}
+		#quicktags {border-bottom: none; padding-bottom: 2px; margin-bottom: -1px;}
+		#edButtons {border-bottom: 1px solid #ccc;}
+	</style>
+	<div id="edButtons" style="display:none;">
+		<div class="zerosize"><input accesskey="e" type="button" onclick="switchEditors(&quot;content&quot;)"></div>
+		<input id="edButtonPreview" class="edButtonFore" type="button" value="Visual">
+		<input id="edButtonHTML" class="edButtonBack" type="button" value="Code" onclick="switchEditors(&quot;content&quot;)">
+	</div>
+	<script type="text/javascript">
+	// <![CDATA[
+		if ( typeof tinyMCE != "undefined" && tinyMCE.configs.length > 0 )
+			document.getElementById('edButtons').style.display = 'block';
+	// ]]>
+	</script>
+
+		<div id="quicktags">
+	<script type="text/javascript" src="files/quicktag.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	quicktagsL10n = {
+		quickLinks: "(Quick Links)",
+		wordLookup: "Enter a word to look up:",
+		dictionaryLookup: "Dictionary lookup",
+		lookup: "lookup",
+		closeAllOpenTags: "Close all open tags",
+		closeTags: "close tags",
+		enterURL: "Enter the URL",
+		enterImageURL: "Enter the URL of the image",
+		enterImageDescription: "Enter a description of the image"
+	}
+/* ]]> */
+</script>
+	<script type="text/javascript">edToolbar()</script>
+	</div>
+	<script type="text/javascript">
+	// <![CDATA[
+		if ( typeof tinyMCE != "undefined" && tinyMCE.configs.length > 0 )
+			document.getElementById("quicktags").style.display="none";
+	// ]]>
+	</script>
+	<div><textarea class="mceEditor" rows="10" cols="40" name="content" tabindex="2" id="content"></textarea></div>
+	<script type="text/javascript">
+	//<!--
+	edCanvas = document.getElementById('content');
+		// If tinyMCE is defined.
+	if ( typeof tinyMCE != 'undefined' ) {
+	// This code is meant to allow tabbing from Title to Post (TinyMCE).
+		if ( tinyMCE.isMSIE ) {
+			document.getElementById('title').onkeydown = function (e) {
+				e = e ? e : window.event;
+				if (e.keyCode == 9 && !e.shiftKey && !e.controlKey && !e.altKey) {
+					var i = tinyMCE.getInstanceById('content');
+					if(typeof i ==  'undefined')
+						return true;
+					tinyMCE.execCommand("mceStartTyping");
+					this.blur();
+					i.contentWindow.focus();
+					e.returnValue = false;
+					return false;
+				}
+			}
+		} else {
+			document.getElementById('title').onkeypress = function (e) {
+				e = e ? e : window.event;
+				if (e.keyCode == 9 && !e.shiftKey && !e.controlKey && !e.altKey) {
+					var i = tinyMCE.getInstanceById('content');
+					if(typeof i ==  'undefined')
+						return true;
+					tinyMCE.execCommand("mceStartTyping");
+					this.blur();
+					i.contentWindow.focus();
+					e.returnValue = false;
+					return false;
+				}
+			}
+		}
+	}
+		//-->
+	</script>
+	</fieldset>
+
+<input type="hidden" name="post_pingback" value="1" id="post_pingback"><input type="hidden" name="prev_status" value="draft">
+<fieldset id="tagdiv">
+	<legend>Tags (separate multiple tags with commas: cats, pet food, dogs)</legend>
+	<div><input type="text" name="tags_input" class="tags-input" id="tags-input" size="30" tabindex="3" value></div>
+</fieldset>
+
+<p class="submit">
+<span id="autosave"></span>
+<input name="save" type="submit" id="save" tabindex="3" value="Save and Continue Editing"><input type="submit" name="submit" value="Save" style="font-weight: bold;" tabindex="4">
+	<input name="publish" type="submit" id="publish" tabindex="5" accesskey="p" value="Publish">
+<input name="referredby" type="hidden" id="referredby" value="redo"></p>
+
+
+<iframe id="uploading" name="uploading" frameborder="0" src="files/upload00.htm">This feature requires iframe support.</iframe>
+<div id="advancedstuff" class="dbx-group">
+
+<div class="dbx-b-ox-wrapper">
+<fieldset id="postexcerpt" class="dbx-box">
+<div class="dbx-h-andle-wrapper">
+<h3 class="dbx-handle">Optional Excerpt</h3>
+</div>
+<div class="dbx-c-ontent-wrapper">
+<div class="dbx-content"><textarea rows="1" cols="40" name="excerpt" tabindex="6" id="excerpt"></textarea></div>
+</div>
+</fieldset>
+</div>
+
+<div class="dbx-b-ox-wrapper">
+<fieldset id="trackbacksdiv" class="dbx-box">
+<div class="dbx-h-andle-wrapper">
+<h3 class="dbx-handle">Trackbacks</h3>
+</div>
+<div class="dbx-c-ontent-wrapper">
+<div class="dbx-content">Send trackbacks to: <input type="text" name="trackback_url" style="width: 415px" id="trackback" tabindex="7" value> (Separate multiple URLs with spaces)
+</div>
+</div>
+</fieldset>
+</div>
+
+<div class="dbx-b-ox-wrapper">
+<fieldset id="postcustom" class="dbx-box">
+<div class="dbx-h-andle-wrapper">
+<h3 class="dbx-handle">Custom Fields</h3>
+</div>
+<div class="dbx-c-ontent-wrapper">
+<div id="postcustomstuff" class="dbx-content">
+<table cellpadding="3">
+<tbody id="the-list"><tr style="display: none;"><td>&nbsp;</td></tr></tbody>
+</table>
+<h3>Add a new custom field:</h3>
+<table id="newmeta" cellspacing="3" cellpadding="3">
+	<tr>
+<th colspan="2">Key</th>
+<th>Value</th>
+</tr>
+	<tr valign="top">
+		<td align="right" width="18%">
+</td>
+<td><input type="text" id="metakeyinput" name="metakeyinput" tabindex="7"></td>
+		<td><textarea id="metavalue" name="metavalue" rows="3" cols="25" tabindex="8"></textarea></td>
+	</tr>
+
+</table>
+<p class="submit"><input type="submit" id="updatemetasub" name="updatemeta" tabindex="9" value="Add Custom Field »"></p>
+<div id="ajax-response"></div>
+</div>
+</div>
+</fieldset>
+</div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</form>
+
+
+
+<div id="footer">
+<p>Thank you for creating with <a href="http://wordpress.org/">WordPress</a> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a> | <strong>Your WordPress 2.3 is out of date. <a href="http://wordpress.org/download/">Please update</a>.</strong></p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+</body>
+</html>

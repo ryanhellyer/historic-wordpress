@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>WordPress > Post / Edit</title>
+<link rel="stylesheet" href="files/b2.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+
+<script language="javascript" type="text/javascript">
+<!-- hiding from old terrible browsers
+
+	function profile(userID) {
+		window.open ("b2profile.php?action=viewprofile&user="+userID, "Profile", "width=500, height=450, location=0, menubar=0, resizable=0, scrollbars=1, status=1, titlebar=0, toolbar=0, screenX=60, left=60, screenY=60, top=60");
+	}
+
+	function launchupload() {
+		window.open ("b2#", "b2upload", "width=380,height=360,location=0,menubar=0,resizable=1,scrollbars=yes,status=1,toolbar=0");
+	}
+
+//  End -->
+</script>
+</head>
+<body>
+
+<h1 id="wphead"><a href="http://wordpress.org" rel="external"><span>WordPress</span></a></h1> 
+<ul id="adminmenu">
+
+	<li><a href='b2edit.php'>Post / Edit</a></li>
+	<li><a href='b2team.php'>Team</a></li>
+	<li><a href='b2options.php'>Options</a></li>
+	<li><a href='b2#'>Categories</a></li>
+	<li><a href='b2template.php'>Template</a></li>
+	<li><a href='linkmanager.php'>Manage Links</a></li>
+	<li><a href="javascript:profile(1)">My Profile</a></li>
+	<li><a href="#index.php">View site</a></li>
+	<li id="last"><a href="#b2login.php?action=logout">Logout</a></li>
+</ul>
+<br clear="all" />
+
+<h2>Post / Edit</h2>
+<div class="wrap">
+
+<form name="post" action="b2edit.php" method="POST">
+<input type="hidden" name="user_ID" value="1" />
+<input type="hidden" name="action" value='post' />
+
+ 
+      
+<table>
+      <tr> 
+        <td width="210"> <label for="title">Title:</label> <br /> <input type="text" name="post_title" size="25" tabindex="1" style="width: 190px;" value="" id="title" /> 
+        </td>
+        <td> <label for="category">Category :</label> <br /> 
+          <select name="post_category" style="width:170px;" tabindex="2" id="category"><option value="1">General</option><option value="2">General</option></select>        </td>
+        <td><label for="post_status">Post Status:</label><br />
+          
+      <select name="post_status" id="post_status">
+        <option value="publish">Publish</option>
+            <option value="draft">Draft</option>
+            <option value="private">Private</option>
+          </select> </td>
+        <td><label for="comment_status">Comments:</label><br />
+          
+      <select name="comment_status" id="comment_status">
+        <option value="open">Open</option>
+            <option value="closed">Closed</option>
+          </select> </td>
+        <td><label for="ping_status">Pings:</label><br />
+          
+      <select name="ping_status" id="ping_status">
+        <option value="open">Open</option>
+            <option value="closed">Closed</option>
+          </select></td>
+        <td><label for="post_password">Post Password:</label>
+      <br />
+          <input name="post_password" type="text" id="post_password" value="" /> </td>
+      </tr>
+    </table>
+  
+<label for="excerpt">Excerpt:</label><p><textarea rows="3" cols="40" style="width:100%" name="excerpt" tabindex="4" wrap="virtual" id="excerpt"></textarea></p>
+
+<table width="100%">
+	<tr>
+		<td>
+<label for="content">Post:</label>		</td>
+		<td align="right">
+<script src="files/b2quicktags.js" language="JavaScript" type="text/javascript">
+</script><table border="0" cellspacing="0" cellpadding="0">
+<tr align="center" valign="middle">
+<td>
+<input type="button" class="quicktags" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold; width: 30px" onClick="bbstyle(this.form,0)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic; width: 30px" onClick="bbstyle(this.form,2)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline; width: 30px" onClick="bbstyle(this.form,4)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="s" name="addbbcode6" value="strike" style="text-decoration: line-through;width: 50px" onClick="bbstyle(this.form,6)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="p" name="addbbcode10" value="&lt;p>" style="width: 40px" onClick="bbstyle(this.form,10)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="l" name="addbbcode12" value="&lt;li>" style="width: 40px" onClick="bbstyle(this.form,12)" />
+</td><td>
+<input type="button" class="quicktags" accesskey="q" name="addbbcode8" value="b-quote" style="width: 60px" onClick="bbstyle(this.form,8)" />
+</td><td>
+<input type="button" class="quicktags" accesskey="m" name="addbbcode14" value="image" title="insert an image" style="width: 40px"  onClick="bblink(this.form,14)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="h" name="addbbcode16" value="link" title="insert a link" style="text-decoration: underline; width: 40px" onClick="bblink(this.form,16)" />
+</td><td>
+<input type="button" class="quicktags" accesskey="c" name="closetags" value="X" title="Close all tags" style="width: 30px; font-weigh: bolder;"  onClick="bbstyle(document.post,-1)" /></td>
+</tr>
+</table>		</td>
+	</tr>
+</table>
+<textarea rows="9" cols="40" style="width:100%" name="content" tabindex="4" wrap="virtual" id="content"></textarea><br />
+
+<input type="checkbox" class="checkbox" name="post_pingback" value="1" checked="checked" tabindex="7" id="pingback" /> <label for="pingback">PingBack the URLs in this post</label><br />
+<p><input type="submit" name="submit" value="Blog this!" class="search" style="font-weight: bold;" tabindex="5" /></p>
+
+
+<p><label for="trackback"><strong>TrackBack</strong> an <acronym title="Uniform Resource Locator">URL</acronym>:</label> (Seperate multiple URLs with commas.)<br /><input type="text" name="trackback_url" style="width: 415px" id="trackback" /></p><p><input type="checkbox" class="checkbox" name="edit_date" value="1" id="timestamp"  /> <label for="timestamp">Edit timestamp</label><br /><input type="text" name="jj" value="22" size="2" maxlength="2" />
+<select name="mm">
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5" selected>May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+</select>
+<input type="text" name="aa" value="2013" size="4" maxlength="5" /> @ 
+<input type="text" name="hh" value="14" size="2" maxlength="2" /> : 
+<input type="text" name="mn" value="38" size="2" maxlength="2" /> : 
+<input type="text" name="ss" value="07" size="2" maxlength="2" /> </p>
+	</form>
+</div><br /><br /><div class="wrap">
+
+<table width="100%">
+  <tr>
+    <td valign="top" width="200">
+      Show posts:
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td colspan="2" align="center"><!-- show next/previous X posts -->
+            <form name="previousXposts" method="get" action="">
+            </form>
+          </td>
+          <td>
+            <form name="nextXposts" method="get" action="">
+              <input type="hidden" name="poststart" value="20" />
+              <input type="hidden" name="postend" value="40" />
+              <input type="submit" name="submitnext" class="search" value="20 >" />
+            </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="200"><!-- show X first/last posts -->
+      <form name="showXfirstlastposts" method="get" action="">
+        <input type="text" name="posts" value="20" style="width:40px;" /?>
+        <select name="order">
+          <option value="DESC" selected='selected'>last posts</option>
+          <option value="ASC" >first posts</option>
+        </select>&nbsp;
+        <input type="submit" name="submitfirstlast" class="search" value="OK" />
+      </form>
+    </td>
+    <td valign="top"><!-- show post X to post X -->
+      <form name="showXfirstlastposts" method="get" action="">
+        <input type="text" name="poststart" value="0" style="width:40px;" /?>&nbsp;to&nbsp;<input type="text" name="postend" value="20" style="width:40px;" /?>&nbsp;
+        <select name="order">
+          <option value="DESC" "selected='selected'">from the end</option>
+        <option value="ASC" "">from the start</option>
+        </select>&nbsp;
+        <input type="submit" name="submitXtoX" class="search" value="OK" />
+      </form>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="wrap">
+<table width="100%">
+	<td valign="top" width="33%">
+		<form name="searchform" action="b2edit.php" method="get">
+			<input type="hidden" name="a" value="s" />
+			<input onfocus="this.value='';" onblur="if (this.value=='') {this.value='search...';}" type="text" name="s" value="search..." size="7" style="width: 100px;" />
+			<input type="submit" name="submit" value="search" class="search" />
+		</form>
+	</td>
+<td valign="top" width="33%" align="center">
+	<form name="viewcat" action="b2edit.php" method="get">
+		<select name="cat" style="width:140px;">
+		<option value="all">All Categories</option>
+		<option value="1"></option><option value="2"></option>		</select>
+		<input type="submit" name="submit" value="View" class="search" />
+	</form>
+</td>
+<td valign="top" width="33%" align="right">
+<form name="viewarc" action="b2edit.php" method="get">
+	<select name="m" style="width:120px;"><option value="201305">May 2013</option>
+</select>	<input type="submit" name="submit" value="View" class="search" />
+</form>
+</td>
+
+</table>
+
+				<p>
+				<strong>2013/05/20 @ 16:34:28</strong> [ <a href="#b2edit.php?p=2&c=1">no comments</a>
+				 - <a href='b2edit.php?action=edit&amp;post=2'>Edit</a> - <a href='b2edit.php?action=delete&amp;post=2' onclick="return confirm('You are about to delete this post \'\'\n  \'Cancel\' to stop, \'OK\' to delete.')">Delete</a> 				]
+				<br />
+				<font color="#999999"><b><a href="#index.php?p=2&amp;more=1&amp;c=1" title="permalink">Hello world!</a></b> by <b>admin (<a href="#javascript:profile(1)">admin</a>)</b>, in <b>General</b></font><br />
+				<a name="2"></a>				<p>Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!</p>
+			</p>
+							<br />
+
+				<p>
+				<strong>2013/05/20 @ 16:32:16</strong> [ <a href="#b2#">2 comments</a>
+				 - <a href='b2edit.php?action=edit&amp;post=1'>Edit</a> - <a href='b2edit.php?action=delete&amp;post=1' onclick="return confirm('You are about to delete this post \'\'\n  \'Cancel\' to stop, \'OK\' to delete.')">Delete</a> 				]
+				<br />
+				<font color="#999999"><b><a href="#index.php?p=1&amp;more=1&amp;c=1" title="permalink">Hello world!</a></b> by <b>admin (<a href="#javascript:profile(1)">admin</a>)</b>, in <b>General</b></font><br />
+				<a name="1"></a>				<p>Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!</p>
+			</p>
+							<br />
+
+	
+</div>
+
+<div class="wrap">
+<table width="100%">
+  <tr>
+    <td valign="top" width="200">Show posts:</td>
+    <td>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td colspan="2" align="center"><!-- show next/previous X posts -->
+            <form name="previousXposts" method="get">              <input type="hidden" name="poststart" value="0" />
+              <input type="hidden" name="postend" value="20" />
+              <input type="submit" name="submitprevious" class="search" value="< Previous 20" />            </form>
+          </td>
+          <td>
+            <form name="nextXposts" method="get">
+              <input type="hidden" name="poststart" value="20" />
+              <input type="hidden" name="postend" value="40" />
+              <input type="submit" name="submitnext" class="search" value="Next 20 >" />
+            </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="200"><!-- show X first/last posts -->
+      <form name="showXfirstlastposts" method="get">
+        <input type="text" name="posts" value="20" style="width:40px;" /?>
+        <select name="order">&nbsp;<option value="DESC"  selected>last posts</option>
+<option value="ASC" >first posts</option>
+        </select>&nbsp;<input type="submit" name="submitfirstlast" class="search" value="OK" />
+      </form>
+    </td>
+    <td valign="top"><!-- show post X to post X -->
+      <form name="showXfirstlastposts" method="get">
+        <input type="text" name="poststart" value="0" style="width:40px;" /?>&nbsp;to&nbsp;<input type="text" name="postend" value="20" style="width:40px;" /?>&nbsp;<select name="order">
+          <option value="DESC"  selected>from the end</option>
+<option value="ASC" >from the start</option>
+          </select>&nbsp;<input type="submit" name="submitXtoX" class="search" value="OK" />
+        </form>
+      </td>
+    </tr>
+  </table>
+</div></div>
+<div align="center" style="width: 100%" class="tabletoprow"><strong><a href="http://wordpress.org">WordPress</a></strong> 0.71 <a href="http://wordpress.org/support/">Support Forums</a></div>
+
+</body>
+</html>

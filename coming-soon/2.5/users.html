@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)users.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › Users — WordPress</title>
+<link rel="stylesheet" href="files/global.css" type="text/css">
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="stylesheet" href="files/colors-fresh.css" type="text/css">
+<!--[if gte IE 6]>
+<link rel='stylesheet' href='css/ie.css?version=2.5' type='text/css' />
+<![endif]-->
+<script type="text/javascript">
+//<![CDATA[
+addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document).ready(func); else if (typeof wpOnload!='function'){wpOnload=func;} else {var oldonload=wpOnload; wpOnload=function(){oldonload();func();}}};
+//]]>
+</script>
+<style type="text/css">* html { overflow-x: hidden; }</style>
+<style type="text/css" media="all">
+	@import '#/wp-includes/js/thickbox/thickbox.css?1';
+	div#TB_title {
+		background-color: #222222;
+		color: #cfcfcf;
+	}
+	div#TB_title a, div#TB_title a:visited {
+		color: #cfcfcf;
+	}
+</style>
+<script type="text/javascript" src="files/jquery.js"></script>
+<script type="text/javascript" src="files/common.js"></script>
+<script type="text/javascript" src="files/jquery.color.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpAjax = {
+		noPerm: "You do not have permission to do that.",
+		broken: "An unidentified error has occurred."
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/wp-ajax-response.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpListL10n = {
+		url: "admin-ajax.php"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/wp-lists.js"></script>
+<script type="text/javascript" src="files/users.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="files/forms.js"></script>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<body class="wp-admin ">
+<div id="wpwrap">
+<div id="wpcontent">
+<div id="wphead">
+<h1>Test blog<span id="viewsite"><a href="#">Visit Site</a></span></h1>
+</div>
+<div id="user_info"><p>Howdy, <a href="profile.html">admin</a>! | <a href="wp-login.html" title="Log Out">Log Out</a> | <a href="http://codex.wordpress.org/">Help</a> | <a href="http://wordpress.org/support/">Forums</a></p></div>
+
+
+<ul id="dashmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li></ul>
+
+<ul id="adminmenu">
+
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="themes.html">Design</a></li>
+	<li><a href="edit-comments.html">Comments <span id="awaiting-mod" class="count-0"><span class="comment-count">0</span></span></a></li></ul>
+
+<ul id="sidemenu">
+
+	<li><a href="options-general.html">Settings</a> </li>
+	<li><a href="plugins.html">Plugins</a> </li>
+	<li><a href="users.html" class="current">Users</a></li></ul>
+
+
+<ul id="submenu">
+
+	<li><a href="users.html" class="current">Authors &amp; Users</a></li>
+	<li><a href="profile.html">Your Profile</a></li>
+</ul>
+<div id="update-nag">WordPress 3.5.1 is available! <a href="http://wordpress.org/download/">Please update now</a>.</div><div id="wpbody">
+
+
+<div class="wrap">
+<form id="posts-filter" action="" method="get">
+			<h2>Manage Users</h2>
+	
+<ul class="subsubsub">
+<li><a href="users.html" class="current">All Users</a> |</li><li><a href="users.html?role=administrator">Administrator (1)</a></li></ul>
+	<p id="post-search">
+	<input type="text" id="post-search-input" name="usersearch" value="">
+	<input type="submit" value="Search Users" class="button">
+	</p>
+
+<div class="tablenav">
+
+
+<div class="alignleft">
+<input type="submit" value="Delete" name="deleteit" class="button-secondary delete">
+<select name="new_role"><option value="">Change role to…</option>"
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option>
+	<option value="subscriber">Subscriber</option></select>
+<input type="submit" value="Change" name="changeit" class="button-secondary">
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="9feff3c0b4"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.5/wp-admin/users.html"></div>
+
+<br class="clear">
+</div>
+
+<br class="clear">
+
+	
+
+
+	
+<table class="widefat">
+<thead>
+<tr class="thead">
+	<th scope="col" class="check-column"><input type="checkbox" onclick="checkAll(document.getElementById(&#39;posts-filter&#39;));"> </th>
+	<th>Username</th>
+	<th>Name</th>
+	<th>E-mail</th>
+	<th>Role</th>
+	<th class="num">Posts</th>
+</tr>
+</thead>
+<tbody id="users" class="list:user user-list">
+
+	<tr id="user-1" class="alternate">
+		<th scope="row" class="check-column"><input type="checkbox" name="users[]" id="user_1" class="administrator" value="1"></th>
+		<td><strong><a href="profile.html">admin</a></strong></td>
+		<td> </td>
+		<td><a href="mailto:admin@admin.com" title="e-mail: admin@admin.com">admin@admin.com</a></td>
+		<td>Administrator</td>
+		<td class="num"><a href="#" title="View posts by this author" class="edit">1</a></td>
+	</tr></tbody>
+</table>
+
+<div class="tablenav">
+
+
+<br class="clear">
+</div>
+
+</form>
+
+</div>
+
+
+<br class="clear">
+
+<div class="wrap">
+<h2 id="add-new-user">Add New User</h2>
+
+<div id="ajax-response"></div>
+
+<p>Users cannot currently <a href="#">register themselves</a>, but you can manually create users here.</p><form action="users.html#add-new-user" method="post" name="adduser" id="adduser" class="add:users: validate">
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="2937c3f8e4"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.5/wp-admin/users.html"><table class="form-table">
+	<tbody><tr class="form-field form-required">
+		<th scope="row">Username (required)<input name="action" type="hidden" id="action" value="adduser"></th>
+		<td><input name="user_login" type="text" id="user_login" value=""></td>
+	</tr>
+	<tr class="form-field">
+		<th scope="row">First Name </th>
+		<td><input name="first_name" type="text" id="first_name" value=""></td>
+	</tr>
+	<tr class="form-field">
+		<th scope="row">Last Name </th>
+		<td><input name="last_name" type="text" id="last_name" value=""></td>
+	</tr>
+	<tr class="form-field form-required">
+		<th scope="row">E-mail (required)</th>
+		<td><input name="email" type="text" id="email" value=""></td>
+	</tr>
+	<tr class="form-field">
+		<th scope="row">Website</th>
+		<td><input name="url" type="text" id="url" value=""></td>
+	</tr>
+
+	<tr class="form-field form-required">
+		<th scope="row">Password (twice) </th>
+		<td><input name="pass1" type="password" id="pass1">
+		<br>
+		<input name="pass2" type="password" id="pass2"></td>
+	</tr>
+
+	<tr class="form-field">
+		<th scope="row">Role</th>
+		<td><select name="role" id="role">
+			
+	<option selected="selected" value="subscriber">Subscriber</option>
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option>			</select>
+		</td>
+	</tr>
+</tbody></table>
+<p class="submit">
+	<input type="hidden" name="wp_http_referer" value="/historic-wordpress/2.5/wp-admin/users.html">	<input name="adduser" type="submit" id="addusersub" value="Add User">
+</p>
+</form>
+
+</div>
+
+</div><!-- wpbody -->
+</div><!-- wpcontent -->
+</div><!-- wpwrap -->
+<div id="footer">
+<p>Thank you for creating with <a href="http://wordpress.org/">WordPress</a> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a> | <strong><a href="http://wordpress.org/download/">Get Version 3.5.1</a></strong></p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+<div id="tTips"><p id="tTips_inside"></p></div></body></html>

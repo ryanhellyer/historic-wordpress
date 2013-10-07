@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Dashboard — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function customToggleLink() {
+	// TODO: Only show link if there's a hidden row
+	document.write('<small>(<a href="javascript:;" id="customtoggle" onclick="toggleHidden()">Show hidden</a>)</small>');
+	// TODO: Rotate link to say "show" or "hide"
+	// TODO: Use DOM
+}
+
+function toggleHidden() {
+	var allElements = document.getElementsByTagName('tr');
+	for (i = 0; i < allElements.length; i++) {
+		if ( allElements[i].className.indexOf('hidden') != -1 ) {
+			 allElements[i].className = allElements[i].className.replace('hidden', '');
+		}
+	}
+}
+
+
+//]]>
+</script>
+</head>
+<body>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html" class="current">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (Administrator)</a></li>
+</ul>
+
+
+<div class="wrap">
+<div id="zeitgeist">
+<h2>Latest Activity</h2>
+<div>
+<h3>Posts <a href="edit.html" title="More posts...">»</a></h3>
+<ul>
+<li><a href="post.html?action=edit&post=1">Hello world!</a></li></ul>
+</div>
+
+
+<div>
+<h3>Comments <a href="#" title="More comments...">»</a></h3>
+<ul>
+<li><a href="http://wordpress.org/" rel="external nofollow">Mr WordPress</a> on <a href="hello-world.html#comment-1">Hello world!</a> <small>( <a href="post.html?action=editcomment&comment=1">Edit</a> )</small></li></ul>
+</div>
+
+
+<div>
+<h3>Blog Stats</h3>
+<p>There are currently 1 <a href="edit.html" title="posts">posts</a> and 1 <a href="#" title="Comments">comments</a>, contained within 1 <a href="categories.html" title="categories">categories</a>.</p>
+</div>
+
+<div id="incominglinks">
+<h3>Incoming Links <cite><a href="http://www.technorati.com/cosmos/search.html?url=http://localhost/historic-wordpress/1.5/&partner=wordpress">More »</a></cite></h3>
+<ul>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/cUOeBF91D8A/">Druva Announces 'End-of-XP' Migration Tool as Support Sunsets</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/clrvaL-5kiI/">Social Marketing for Seniors -- Don't Dismiss This Growing Demographic</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/qWspbYGGX8s/">Microsoft's New Xbox One Game Console Introduced</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/tlZh-lpOgko/">Immigration Bill Moves to Full Senate; Tech Industries to Benefit</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/0pYAfcev_7o/">The Secret Of Finding a Great Title for Your Blog and Getting Everyone to Read Below It</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/r8HKSxwc6RQ/">Berkshire Sues NeighborCity.com in IP Dispute</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/mp4EEh_XwY8/">Nesta Launches Crowdfunding Directory</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/D7mfD7Y1e5A/">Why Skype Premium is Bad for Business</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/bXk9rehBUts/">Zappos Adds Mobile Features on Apple iOS App</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/csUzuavj268/">Malware and Viruses Still Pose a Threat </a></li>
+</ul>
+</div>
+
+</div>
+
+<h2>Dashboard</h2>
+<p>Below is the latest news from the official WordPress development blog, click on a title to read the full entry.</p>
+<h3>WordPress Development Blog</h3>
+<h4><a href="http://wordpress.org/news/2013/05/wordpress-3-6-beta-3/">WordPress 3.6 Beta 3</a> — 12 days ago</h4>
+<p>WordPress 3.6 Beta 3 is now available! This is software still in development and&nbsp;we really&nbsp;don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version.&nbsp;To test WordPress 3.6, try the&nbsp;WordPress Beta Tester&nbsp;plugin (you’ll want “bleeding edge nightlies”). Or you can&nbsp;download the beta here&nbsp;(zip). Beta […]</p>
+<h4><a href="http://wordpress.org/news/2013/04/wordpress-3-6-beta-2/">WordPress 3.6 Beta 2</a> — 23 days ago</h4>
+<p>WordPress 3.6 Beta 2 is now available! This is software still in development and&nbsp;we really&nbsp;don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version.&nbsp;To test WordPress 3.6, try the&nbsp;WordPress Beta Tester&nbsp;plugin (you’ll want “bleeding edge nightlies”). Or you can&nbsp;download the beta here&nbsp;(zip). The […]</p>
+<h4><a href="http://wordpress.org/news/2013/04/summer-mentorship-programs-gsoc-and-gnome/">Summer Mentorship Programs: GSoC and Gnome</a> — 28 days ago</h4>
+<p>As an open source, free software project, WordPress depends on the contributions of hundreds of people from around the globe — contributions in areas like core code, documentation, answering questions in the support forums, translation, and all the other things it takes to make WordPress the best publishing platform it can be, with the most […]</p>
+
+
+<div id="planetnews">
+<h3>Other WordPress News <a href="http://planet.wordpress.org/">more »</a></h3>
+<ul>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/umlgyjF8rs8/wordpress-nostalgia">WPTavern: WordPress Nostalgia</a></li>
+<li><a href="http://wordpress.tv/2013/05/22/james-banks-mobile-first-development-and-design-for-wordpress/">WordPress.tv: James Banks: Mobile First Development and Design for WordPress</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/OeENyG5J5qs/help-ithemes-help-their-neighbors">WPTavern: Help iThemes Help Their Neighbors</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/60XdX6380Vo/user-guide-how-to-choose-a-plugin">WPTavern: User Guide – How To Choose A Plugin</a></li>
+<li><a href="http://wordpress.tv/2013/05/21/tom-mcfarlin-a-discussion-and-introduction-to-wordpress-plugins/">WordPress.tv: Tom McFarlin: A Discussion and Introduction To WordPress Plugins</a></li>
+<li><a href="http://wordpress.tv/2013/05/21/dan-petrovic-10-ways-to-screw-up-in-google-10-ways-to-fix-it/">WordPress.tv: Dan Petrovic: 10 Ways to Screw Up in Google &amp; 10 Ways to Fix It</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/xq8KNVLJi9M/improve-the-documentation-efforts-by-taking-a-survey">WPTavern: Improve The Documentation Efforts By Taking A Survey</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/p6yVX84z_sg/secrets-revealed-wltc-and-wptavern">WPTavern: Secrets Revealed: WLTC and WPTavern</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/ExwWeuHfwjg/ui-enhancement-suggestion-visual-cue-for-media-library-searching">WPTavern: UI Enhancement Suggestion – Visual Cue For Media Library Searching</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/7Aj6DhnDJ6I/local-10th-anniversary-wordpress-party-next-week">WPTavern: Local 10th Anniversary WordPress Party Next Week</a></li>
+<li><a href="http://wordpress.tv/2013/05/20/bronson-quick-my-wordpress-development-workflow/">WordPress.tv: Bronson Quick: My WordPress Development Workflow</a></li>
+<li><a href="http://wordpress.tv/2013/05/20/piero-bellomo-creare-temi-custom-con-_s-theme-bootstrap-e-less/">WordPress.tv: Piero Bellomo: Creare Temi custom con _s Theme, Bootstrap e LESS</a></li>
+<li><a href="http://ma.tt/2013/05/yahooblr/">Matt: On Yahoo-Tumblr</a></li>
+<li><a href="http://wordpress.tv/2013/05/19/joe-ortenzi-inclusive-design-for-wordpress/">WordPress.tv: Joe Ortenzi: Inclusive Design for WordPress</a></li>
+<li><a href="http://wordpress.tv/2013/05/18/mikey-de-wildt-how-to-survive-people-discovering-your-plugin/">WordPress.tv: Mikey De Wildt: How to Survive People Discovering Your Plugin</a></li>
+<li><a href="http://ma.tt/2013/05/houston-modern-american-boomtown/">Matt: Houston: Modern American Boomtown</a></li>
+<li><a href="http://ma.tt/2013/05/the-physical-graph/">Matt: The Physical Graph</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/82DyMFQcfXk/code-garage-migrations-are-underway">WPTavern: Code Garage Migrations Are Underway</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/gI-_S7CeGYU/do-you-mistrust-a-company-that-misspells-wordpress">WPTavern: Do You Mistrust A Company That Misspells WordPress?</a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/7lWEbGUXtwo/buddypress-1-7-2-released-contains-security-fixes">WPTavern: BuddyPress 1.7.2 Released – Contains Security Fixes</a></li>
+</ul>
+</div>
+<div style="clear: both">&nbsp;
+<br clear="all">
+</div>
+</div>
+
+<div id="footer"><p><a href="http://wordpress.org/"><img src="files/wp-small.png" alt="WordPress"></a><br>
+1.5 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+4.39 seconds</p>
+
+<p><a href="http://spreadfirefox.com/community/?q=affiliates&id=2490&t=1" title="WordPress recommends the open-source Firefox browser"><img src="files/get-firefox.png" alt="Get Firefox"></a></p>
+</div>
+
+
+
+</body></html>

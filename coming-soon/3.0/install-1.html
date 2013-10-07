@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)install.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>WordPress › Installation</title>
+	<link rel="stylesheet" id="install-css" href="./install-1_files/install.css" type="text/css" media="all">
+<style type="text/css"></style><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<body>
+<h1 id="logo"><img alt="WordPress" src="./install-1_files/wordpress-logo.png"></h1>
+
+<h1>Welcome</h1>
+<p>Welcome to the famous five minute WordPress installation process! You may want to browse the <a href="#/readme.html">ReadMe documentation</a> at your leisure. Otherwise, just fill in the information below and you’ll be on your way to using the most extendable and powerful personal publishing platform in the world.</p>
+
+<h1>Information needed</h1>
+<p>Please provide the following information. Don’t worry, you can always change these settings later.</p>
+
+<form id="setup" method="post" action="#">
+	<table class="form-table">
+		<tbody><tr>
+			<th scope="row"><label for="weblog_title">Site Title</label></th>
+			<td><input name="weblog_title" type="text" id="weblog_title" size="25" value=""></td>
+		</tr>
+		<tr>
+			<th scope="row"><label for="user_name">Username</label></th>
+			<td>
+			<input name="user_name" type="text" id="user_login" size="25" value="admin">
+				<p>Usernames can have only alphanumeric characters, spaces, underscores, hyphens, periods and the @ symbol.</p>
+						</td>
+		</tr>
+				<tr>
+			<th scope="row">
+				<label for="admin_password">Password, twice</label>
+				<p>A password will be automatically generated for you if you leave this blank.</p>
+			</th>
+			<td>
+				<input name="admin_password" type="password" id="pass1" size="25" value="">
+				<p><input name="admin_password2" type="password" id="pass2" size="25" value=""></p>
+				<div id="pass-strength-result">Strength indicator</div>
+				<p>Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ &amp; ).</p>
+			</td>
+		</tr>
+				<tr>
+			<th scope="row"><label for="admin_email">Your E-mail</label></th>
+			<td><input name="admin_email" type="text" id="admin_email" size="25" value="">
+			<p>Double-check your email address before continuing.</p></td>
+		</tr>
+		<tr>
+			<td colspan="2"><label><input type="checkbox" name="blog_public" value="1" checked="checked"> Allow my site to appear in search engines like Google and Technorati.</label></td>
+		</tr>
+	</tbody></table>
+	<p class="step"><input type="submit" name="Submit" value="Install WordPress" class="button"></p>
+</form>
+<script type="text/javascript">var t = document.getElementById('weblog_title'); if (t){ t.focus(); }</script>
+<script type="text/javascript" src="./install-1_files/jquery.js"></script>
+<script type="text/javascript" src="./install-1_files/password-strength-meter.js"></script>
+<script type="text/javascript" src="./install-1_files/user-profile.js"></script>
+<script type="text/javascript" src="./install-1_files/utils.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pwsL10n = {
+ empty: "Strength indicator",
+ short: "Very weak",
+ bad: "Weak",
+ good: "Medium",
+ strong: "Strong",
+ mismatch: "Mismatch"
+};
+try{convertEntities(pwsL10n);}catch(e){};
+/* ]]> */
+</script>
+
+
+</body></html>

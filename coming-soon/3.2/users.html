@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)users.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Users ‹ Test blog — WordPress</title>
+<script type="text/javascript">
+//<![CDATA[
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var userSettings = {
+		'url': '/historic-wordpress/3.2/',
+		'uid': '1',
+		'time':'1369316983'
+	},
+	ajaxurl = 'admin-ajax.php',
+	pagenow = 'users',
+	typenow = '',
+	adminpage = 'users-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+//]]>
+</script>
+<link rel="stylesheet" href="files/load-styles.php" type="text/css" media="all">
+<link rel="stylesheet" id="colors-css" href="files/colors-fresh.css" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='css/ie.css?ver=20110627' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="files/l10n.js"></script>
+<script type="text/javascript" src="files/load-scripts.php"></script>
+</head>
+<body class="wp-admin js  users-php branch-3-2 version-3-2 admin-color-fresh">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="wpwrap">
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<div id="adminmenushadow"></div>
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item wp-has-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<div class="wp-menu-image"><a href="dashboard.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="dashboard.html" class="wp-first-item wp-has-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" tabindex="1">Dashboard</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Dashboard</div><ul><li class="wp-first-item"><a href="dashboard.html" class="wp-first-item" tabindex="1">Home</a></li><li><a href="update-core.php" tabindex="1">Updates <span class="update-plugins count-4" title="1 WordPress Update, 1 Plugin Update, 2 Theme Updates"><span class="update-count">4</span></span></a></li></ul></div></div></li>
+	<li class="wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
+	<div class="wp-menu-image"><a href="edit.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="edit.html" class="wp-has-submenu open-if-no-js menu-top menu-icon-post menu-top-first" tabindex="1">Posts</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Posts</div><ul><li class="wp-first-item"><a href="edit.html" class="wp-first-item" tabindex="1">All Posts</a></li><li><a href="post-new.html" tabindex="1">Add New</a></li><li><a href="edit-tags.php?taxonomy=category" tabindex="1">Categories</a></li><li><a href="edit-tags.php?taxonomy=post_tag" tabindex="1">Post Tags</a></li></ul></div></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-media" id="menu-media">
+	<div class="wp-menu-image"><a href="#"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="#" class="wp-has-submenu menu-top menu-icon-media" tabindex="1">Media</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Media</div><ul><li class="wp-first-item"><a href="#" class="wp-first-item" tabindex="1">Library</a></li><li><a href="media-new.php" tabindex="1">Add New</a></li></ul></div></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-links" id="menu-links">
+	<div class="wp-menu-image"><a href=""><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="" class="wp-has-submenu menu-top menu-icon-links" tabindex="1">Links</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Links</div><ul><li class="wp-first-item"><a href="" class="wp-first-item" tabindex="1">All Links</a></li><li><a href="#" tabindex="1">Add New</a></li><li><a href="edit-tags.php?taxonomy=link_category" tabindex="1">Link Categories</a></li></ul></div></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-page" id="menu-pages">
+	<div class="wp-menu-image"><a href="edit.php?post_type=page"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="edit.php?post_type=page" class="wp-has-submenu menu-top menu-icon-page" tabindex="1">Pages</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Pages</div><ul><li class="wp-first-item"><a href="edit.php?post_type=page" class="wp-first-item" tabindex="1">All Pages</a></li><li><a href="post-new.html?post_type=page" tabindex="1">Add New</a></li></ul></div></div></li>
+	<li class="menu-top menu-icon-comments menu-top-last" id="menu-comments">
+	<div class="wp-menu-image"><a href="edit-comments.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle" style="display: none;"><br></div><a href="edit-comments.html" class="menu-top menu-icon-comments menu-top-last" tabindex="1">Comments <span class="awaiting-mod count-0"><span class="pending-count">0</span></span></a></li>
+	<li class="wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<div class="wp-menu-image"><a href="themes.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="themes.html" class="wp-has-submenu menu-top menu-icon-appearance menu-top-first" tabindex="1">Appearance</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Appearance</div><ul><li class="wp-first-item"><a href="themes.html" class="wp-first-item" tabindex="1">Themes</a></li><li><a href="#" tabindex="1">Widgets</a></li><li><a href="nav-menus.php" tabindex="1">Menus</a></li><li><a href="#page=theme_options" tabindex="1">Theme Options</a></li><li><a href="#page=custom-background" tabindex="1">Background</a></li><li><a href="#page=custom-header" tabindex="1">Header</a></li><li><a href="#" tabindex="1">Editor</a></li></ul></div></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<div class="wp-menu-image"><a href="plugins.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="plugins.html" class="wp-has-submenu menu-top menu-icon-plugins" tabindex="1">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></div><ul><li class="wp-first-item"><a href="plugins.html" class="wp-first-item" tabindex="1">Installed Plugins</a></li><li><a href="plugin-install.php" tabindex="1">Add New</a></li><li><a href="#" tabindex="1">Editor</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users" id="menu-users">
+	<div class="wp-menu-image"><a href="users.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="users.html" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users" tabindex="1">Users</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Users</div><ul><li class="wp-first-item current"><a href="users.html" class="wp-first-item current" tabindex="1">All Users</a></li><li><a href="user-new.php" tabindex="1">Add New</a></li><li><a href="profile.html" tabindex="1">Your Profile</a></li></ul></div></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-tools" id="menu-tools">
+	<div class="wp-menu-image"><a href="tools.php"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="tools.php" class="wp-has-submenu menu-top menu-icon-tools" tabindex="1">Tools</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Tools</div><ul><li class="wp-first-item"><a href="tools.php" class="wp-first-item" tabindex="1">Available Tools</a></li><li><a href="import.html" tabindex="1">Import</a></li><li><a href="#" tabindex="1">Export</a></li></ul></div></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<div class="wp-menu-image"><a href="options-general.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br></div><a href="options-general.html" class="wp-has-submenu menu-top menu-icon-settings menu-top-last" tabindex="1">Settings</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Settings</div><ul><li class="wp-first-item"><a href="options-general.html" class="wp-first-item" tabindex="1">General</a></li><li><a href="#" tabindex="1">Writing</a></li><li><a href="#" tabindex="1">Reading</a></li><li><a href="#" tabindex="1">Discussion</a></li><li><a href="options-media.php" tabindex="1">Media</a></li><li><a href="#" tabindex="1">Privacy</a></li><li><a href="#" tabindex="1">Permalinks</a></li></ul></div></div></li><li id="collapse-menu" class="hide-if-no-js"><div id="collapse-button"><div></div></div><span>Collapse menu</span></li></ul>
+</div>
+<div id="wpcontent">
+<div id="wphead">
+
+<img id="header-logo" src="files/blank.gif" alt="" width="16" height="16">
+<h1 id="site-heading">
+	<a href="#" title="Visit Site">
+		<span id="site-title">Test blog</span>
+	</a>
+</h1>
+
+
+<div id="wphead-info">
+<div id="user_info">
+	<p class="hide-if-js">Howdy, admin | <a href="profile.html" title="Edit your profile">Your Profile</a> | <a href="wp-login.html&_wpnonce=fa56549def" title="Log Out">Log Out</a></p>
+
+	<div class="hide-if-no-js">
+		<p>Howdy, admin</p>
+		<div id="user_info_arrow"></div>
+		<div id="user_info_links_wrap"><div id="user_info_links">
+			<ul><li><a href="profile.html" title="Edit your profile">Your Profile</a></li><li><a href="wp-login.html&_wpnonce=fa56549def" title="Log Out">Log Out</a></li></ul>
+		</div></div>
+	</div>
+</div>
+</div>
+
+</div>
+
+<div id="wpbody">
+
+<div id="wpbody-content">
+<div id="screen-meta">
+<div id="screen-options-wrap" class="hidden">
+	<form id="adv-settings" action="" method="post">
+			<h5>Show on screen</h5>
+		<div class="metabox-prefs">
+<label for="email-hide"><input class="hide-column-tog" name="email-hide" type="checkbox" id="email-hide" value="email" checked="checked">E-mail</label>
+<label for="role-hide"><input class="hide-column-tog" name="role-hide" type="checkbox" id="role-hide" value="role" checked="checked">Role</label>
+<label for="posts-hide"><input class="hide-column-tog" name="posts-hide" type="checkbox" id="posts-hide" value="posts" checked="checked">Posts</label>
+			<br class="clear">
+		</div>
+			<h5>Show on screen</h5>
+		<div class="screen-options">
+<input type="text" class="screen-per-page" name="wp_screen_options[value]" id="users_per_page" maxlength="3" value="20"> <label for="users_per_page">Users</label>
+<input type="submit" name="screen-options-apply" id="screen-options-apply" class="button" value="Apply"><input type="hidden" name="wp_screen_options[option]" value="users_per_page"></div>
+<div><input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="4c4c350493"></div>
+</form>
+</div>
+
+	<div id="contextual-help-wrap" class="hidden">
+	<div class="metabox-prefs"><p>This screen lists all the existing users for your site. Each user has one of five defined roles as set by the site admin: Site Administrator, Editor, Author, Contributor, or Subscriber. Users with roles other than Administrator will see fewer options in the dashboard navigation when they are logged in, based on their role.</p><p>You can customize the display of information on this screen as you can on other screens, by using the Screen Options tab and the on-screen filters.</p><p>To add a new user for your site, click the Add New button at the top of the screen or Add New in the Users menu section.</p><p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Users_Screen" target="_blank">Documentation on Managing Users</a></p><p><a href="http://codex.wordpress.org/Roles_and_Capabilities" target="_blank">Descriptions of Roles and Capabilities</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p></div>
+	</div>
+
+<div id="screen-meta-links">
+<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+<a href="users.html#contextual-help" id="contextual-help-link" class="show-settings">Help</a>
+</div>
+<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+<a href="users.html#screen-options" id="show-settings-link" class="show-settings">Screen Options</a>
+</div>
+</div>
+</div>
+<div class="update-nag"><a href="http://codex.wordpress.org/Version_3.5.1">WordPress 3.5.1</a> is available! <a href="update-core.php">Please update now</a>.</div>
+
+<div class="wrap">
+<div id="icon-users" class="icon32"><br></div><h2>
+Users	<a href="user-new.php" class="add-new-h2">Add New</a>
+</h2>
+
+<ul class="subsubsub">
+	<li class="all"><a href="users.html" class="current">All <span class="count">(1)</span></a> |</li>
+	<li class="administrator"><a href="users.html?role=administrator">Administrator <span class="count">(1)</span></a></li>
+</ul>
+<form action="" method="get">
+
+<p class="search-box">
+	<label class="screen-reader-text" for="user-search-input">Search Users:</label>
+	<input type="text" id="user-search-input" name="s" value="">
+	<input type="submit" name="" id="search-submit" class="button" value="Search Users"></p>
+
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="4f890dfddb"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/3.2/wp-admin/users.html">	<div class="tablenav top">
+
+		<div class="alignleft actions">
+			<select name="action">
+<option value="-1" selected="selected">Bulk Actions</option>
+	<option value="delete">Delete</option>
+</select>
+<input type="submit" name="" id="doaction" class="button-secondary action" value="Apply">
+		</div>
+	<div class="alignleft actions">
+		<label class="screen-reader-text" for="new_role">Change role to…</label>
+		<select name="new_role" id="new_role">
+			<option value="">Change role to…</option>
+			
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option>
+	<option value="subscriber">Subscriber</option>		</select>
+		<input type="submit" name="changeit" id="changeit" class="button-secondary" value="Change">	</div>
+<div class="tablenav-pages one-page"><span class="displaying-num">1 item</span>
+<span class="pagination-links"><a class="first-page disabled" title="Go to the first page" href="users.html">«</a>
+<a class="prev-page disabled" title="Go to the previous page" href="users.html?paged=1">‹</a>
+<span class="paging-input"><input class="current-page" title="Current page" type="text" name="paged" value="1" size="1"> of <span class="total-pages">1</span></span>
+<a class="next-page disabled" title="Go to the next page" href="users.html?paged=1">›</a>
+<a class="last-page disabled" title="Go to the last page" href="users.html?paged=1">»</a></span></div>
+		<br class="clear">
+	</div>
+<table class="wp-list-table widefat fixed users" cellspacing="0">
+	<thead>
+	<tr>
+		<th scope="col" id="cb" class="manage-column column-cb check-column" style=""><input type="checkbox"></th><th scope="col" id="username" class="manage-column column-username sortable desc" style=""><a href="users.html?orderby=login&order=asc"><span>Username</span><span class="sorting-indicator"></span></a></th><th scope="col" id="name" class="manage-column column-name sortable desc" style=""><a href="users.html?orderby=name&order=asc"><span>Name</span><span class="sorting-indicator"></span></a></th><th scope="col" id="email" class="manage-column column-email sortable desc" style=""><a href="users.html?orderby=email&order=asc"><span>E-mail</span><span class="sorting-indicator"></span></a></th><th scope="col" id="role" class="manage-column column-role" style="">Role</th><th scope="col" id="posts" class="manage-column column-posts num" style="">Posts</th>	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<th scope="col" class="manage-column column-cb check-column" style=""><input type="checkbox"></th><th scope="col" class="manage-column column-username sortable desc" style=""><a href="users.html?orderby=login&order=asc"><span>Username</span><span class="sorting-indicator"></span></a></th><th scope="col" class="manage-column column-name sortable desc" style=""><a href="users.html?orderby=name&order=asc"><span>Name</span><span class="sorting-indicator"></span></a></th><th scope="col" class="manage-column column-email sortable desc" style=""><a href="users.html?orderby=email&order=asc"><span>E-mail</span><span class="sorting-indicator"></span></a></th><th scope="col" class="manage-column column-role" style="">Role</th><th scope="col" class="manage-column column-posts num" style="">Posts</th>	</tr>
+	</tfoot>
+
+	<tbody id="the-list" class="list:user">
+		
+	<tr id="user-1" class="alternate"><th scope="row" class="check-column"><input type="checkbox" name="users[]" id="user_1" class="administrator" value="1"></th><td class="username column-username"><img alt="" src="files/64e1b8d34f425d19e1ee2ea7236d3028" class="avatar avatar-32 photo" height="32" width="32"> <strong><a href="profile.html">admin</a></strong><br><div class="row-actions"><span class="edit"><a href="profile.html">Edit</a></span></div></td><td class="name column-name"> </td><td class="email column-email"><a href="mailto:admin@admin.com" title="E-mail: admin@admin.com">admin@admin.com</a></td><td class="role column-role">Administrator</td><td class="posts column-posts num"><a href="#" title="View posts by this author" class="edit">1</a></td></tr>	</tbody>
+</table>
+	<div class="tablenav bottom">
+
+		<div class="alignleft actions">
+			<select name="action2">
+<option value="-1" selected="selected">Bulk Actions</option>
+	<option value="delete">Delete</option>
+</select>
+<input type="submit" name="" id="doaction2" class="button-secondary action" value="Apply">
+		</div>
+<div class="tablenav-pages one-page"><span class="displaying-num">1 item</span>
+<span class="pagination-links"><a class="first-page disabled" title="Go to the first page" href="users.html">«</a>
+<a class="prev-page disabled" title="Go to the previous page" href="users.html?paged=1">‹</a>
+<span class="paging-input">1 of <span class="total-pages">1</span></span>
+<a class="next-page disabled" title="Go to the next page" href="users.html?paged=1">›</a>
+<a class="last-page disabled" title="Go to the last page" href="users.html?paged=1">»</a></span></div>
+		<br class="clear">
+	</div>
+</form>
+
+<br class="clear">
+</div>
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="footer">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span> • <a href="http://codex.wordpress.org/">Documentation</a> • <a href="freedoms.php">Freedoms</a> • <a href="http://wordpress.org/support/forum/4">Feedback</a> • <a href="credits.php">Credits</a></p>
+<p id="footer-upgrade" class="alignright"><strong><a href="update-core.php">Get Version 3.5.1</a></strong></p>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var commonL10n = {
+	warnDelete: "You are about to permanently delete the selected items.\n  \'Cancel\' to stop, \'OK\' to delete."
+};
+try{convertEntities(commonL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/load-scripts(1).php"></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+</body></html>

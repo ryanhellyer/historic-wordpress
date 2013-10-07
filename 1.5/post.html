@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Create New Post — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function customToggleLink() {
+	// TODO: Only show link if there's a hidden row
+	document.write('<small>(<a href="javascript:;" id="customtoggle" onclick="toggleHidden()">Show hidden</a>)</small>');
+	// TODO: Rotate link to say "show" or "hide"
+	// TODO: Use DOM
+}
+
+function toggleHidden() {
+	var allElements = document.getElementsByTagName('tr');
+	for (i = 0; i < allElements.length; i++) {
+		if ( allElements[i].className.indexOf('hidden') != -1 ) {
+			 allElements[i].className = allElements[i].className.replace('hidden', '');
+		}
+	}
+}
+
+
+//]]>
+</script>
+
+</head>
+<body>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html" class="current">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (Administrator)</a></li>
+</ul>
+
+<ul id="adminmenu2">
+
+	<li><a href="post.html" class="current">Write Post</a></li>
+	<li><a href="#">Write Page</a></li>
+</ul>
+
+<div class="wrap">
+<h2>Write Post</h2>
+<form name="post" action="#" method="post" id="simple">
+
+<input type="hidden" name="user_ID" value="1">
+<input type="hidden" name="action" value="post">
+
+<script type="text/javascript">
+<!--
+function focusit() {
+	// focus on first input field
+	document.getElementById('title').focus();
+}
+window.onload = focusit;
+//-->
+</script>
+
+<div id="poststuff">
+    <fieldset id="titlediv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#title" title="Help on titles">Title</a></legend> 
+	  <div><input type="text" name="post_title" size="30" tabindex="1" value="" id="title"></div>
+    </fieldset>
+
+    <fieldset id="categorydiv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#category" title="Help on categories">Categories</a></legend> 
+	  <div><label for="category-1" class="selectit"><input value="1" type="checkbox" name="post_category[]" id="category-1" checked="checked"> Uncategorized</label>
+
+<span class="cat-nest">
+</span>
+</div>
+    </fieldset>
+
+<br>
+<fieldset id="postdiv">
+    <legend><a href="http://wordpress.org/docs/reference/post/#post" title="Help with post field">Post</a></legend>
+<div><textarea rows="9" cols="40" name="content" tabindex="4" id="content"></textarea></div>
+</fieldset>
+
+
+<script type="text/javascript">
+<!--
+edCanvas = document.getElementById('content');
+//-->
+</script>
+
+<input type="hidden" name="post_pingback" value="1" id="post_pingback">
+
+<p><label for="trackback"> <a href="http://wordpress.org/docs/reference/post/#trackback" title="Help on trackbacks"><strong>TrackBack</strong> a <abbr title="Universal Resource Identifier">URI</abbr></a>:</label> (Separate multiple <abbr title="Universal Resource Identifier">URI</abbr>s with spaces.)<br>	<input type="text" name="trackback_url" style="width: 360px" id="trackback" tabindex="7"></p>
+
+<p class="submit"><input name="saveasdraft" type="submit" id="saveasdraft" tabindex="9" value="Save as Draft"> 
+  <input name="saveasprivate" type="submit" id="saveasprivate" tabindex="10" value="Save as Private">
+
+  <input name="publish" type="submit" id="publish" tabindex="6" style="font-weight: bold;" value="Publish"> 
+
+<input name="advanced" type="submit" id="advancededit" tabindex="7" value="Advanced Editing »">  <input name="referredby" type="hidden" id="referredby" value="#">
+</p>
+
+
+</div>
+</form>
+
+</div>
+<div class="wrap">
+<h3>WordPress bookmarklet</h3>
+<p>You can drag the following link to your links bar or add it to your bookmarks and when you "Press it" it will open up a popup window with information and a link to the site you’re currently browsing so you can make a quick post about it. Try it out:</p><p>
+
+<a href="javascript:if(navigator.userAgent.indexOf('Safari') >= 0){Q=getSelection();}else{Q=document.selection?document.selection.createRange().text:document.getSelection();}void(window.open('bookmarklet.php?text='+encodeURIComponent(Q)+'&popupurl='+encodeURIComponent(location.href)+'&popuptitle='+encodeURIComponent(document.title),'WordPress bookmarklet','scrollbars=yes,width=600,height=460,left=100,top=150,status=yes'));">Press It - Test blog</a> 
+</p>
+</div>
+
+<div id="footer"><p><a href="http://wordpress.org/"><img src="files/wp-small.png" alt="WordPress"></a><br>
+1.5 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.04 seconds</p>
+
+<p><a href="http://spreadfirefox.com/community/?q=affiliates&id=2490&t=1" title="WordPress recommends the open-source Firefox browser"><img src="files/get-firefox.png" alt="Get Firefox"></a></p>
+</div>
+
+
+
+</body></html>

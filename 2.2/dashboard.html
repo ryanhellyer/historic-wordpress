@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049) -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › Dashboard — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+ 
+<script type="text/javascript">
+//<![CDATA[
+function addLoadEvent(func) {if ( typeof wpOnload!='function'){wpOnload=func;}else{ var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}}
+//]]>
+</script>
+<style type="text/css">* html { overflow-x: hidden; }</style>
+<script type="text/javascript" src="files/fat.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./dashboard_files/prototype.js"></script>
+<script type="text/javascript" src="files/jquery.js"></script>
+<script type="text/javascript" src="./dashboard_files/interface.js"></script>
+<script type="text/javascript">
+Event.observe( window, 'load', dashboard_init, false );
+function dashboard_init() {
+	var update1 = new Ajax.Updater( 'incominglinks', 'index-extra.php?jax=incominglinks' );
+	var update2 = new Ajax.Updater( 'devnews', 'index-extra.php?jax=devnews' );
+	var update3 = new Ajax.Updater( 'planetnews', 'index-extra.php?jax=planetnews'	);
+}
+</script>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<body>
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Profile</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html" class="current">Dashboard</a></li>
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="edit-comments.html">Comments</a></li>
+	<li><a href="link-manager.html">Blogroll</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li></ul>
+
+<div id="minisub"></div>
+
+<div class="wrap">
+
+<h2>Welcome to WordPress</h2>
+
+<div id="zeitgeist">
+<h2>Latest Activity</h2>
+
+<div id="incominglinks"><h3>Incoming Links <cite><a href="http://www.technorati.com/search/#/?partner=wordpress">More »</a></cite></h3>
+<ul>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/cUOeBF91D8A/">Druva Announces ‘End-of-XP’ Migration Tool as Support Sunsets</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/clrvaL-5kiI/">Social Marketing for Seniors — Don’t Dismiss This Growing Demographic</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/qWspbYGGX8s/">Microsoft’s New Xbox One Game Console Introduced</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/tlZh-lpOgko/">Immigration Bill Moves to Full Senate; Tech Industries to Benefit</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/0pYAfcev_7o/">The Secret Of Finding a Great Title for Your Blog and Getting Everyone to Read Below It</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/r8HKSxwc6RQ/">Berkshire Sues NeighborCity.com in IP Dispute</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/mp4EEh_XwY8/">Nesta Launches Crowdfunding Directory</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/D7mfD7Y1e5A/">Why Skype Premium is Bad for Business</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/bXk9rehBUts/">Zappos Adds Mobile Features on Apple iOS App</a></li>
+	<li><a href="http://feeds09.technorati.com/~r/trarticles/~3/csUzuavj268/">Malware and Viruses Still Pose a Threat </a></li>
+</ul>
+</div>
+
+<div>
+<h3>Comments <a href="edit-comments.html" title="More comments...">»</a></h3>
+
+
+<ul>
+<li><a href="http://wordpress.org/" rel="external nofollow">Mr WordPress</a> on <a href="hello-world.html#comment-1">Hello world!</a> <small>(<a href="#">Edit</a>)</small></li></ul>
+</div>
+
+<div>
+<h3>Posts <a href="edit.html" title="More posts...">»</a></h3>
+<ul>
+<li><a href="#">Hello world!</a></li></ul>
+</div>
+
+
+<div>
+<h3>Blog Stats</h3>
+
+<p>There are currently 1 <a href="edit.html" title="Posts">post</a> and 1 <a href="edit-comments.html" title="Comments">comment</a>, contained within 2 <a href="#" title="Categories">categories</a>.</p>
+</div>
+
+</div>
+
+<p>Use these links to get started:</p>
+
+<ul>
+	<li><a href="post-new.html">Write a post</a></li>
+	<li><a href="profile.html">Update your profile or change your password</a></li>
+	<li><a href="#">Add a link to your blogroll</a></li>
+	<li><a href="themes.html">Change your site’s look or theme</a></li>
+</ul>
+<p>Need help with WordPress? Please see our <a href="http://codex.wordpress.org/">documentation</a> or visit the <a href="http://wordpress.org/support/">support forums</a>.</p>
+
+<div id="devnews"><h3>WordPress Development Blog</h3>
+<h4><a href="http://wordpress.org/news/2013/05/wordpress-3-6-beta-3/">WordPress 3.6 Beta 3</a> — 12 days ago</h4>
+<p>WordPress 3.6 Beta 3 is now available! This is software still in development and&nbsp;we really&nbsp;don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version.&nbsp;To test WordPress 3.6, try the&nbsp;WordPress Beta Tester&nbsp;plugin (you’ll want “bleeding edge nightlies”). Or you can&nbsp;download the beta here&nbsp;(zip). Beta […]</p>
+<h4><a href="http://wordpress.org/news/2013/04/wordpress-3-6-beta-2/">WordPress 3.6 Beta 2</a> — 24 days ago</h4>
+<p>WordPress 3.6 Beta 2 is now available! This is software still in development and&nbsp;we really&nbsp;don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version.&nbsp;To test WordPress 3.6, try the&nbsp;WordPress Beta Tester&nbsp;plugin (you’ll want “bleeding edge nightlies”). Or you can&nbsp;download the beta here&nbsp;(zip). The […]</p>
+<h4><a href="http://wordpress.org/news/2013/04/summer-mentorship-programs-gsoc-and-gnome/">Summer Mentorship Programs: GSoC and Gnome</a> — 28 days ago</h4>
+<p>As an open source, free software project, WordPress depends on the contributions of hundreds of people from around the globe — contributions in areas like core code, documentation, answering questions in the support forums, translation, and all the other things it takes to make WordPress the best publishing platform it can be, with the most […]</p>
+
+</div>
+
+<div id="planetnews"><h3>Other WordPress News</h3>
+<ul>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/umlgyjF8rs8/wordpress-nostalgia"><span class="post"> WordPress Nostalgia</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://wordpress.tv/2013/05/22/james-banks-mobile-first-development-and-design-for-wordpress/"><span class="post"> James Banks: Mobile First Development and Design for WordPress</span><span class="hidden"> - </span><cite>WordPress.tv</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/OeENyG5J5qs/help-ithemes-help-their-neighbors"><span class="post"> Help iThemes Help Their Neighbors</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/60XdX6380Vo/user-guide-how-to-choose-a-plugin"><span class="post"> User Guide – How To Choose A Plugin</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://wordpress.tv/2013/05/21/tom-mcfarlin-a-discussion-and-introduction-to-wordpress-plugins/"><span class="post"> Tom McFarlin: A Discussion and Introduction To WordPress Plugins</span><span class="hidden"> - </span><cite>WordPress.tv</cite></a></li>
+<li><a href="http://wordpress.tv/2013/05/21/dan-petrovic-10-ways-to-screw-up-in-google-10-ways-to-fix-it/"><span class="post"> Dan Petrovic: 10 Ways to Screw Up in Google &amp; 10 Ways to Fix It</span><span class="hidden"> - </span><cite>WordPress.tv</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/xq8KNVLJi9M/improve-the-documentation-efforts-by-taking-a-survey"><span class="post"> Improve The Documentation Efforts By Taking A Survey</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/p6yVX84z_sg/secrets-revealed-wltc-and-wptavern"><span class="post"> Secrets Revealed: WLTC and WPTavern</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/ExwWeuHfwjg/ui-enhancement-suggestion-visual-cue-for-media-library-searching"><span class="post"> UI Enhancement Suggestion – Visual Cue For Media Library Searching</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/7Aj6DhnDJ6I/local-10th-anniversary-wordpress-party-next-week"><span class="post"> Local 10th Anniversary WordPress Party Next Week</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://wordpress.tv/2013/05/20/bronson-quick-my-wordpress-development-workflow/"><span class="post"> Bronson Quick: My WordPress Development Workflow</span><span class="hidden"> - </span><cite>WordPress.tv</cite></a></li>
+<li><a href="http://wordpress.tv/2013/05/20/piero-bellomo-creare-temi-custom-con-_s-theme-bootstrap-e-less/"><span class="post"> Piero Bellomo: Creare Temi custom con _s Theme, Bootstrap e LESS</span><span class="hidden"> - </span><cite>WordPress.tv</cite></a></li>
+<li><a href="http://ma.tt/2013/05/yahooblr/"><span class="post"> On Yahoo-Tumblr</span><span class="hidden"> - </span><cite>Matt</cite></a></li>
+<li><a href="http://wordpress.tv/2013/05/19/joe-ortenzi-inclusive-design-for-wordpress/"><span class="post"> Joe Ortenzi: Inclusive Design for WordPress</span><span class="hidden"> - </span><cite>WordPress.tv</cite></a></li>
+<li><a href="http://wordpress.tv/2013/05/18/mikey-de-wildt-how-to-survive-people-discovering-your-plugin/"><span class="post"> Mikey De Wildt: How to Survive People Discovering Your Plugin</span><span class="hidden"> - </span><cite>WordPress.tv</cite></a></li>
+<li><a href="http://ma.tt/2013/05/houston-modern-american-boomtown/"><span class="post"> Houston: Modern American Boomtown</span><span class="hidden"> - </span><cite>Matt</cite></a></li>
+<li><a href="http://ma.tt/2013/05/the-physical-graph/"><span class="post"> The Physical Graph</span><span class="hidden"> - </span><cite>Matt</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/82DyMFQcfXk/code-garage-migrations-are-underway"><span class="post"> Code Garage Migrations Are Underway</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/gI-_S7CeGYU/do-you-mistrust-a-company-that-misspells-wordpress"><span class="post"> Do You Mistrust A Company That Misspells WordPress?</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/7lWEbGUXtwo/buddypress-1-7-2-released-contains-security-fixes"><span class="post"> BuddyPress 1.7.2 Released – Contains Security Fixes</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
+</ul>
+<p class="readmore"><a href="http://planet.wordpress.org/">Read more »</a></p>
+</div>
+
+<div style="clear: both">&nbsp;
+<br clear="all">
+</div>
+</div>
+
+
+<div id="footer">
+<p class="logo"><a href="http://wordpress.org/" id="wordpress-logo"><img src="./dashboard_files/wordpress-logo.png" alt="WordPress"></a></p>
+<p class="docs"><a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a><br>
+2.2 — 0.08 seconds</p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

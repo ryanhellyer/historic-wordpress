@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0066)edit-comments.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › Edit Comments — WordPress</title>
+<link rel="stylesheet" href="./comments_files/wp-admin.css" type="text/css">
+ 
+<script type="text/javascript">
+//<![CDATA[
+function addLoadEvent(func) {if ( typeof wpOnload!='function'){wpOnload=func;}else{ var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}}
+//]]>
+</script>
+<style type="text/css">* html { overflow-x: hidden; }</style>
+<script type="text/javascript" src="./comments_files/fat.js"></script>
+<script type="text/javascript" src="./comments_files/prototype.js"></script>
+<script type="text/javascript" src="./comments_files/wp-ajax-js.php"></script>
+<script type="text/javascript" src="./comments_files/list-manipulation-js.php"></script>
+<script type="text/javascript" src="./comments_files/edit-comments.js"></script>
+</head>
+<body>
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Profile</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="./comments_files/comments.html" class="current">Comments</a></li>
+	<li><a href="link-manager.html">Blogroll</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="./comments_files/comments.html" class="current">Comments</a></li>
+	<li><a href="#">Awaiting Moderation (<span id="awaitmod">0</span>)</a></li>
+</ul>
+
+<script type="text/javascript">
+<!--
+function checkAll(form)
+{
+	for (i = 0, n = form.elements.length; i < n; i++) {
+		if(form.elements[i].type == "checkbox") {
+			if(form.elements[i].checked == true)
+				form.elements[i].checked = false;
+			else
+				form.elements[i].checked = true;
+		}
+	}
+}
+
+function getNumChecked(form)
+{
+	var num = 0;
+	for (i = 0, n = form.elements.length; i < n; i++) {
+		if(form.elements[i].type == "checkbox") {
+			if(form.elements[i].checked == true)
+				num++;
+		}
+	}
+	return num;
+}
+//-->
+</script>
+<div class="wrap">
+<h2>Comments</h2>
+<form name="searchform" action="" method="get" id="editcomments"> 
+  <fieldset> 
+  <legend>Show Comments That Contain...</legend> 
+  <input type="text" name="s" value="" size="17"> 
+  <input type="submit" name="submit" value="Search">  
+  <input type="hidden" name="mode" value="view">
+  (Searches within comment text, e-mail, URL, and IP address.)  </fieldset> 
+</form>
+<p><a href="#">View Mode</a> | <a href="#">Mass Edit Mode</a></p>
+
+<ol id="the-comment-list" class="commentlist" start="1"><li id="comment-1" class=" alternate"><p><strong>Mr WordPress</strong>  | <a href="http://wordpress.org/" rel="external">wordpress.org</a> | IP: <a href="http://ws.arin.net/cgi-bin/whois.pl?queryinput="></a></p>
+
+<p>Hi, this is a comment.<br>To delete a comment, just log in and view the post's comments. There you will have the option to edit or delete them.</p>
+
+<p>May 23, 3:11 PM — [
+ <a href="#">Edit</a> | <a href="#92a5937660" onclick="return deleteSomething( &#39;comment&#39;, 1, &#39;You are about to delete this comment by \&#39;Mr WordPress\&#39;.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;, theCommentList );">Delete</a> <span class="unapprove"> | <a href="#a574b5f432" onclick="return dimSomething( &#39;comment&#39;, 1, &#39;unapproved&#39;, theCommentList );">Unapprove</a> </span><span class="approve"> | <a href="#5736cef187" onclick="return dimSomething( &#39;comment&#39;, 1, &#39;unapproved&#39;, theCommentList );">Approve</a> </span> | <a href="#92a5937660" onclick="return deleteSomething( &#39;comment-as-spam&#39;, 1, &#39;You are about to mark as spam this comment by \&#39;Mr WordPress\&#39;.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to mark as spam.&#39;, theCommentList );">Spam</a>  | <a href="hello-world.html" title="Hello world!">View Post</a> ]</p>
+		</li></ol>
+
+<div id="ajax-response"></div>
+
+
+</div>
+
+
+<div id="footer">
+<p class="logo"><a href="http://wordpress.org/" id="wordpress-logo"><img src="./comments_files/wordpress-logo.png" alt="WordPress"></a></p>
+<p class="docs"><a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a><br>
+2.1 — 0.06 seconds</p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

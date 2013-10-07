@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>b2 > Post / Edit</title>
+<link rel="stylesheet" href="files/b2.css" type="text/css">
+<style type="text/css">
+<!--
+td.menutop {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-color: #999999;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-style: dashed;
+}
+textarea,input,select {
+	background-color: #f0f0f0;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: 2px;
+	margin: 1px;
+}
+.checkbox {
+-->
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+function DoSpell(formname, subject, body)
+{
+document.SPELLDATA.formname.value=formname
+document.SPELLDATA.subjectname.value=subject
+document.SPELLDATA.messagebodyname.value=body
+document.SPELLDATA.companyID.value="custom\\http://cafelog.com"
+document.SPELLDATA.language.value=1033
+document.SPELLDATA.opener.value="http://example.com/sproxy.pl"
+document.SPELLDATA.formaction.value="http://www.spellchecker.com/spell/startspelling.asp "
+window.open("http://example.com/b2spell.php","Spell",
+"toolbar=no,directories=no,location=yes,resizable=yes,width=620,height=400,top=100,left=100")
+}
+//-->
+</script><script language="javascript">
+<!-- hiding from old terrible browsers
+
+	function profile(userID) {
+		window.open ("b2profile.php?action=viewprofile&user="+userID, "Profile", "width=500, height=450, location=0, menubar=0, resizable=0, scrollbars=1, status=1, titlebar=0, toolbar=0, screenX=60, left=60, screenY=60, top=60");
+	}
+
+	function preview(form) {
+		var preview_date = "2013-05-22 17:47:28";
+		var preview_userid = "1";
+		var preview_title = form.post_title.value;
+		var preview_category = form.post_category.value;
+		var preview_content = form.content.value;
+		var preview_autobr = form.post_autobr.value;
+		preview_date = escape(preview_date);
+		preview_userid = escape(preview_userid);
+		preview_title = escape(preview_title);
+		preview_category = escape(preview_category);
+		preview_content = escape(preview_content);
+		preview_autobr = escape(preview_autobr);
+		window.open ("#index.php?preview=1&preview_date="+preview_date +"&preview_userid="+preview_userid +"&preview_title="+preview_title +"&preview_category="+preview_category +"&preview_content="+preview_content +"&preview_autobr="+preview_autobr ,"Preview", "location=0,menubar=1,resizable=1,scrollbars=yes,status=1,toolbar=0");
+	}
+
+	function launchupload() {
+		window.open ("b2#", "b2upload", "width=380,height=360,location=0,menubar=0,resizable=1,scrollbars=yes,status=1,toolbar=0");
+	}
+
+//  End -->
+</script>
+</head>
+<body bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table width="100%" cellpadding="0" cellspacing="0" align="center">
+<tr height="60">
+<td valign="top">
+<img src="files/blank.gif" width="1" height="5" alt="" border="0" />
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr height="15">
+
+<td height="15" width="20"><img src="files/blank.gif" width="1" height="1" alt="" /></td>
+
+<td rowspan="3" width="50" valign="top"><a href="http://cafelog.com/"><img src="files/b2minilogo.png" width="50" height="50" border="0" alt="visit b2's website" style="border-width:1px; border-color: #999999; border-style: dashed" /></a></td>
+
+<td><img src="files/blank.gif" width="1" height="1" alt="" /></td>
+<td width="150" style="text-align: right; padding-rightt: 6px;">
+<span style="color: #b0b0b0; font-family: verdana, arial, helvetica; font-size: 10px;">logged in as : <b>admin</b></span>
+</td>
+
+</tr>
+<tr>
+
+<td class="menutop" width="20">&nbsp;
+</td>
+
+<td class="menutop">
+<div class="menutop">
+
+
+
+
+&nbsp;<a href="b2edit.php" class="menutop" style="-font-weight: bold;">Post / Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:profile(1)" class="menutop">My Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="b2team.php" class="menutop">Team</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="b2options.php" class="menutop">Options</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="b2#" class="menutop">Categories</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="b2template.php" class="menutop">Template</a>
+</div>
+</td>
+
+<td width="150" class="menutop" align="right" bgcolor="#FF9900">
+<a href="#index.php" class="menutop">View site</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#b2login.php?action=logout" class="menutop">Logout</a>
+</td>
+
+</tr>
+<tr>
+
+<td>&nbsp;</td>
+<td style="padding-left: 6px;"><span class="menutoptitle">:: Post / Edit</span></td>
+<td>&nbsp;</td>
+
+</tr>
+
+</table></td>
+</tr><tr>
+<td valign="top">
+<img src="files/blank.gif" border="0" width="35" height="24" />
+<div class="panelbody">
+	<table cellspacing="0" cellpadding="1" width="85%" border="0" bgcolor="#cccccc" align="center">
+	<td align="left">
+		<table cellspacing="0" cellpadding="15" width="100%" border="0"bgcolor="#ffffff" align="center">
+		<td align="left">
+
+<form name="post" action="b2edit.php" method="POST">
+<input type="hidden" name="user_ID" value="1" />
+<input type="hidden" name="action" value="post" />
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+	<td>
+	<table height="60" align="left" cellpadding="0" cellspacing="0">
+		<td height="60" width="190">
+		<label for="title"><b>Title :</b></label><br />
+		<input type="text" name="post_title" size="20" tabindex="1" style="width: 170px;" value="" id="title" />
+		</td>
+		<td>
+		<label for="category"><b>Category :</b></label><br /><select name="post_category" style="width:170px;" tabindex="2" id="category"><option value="1">General</option></select>		</td>
+	</table>
+		</td>
+</tr>
+<tr>
+<td colspan="3">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<td valign="bottom">
+<label for="content"><b>Post :</b></label></td>
+<td valign="bottom" align="right">
+<script src="files/b2quicktags.js" language="JavaScript" type="text/javascript">
+</script><table border="0" cellspacing="0" cellpadding="0">
+<tr align="center" valign="middle">
+<td>
+<input type="button" class="quicktags" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold; width: 30px" onClick="bbstyle(this.form,0)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic; width: 30px" onClick="bbstyle(this.form,2)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline; width: 30px" onClick="bbstyle(this.form,4)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="s" name="addbbcode6" value="strike" style="text-decoration: line-through;width: 50px" onClick="bbstyle(this.form,6)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="p" name="addbbcode10" value="&lt;p>" style="width: 40px" onClick="bbstyle(this.form,10)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="l" name="addbbcode12" value="&lt;li>" style="width: 40px" onClick="bbstyle(this.form,12)" />
+</td><td>
+<input type="button" class="quicktags" accesskey="q" name="addbbcode8" value="b-quote" style="width: 60px" onClick="bbstyle(this.form,8)" />
+</td><td>
+<input type="button" class="quicktags" accesskey="m" name="addbbcode14" value="image" title="insert an image" style="width: 40px"  onClick="bblink(this.form,14)" />
+</td>
+<td>
+<input type="button" class="quicktags" accesskey="h" name="addbbcode16" value="link" title="insert a link" style="text-decoration: underline; width: 40px" onClick="bblink(this.form,16)" />
+</td><td>
+<input type="button" class="quicktags" accesskey="c" name="closetags" value="X" title="Close all tags" style="width: 30px; font-weigh: bolder;"  onClick="bbstyle(document.post,-1)" /></td>
+</tr>
+</table></td>
+</table>
+
+<textarea rows="9" cols="40" style="width:100%" name="content" tabindex="4" wrap="virtual" id="content"></textarea><br />
+
+<input type="checkbox" class="checkbox" name="post_autobr" value="1"  checked tabindex="7" id="autobr" /><label for="autobr"> Auto-BR (converts line-breaks into &lt;br /> tags)</label><br />
+
+
+<input type="button" value="preview" onclick="preview(this.form);" class="search" tabindex="8" />
+
+<input type="submit" name="submit" value="Blog this !" class="search" style="font-weight: bold;" tabindex="5" /> 
+
+<!--<input type = "button" value = "Spell Check" onclick="var f=document.forms[0]; doSpell( 'en', f.post_content, '/sproxy.cgi', true);" class="search" tabindex="5" />-->
+<input type="button" value="Spellcheck" onclick="DoSpell
+('post','content','');" class="search" tabindex="9"/>
+
+<br /><br /><input type="checkbox" class="checkbox" name="edit_date" value="1" id="timestamp" /><label for="timestamp"> Edit timestamp</label><br /><input type="text" name="jj" value="22" size="2" maxlength="2" />
+<select name="mm">
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5" selected>May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+</select>
+<input type="text" name="aa" value="2013" size="4" maxlength="5" /> @ 
+<input type="text" name="hh" value="17" size="2" maxlength="2" /> : 
+<input type="text" name="mn" value="47" size="2" maxlength="2" /> : 
+<input type="text" name="ss" value="28" size="2" maxlength="2" />
+	<script language="JavaScript">
+<!--
+//	document.blog.post_content.focus();
+//-->
+</script>
+</td>
+</tr>
+</table>
+		</td>
+	</table>
+	</td>
+	</table>
+</form><br /><br />	<table cellspacing="0" cellpadding="1" width="85%" border="0" bgcolor="#cccccc" align="center">
+	<td align="left">
+		<table cellspacing="0" cellpadding="15" width="100%" border="0"bgcolor="#ffffff" align="center">
+		<td align="left">
+
+<table width="100%">
+<tr>
+<td valign="top" width="200">
+Show posts: </td>
+<td>
+<table cellpadding="0" cellspacing="0" border="0">
+<td colspan="2" align="center"><!-- show next/previous X posts -->
+<form name="previousXposts" method="get"></form></td><td><form name="nextXposts" method="get">
+<input type="hidden" name="poststart" value="20" />
+<input type="hidden" name="postend" value="40" />
+<input type="submit" name="submitnext" class="search" value="20 >" /></form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="200"><!-- show X first/last posts -->
+<form name="showXfirstlastposts" method="get">
+<input type="text" name="posts" value="20" style="width:40px;" /?>
+<select name="order">&nbsp;<option value="DESC"  selected>last posts</option>
+<option value="ASC" >first posts</option>
+</select>&nbsp;<input type="submit" name="submitfirstlast" class="search" value="OK" />
+</form>
+</td>
+<td valign="top"><!-- show post X to post X -->
+<form name="showXfirstlastposts" method="get">
+<input type="text" name="poststart" value="0" style="width:40px;" /?>&nbsp;to&nbsp;<input type="text" name="postend" value="20" style="width:40px;" /?>&nbsp;<select name="order">
+<option value="DESC"  selected>from the end</option>
+<option value="ASC" >from the start</option>
+</select>&nbsp;<input type="submit" name="submitXtoX" class="search" value="OK" /></form>
+</td>
+
+</tr>
+</table>
+		</td>
+	</table>
+	</td>
+	</table>
+
+<br />
+
+	<table cellspacing="0" cellpadding="1" width="85%" border="0" bgcolor="#cccccc" align="center">
+	<td align="left">
+		<table cellspacing="0" cellpadding="15" width="100%" border="0"bgcolor="#ffffff" align="center">
+		<td align="left">
+<table width="100%">
+	<td valign="top" width="33%">
+		<form name="searchform" action="b2edit.php" method="get">
+			<input type="hidden" name="a" value="s" />
+			<input onFocus="this.value='';" onBlur="if (this.value=='') {this.value='search...';}" type="text" name="s" value="search..." size="7" style="width: 100px;" />
+			<input type="submit" name="submit" value="search" class="search" />
+		</form>
+	</td>
+<td valign="top" width="33%" align="center">
+	<form name="viewcat" action="b2edit.php" method="get">
+		<select name="cat" style="width:140px;">
+		<option value="all">All Categories</option>
+		<option value="1">General</option>		</select>
+		<input type="submit" name="submit" value="View" class="search" />
+	</form>
+</td>
+<td valign="top" width="33%" align="right">
+<form name="viewarc" action="b2edit.php" method="get">
+	<select name="m" style="width:120px;"><option value="201305">May 2013</option>
+</select>	<input type="submit" name="submit" value="View" class="search" />
+</form>
+</td>
+
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" border="0" width="100%">
+			<tr>
+		<td>
+			<p>
+				<b>2013/05/20 @ 15:49:05</b> [ <a href="b2#">1 comment</a>
+				 - <a href="b2edit.php?action=edit&post=1">Edit</a> - <a href="b2edit.php?action=delete&post=1" onclick="return confirm('You are about to delete this post \'Hello world !\'\n  \'Cancel\' to stop, \'OK\' to delete.')">Delete</a> 				]
+				<br />
+				<font color="#999999"><b><a href="index.php?p=1&amp;more=1&amp;c=1" title="permalink">Hello world !</a></b> by <b>admin (<a href="javascript:profile(1)">admin</a>)</b>, in <b>General</b></font><br />
+				<a name="1"></a>				This is the first post. Edit or delete it, then start blogging !				</p>
+							<br />
+			</td>
+		</tr>
+		</table>
+		</td>
+	</table>
+	</td>
+	</table>
+<br />
+	<table cellspacing="0" cellpadding="1" width="85%" border="0" bgcolor="#cccccc" align="center">
+	<td align="left">
+		<table cellspacing="0" cellpadding="15" width="100%" border="0"bgcolor="#ffffff" align="center">
+		<td align="left">
+<table width="100%">
+<tr>
+<td valign="top" width="200">
+Show posts: </td>
+<td>
+<table cellpadding="0" cellspacing="0" border="0">
+<td colspan="2" align="center"><!-- show next/previous X posts -->
+<form name="previousXposts" method="get"><input type="hidden" name="poststart" value="0" />
+<input type="hidden" name="postend" value="20" />
+<input type="submit" name="submitprevious" class="search" value="< Previous 20" /></form></td><td><form name="nextXposts" method="get">
+<input type="hidden" name="poststart" value="20" />
+<input type="hidden" name="postend" value="40" />
+<input type="submit" name="submitnext" class="search" value="Next 20 >" /></form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="200"><!-- show X first/last posts -->
+<form name="showXfirstlastposts" method="get">
+<input type="text" name="posts" value="20" style="width:40px;" /?>
+<select name="order">&nbsp;<option value="DESC"  selected>last posts</option>
+<option value="ASC" >first posts</option>
+</select>&nbsp;<input type="submit" name="submitfirstlast" class="search" value="OK" />
+</form>
+</td>
+<td valign="top"><!-- show post X to post X -->
+<form name="showXfirstlastposts" method="get">
+<input type="text" name="poststart" value="0" style="width:40px;" /?>&nbsp;to&nbsp;<input type="text" name="postend" value="20" style="width:40px;" /?>&nbsp;<select name="order">
+<option value="DESC"  selected>from the end</option>
+<option value="ASC" >from the start</option>
+</select>&nbsp;<input type="submit" name="submitXtoX" class="search" value="OK" /></form>
+</td>
+
+</tr>
+</table>
+		</td>
+	</table>
+	</td>
+	</table>
+</div>
+</td></table>
+<p>&nbsp;</p>
+<div align="center" style="width: 100%" class="tabletoprow"><b><span style="color:#333333">b</span><span style="color:#ff9900">2</span></b> 0.6.2.1 - ©2001-2003 <a href="mailto:m@tidakada.com?subject=b2">michel v</a> - <a href="http://tidakada.com">tidakada.com</a></div>
+
+<!-- this is for the spellchecker -->
+<form name="SPELLDATA"><div>
+<input name="formname" type="hidden" value="">
+<input name="messagebodyname" type="hidden" value="">
+<input name="subjectname" type="hidden" value="">
+<input name="companyID" type="hidden" value="">
+<input name="language" type="hidden" value="">
+<input name="opener" type="hidden" value="">
+<input name="formaction" type="hidden" value="">
+</div></form>
+
+</body>
+</html>

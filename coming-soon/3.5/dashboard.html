@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049) -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar" lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Dashboard ‹ Test blog — WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/historic-wordpress/3.5/wp-admin/admin-ajax.php',
+	pagenow = 'dashboard',
+	typenow = '',
+	adminpage = 'index-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<link rel="stylesheet" href="./dashboard_files/load-styles.php" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox-css" href="./dashboard_files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="colors-css" href="./dashboard_files/colors-fresh.min.css" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='css/ie.min.css?ver=3.5' type='text/css' media='all' />
+<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var userSettings = {"url":"\/historic-wordpress\/3.5\/","uid":"1","time":"1369317668"};/* ]]> */
+</script><style type="text/css"></style>
+<script type="text/javascript" src="./dashboard_files/load-scripts.php"></script>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<body class="wp-admin wp-core-ui js  index-php auto-fold admin-bar branch-3-5 version-3-5 admin-color-fresh locale-en-us  customize-support">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+	<script type="text/javascript">
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+			request = true;
+
+			b[c] = b[c].replace( rcs, ' ' );
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+	
+<div id="wpwrap">
+<a tabindex="1" href="#wpbody-content" class="screen-reader-shortcut">Skip to main content</a>
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<div id="adminmenushadow"></div>
+<ul id="adminmenu" role="navigation">
+
+
+	<li class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<a href="dashboard.html" class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Dashboard</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Dashboard</li><li class="wp-first-item current"><a href="dashboard.html" class="wp-first-item current">Home</a></li><li><a href="update-core.php">Updates <span class="update-plugins count-2" title="1 WordPress Update, 1 Plugin Update"><span class="update-count">2</span></span></a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
+	<a href="edit.html" class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Posts</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Posts</li><li class="wp-first-item"><a href="edit.html" class="wp-first-item">All Posts</a></li><li><a href="post-new.html">Add New</a></li><li><a href="edit-tags.php?taxonomy=category">Categories</a></li><li><a href="edit-tags.php?taxonomy=post_tag">Tags</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<a href="#" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Media</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Media</li><li class="wp-first-item"><a href="#" class="wp-first-item">Library</a></li><li><a href="media-new.php">Add New</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page opensub" id="menu-pages">
+	<a href="edit.php?post_type=page" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Pages</div></a>
+	<ul class="wp-submenu wp-submenu-wrap" style=""><li class="wp-submenu-head">Pages</li><li class="wp-first-item"><a href="edit.php?post_type=page" class="wp-first-item">All Pages</a></li><li><a href="post-new.html?post_type=page">Add New</a></li></ul></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" id="menu-comments">
+	<a href="edit-comments.html" class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Comments <span class="awaiting-mod count-0"><span class="pending-count">0</span></span></div></a></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<a href="themes.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Appearance</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Appearance</li><li class="wp-first-item"><a href="themes.html" class="wp-first-item">Themes</a></li><li><a href="#">Widgets</a></li><li><a href="nav-menus.php">Menus</a></li><li><a href="#page=custom-header">Header</a></li><li><a href="#page=custom-background">Background</a></li><li><a href="#">Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<a href="plugins.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></li><li class="wp-first-item"><a href="plugins.html" class="wp-first-item">Installed Plugins</a></li><li><a href="plugin-install.php">Add New</a></li><li><a href="#">Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<a href="users.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Users</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Users</li><li class="wp-first-item"><a href="users.html" class="wp-first-item">All Users</a></li><li><a href="user-new.php">Add New</a></li><li><a href="profile.html">Your Profile</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+	<a href="tools.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Tools</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Tools</li><li class="wp-first-item"><a href="tools.php" class="wp-first-item">Available Tools</a></li><li><a href="import.html">Import</a></li><li><a href="#">Export</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<a href="options-general.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Settings</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Settings</li><li class="wp-first-item"><a href="options-general.html" class="wp-first-item">General</a></li><li><a href="#">Writing</a></li><li><a href="#">Reading</a></li><li><a href="#">Discussion</a></li><li><a href="options-media.php">Media</a></li><li><a href="#">Permalinks</a></li></ul></li><li id="collapse-menu" class="hide-if-no-js"><div id="collapse-button"><div></div></div><span>Collapse menu</span></li></ul>
+</div>
+<div id="wpcontent">
+
+		<div id="wpadminbar" class="" role="navigation">
+			<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+			<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Top navigation toolbar." tabindex="0">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+		<li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="about.php" title="About WordPress"><span class="ab-icon"></span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+		<li id="wp-admin-bar-about"><a class="ab-item" href="about.php">About WordPress</a>		</li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-wporg"><a class="ab-item" href="http://wordpress.org/">WordPress.org</a>		</li>
+		<li id="wp-admin-bar-documentation"><a class="ab-item" href="http://codex.wordpress.org/">Documentation</a>		</li>
+		<li id="wp-admin-bar-support-forums"><a class="ab-item" href="http://wordpress.org/support/">Support Forums</a>		</li>
+		<li id="wp-admin-bar-feedback"><a class="ab-item" href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" aria-haspopup="true" href="home-page.html">Test blog</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+		<li id="wp-admin-bar-view-site"><a class="ab-item" href="#">Visit Site</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-updates"><a class="ab-item" href="update-core.php" title="1 WordPress Update, 1 Plugin Update"><span class="ab-icon"></span><span class="ab-label">2</span><span class="screen-reader-text">1 WordPress Update, 1 Plugin Update</span></a>		</li>
+		<li id="wp-admin-bar-comments"><a class="ab-item" href="edit-comments.html" title="0 comments awaiting moderation"><span class="ab-icon"></span><span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a>		</li>
+		<li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" aria-haspopup="true" href="post-new.html" title="Add New"><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+		<li id="wp-admin-bar-new-post"><a class="ab-item" href="post-new.html">Post</a>		</li>
+		<li id="wp-admin-bar-new-media"><a class="ab-item" href="media-new.php">Media</a>		</li>
+		<li id="wp-admin-bar-new-page"><a class="ab-item" href="post-new.html?post_type=page">Page</a>		</li>
+		<li id="wp-admin-bar-new-user"><a class="ab-item" href="user-new.php">User</a>		</li></ul></div>		</li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" aria-haspopup="true" href="profile.html" title="My Account">Howdy, admin<img alt="" src="./dashboard_files/64e1b8d34f425d19e1ee2ea7236d3028" class="avatar avatar-16 photo" height="16" width="16"></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu">
+		<li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="profile.html"><img alt="" src="./dashboard_files/64e1b8d34f425d19e1ee2ea7236d3028(1)" class="avatar avatar-64 photo" height="64" width="64"><span class="display-name">admin</span></a>		</li>
+		<li id="wp-admin-bar-edit-profile"><a class="ab-item" href="profile.html">Edit My Profile</a>		</li>
+		<li id="wp-admin-bar-logout"><a class="ab-item" href="wp-login.html&_wpnonce=57eec4a19e">Log Out</a>		</li></ul></div>		</li></ul>			</div>
+			<a class="screen-reader-shortcut" href="wp-login.html&_wpnonce=57eec4a19e">Log Out</a>
+		</div>
+
+		
+<div id="wpbody">
+
+<div id="wpbody-content" aria-label="Main content" tabindex="0" style="overflow: hidden;">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden" tabindex="-1" aria-label="Contextual Help Tab">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-overview" class="active">
+								<a href="#tab-panel-overview" aria-controls="tab-panel-overview">
+									Overview								</a>
+							</li>
+						
+							<li id="tab-link-help-navigation">
+								<a href="#tab-panel-help-navigation" aria-controls="tab-panel-help-navigation">
+									Navigation								</a>
+							</li>
+						
+							<li id="tab-link-help-layout">
+								<a href="#tab-panel-help-layout" aria-controls="tab-panel-help-layout">
+									Layout								</a>
+							</li>
+						
+							<li id="tab-link-help-content">
+								<a href="#tab-panel-help-content" aria-controls="tab-panel-help-content">
+									Content								</a>
+							</li>
+												</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Dashboard_Screen" target="_blank">Documentation on Dashboard</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-overview" class="help-tab-content active">
+								<p>Welcome to your WordPress Dashboard! This is the screen you will see when you log in to your site, and gives you access to all the site management features of WordPress. You can get help for any screen by clicking the Help tab in the upper corner.</p>							</div>
+						
+							<div id="tab-panel-help-navigation" class="help-tab-content">
+								<p>The left-hand navigation menu provides links to all of the WordPress administration screens, with submenu items displayed on hover. You can minimize this menu to a narrow icon strip by clicking on the Collapse Menu arrow at the bottom.</p><p>Links in the Toolbar at the top of the screen connect your dashboard and the front end of your site, and provide access to your profile and helpful WordPress information.</p>							</div>
+						
+							<div id="tab-panel-help-layout" class="help-tab-content">
+								<p>You can use the following controls to arrange your Dashboard screen to suit your workflow. This is true on most other administration screens as well.</p><p><strong>Screen Options</strong> - Use the Screen Options tab to choose which Dashboard boxes to show, and how many columns to display.</p><p><strong>Drag and Drop</strong> - To rearrange the boxes, drag and drop by clicking on the title bar of the selected box and releasing when you see a gray dotted-line rectangle appear in the location you want to place the box.</p><p><strong>Box Controls</strong> - Click the title bar of the box to expand or collapse it. In addition, some boxes have configurable content, and will show a “Configure” link in the title bar if you hover over it.</p>							</div>
+						
+							<div id="tab-panel-help-content" class="help-tab-content">
+								<p>The boxes on your Dashboard screen are:</p><p><strong>Right Now</strong> - Displays a summary of the content on your site and identifies which theme and version of WordPress you are using.</p><p><strong>Recent Comments</strong> - Shows the most recent comments on your posts (configurable, up to 30) and allows you to moderate them.</p><p><strong>Incoming Links</strong> - Shows links to your site found by Google Blog Search.</p><p><strong>QuickPress</strong> - Allows you to create a new post and either publish it or save it as a draft.</p><p><strong>Recent Drafts</strong> - Displays links to the 5 most recent draft posts you’ve started.</p><p><strong>WordPress Blog</strong> - Latest news from the official WordPress project.</p><p><strong>Other WordPress News</strong> - Shows the <a href="http://planet.wordpress.org/" target="_blank">WordPress Planet</a> feed. You can configure it to show a different feed of your choosing.</p><p><strong>Plugins</strong> - Features the most popular, newest, and recently updated plugins from the WordPress.org Plugin Directory.</p><p><strong>Welcome</strong> - Shows links for some of the most common tasks when setting up a new site.</p>							</div>
+											</div>
+				</div>
+			</div>
+				<div id="screen-options-wrap" class="hidden" tabindex="-1" aria-label="Screen Options Tab">
+		<form id="adv-settings" action="" method="post">
+					<h5>Show on screen</h5>
+					<div class="metabox-prefs">
+				<label for="dashboard_right_now-hide"><input class="hide-postbox-tog" name="dashboard_right_now-hide" type="checkbox" id="dashboard_right_now-hide" value="dashboard_right_now" checked="checked">Right Now</label>
+<label for="dashboard_recent_comments-hide"><input class="hide-postbox-tog" name="dashboard_recent_comments-hide" type="checkbox" id="dashboard_recent_comments-hide" value="dashboard_recent_comments" checked="checked">Recent Comments <span class="postbox-title-action"><a href="?edit=dashboard_recent_comments#dashboard_recent_comments" class="edit-box open-box">Configure</a></span></label>
+<label for="dashboard_incoming_links-hide"><input class="hide-postbox-tog" name="dashboard_incoming_links-hide" type="checkbox" id="dashboard_incoming_links-hide" value="dashboard_incoming_links" checked="checked">Incoming Links <span class="postbox-title-action"><a href="?edit=dashboard_incoming_links#dashboard_incoming_links" class="edit-box open-box">Configure</a></span></label>
+<label for="dashboard_plugins-hide"><input class="hide-postbox-tog" name="dashboard_plugins-hide" type="checkbox" id="dashboard_plugins-hide" value="dashboard_plugins" checked="checked">Plugins</label>
+<label for="dashboard_quick_press-hide"><input class="hide-postbox-tog" name="dashboard_quick_press-hide" type="checkbox" id="dashboard_quick_press-hide" value="dashboard_quick_press" checked="checked">QuickPress</label>
+<label for="dashboard_recent_drafts-hide"><input class="hide-postbox-tog" name="dashboard_recent_drafts-hide" type="checkbox" id="dashboard_recent_drafts-hide" value="dashboard_recent_drafts" checked="checked">Recent Drafts</label>
+<label for="dashboard_primary-hide"><input class="hide-postbox-tog" name="dashboard_primary-hide" type="checkbox" id="dashboard_primary-hide" value="dashboard_primary" checked="checked">WordPress Blog <span class="postbox-title-action"><a href="?edit=dashboard_primary#dashboard_primary" class="edit-box open-box">Configure</a></span></label>
+<label for="dashboard_secondary-hide"><input class="hide-postbox-tog" name="dashboard_secondary-hide" type="checkbox" id="dashboard_secondary-hide" value="dashboard_secondary" checked="checked">Other WordPress News <span class="postbox-title-action"><a href="?edit=dashboard_secondary#dashboard_secondary" class="edit-box open-box">Configure</a></span></label>
+<label for="wp_welcome_panel-hide"><input type="checkbox" id="wp_welcome_panel-hide" checked="checked">Welcome</label>
+				<br class="clear">
+			</div>
+					<h5 class="screen-layout">Screen Layout</h5>
+		<div class="columns-prefs">Number of Columns:				<label class="columns-prefs-1">
+					<input type="radio" name="screen_columns" value="1">
+					1				</label>
+								<label class="columns-prefs-2">
+					<input type="radio" name="screen_columns" value="2" checked="checked">
+					2				</label>
+								<label class="columns-prefs-3">
+					<input type="radio" name="screen_columns" value="3">
+					3				</label>
+								<label class="columns-prefs-4">
+					<input type="radio" name="screen_columns" value="4">
+					4				</label>
+						</div>
+				<div><input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="e91d79f7d3"></div>
+		</form>
+		</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="#contextual-help-wrap" id="contextual-help-link" class="show-settings" aria-controls="contextual-help-wrap" aria-expanded="false">Help</a>
+			</div>
+					<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="#screen-options-wrap" id="show-settings-link" class="show-settings" aria-controls="screen-options-wrap" aria-expanded="false">Screen Options</a>
+			</div>
+				</div>
+		<div class="update-nag"><a href="http://codex.wordpress.org/Version_3.5.1">WordPress 3.5.1</a> is available! <a href="update-core.php">Please update now</a>.</div>
+<div class="wrap">
+<div id="icon-index" class="icon32"><br></div><h2>Dashboard</h2>
+
+
+ 	<div id="welcome-panel" class="welcome-panel">
+ 		<input type="hidden" id="welcomepanelnonce" name="welcomepanelnonce" value="9771115326">		<a class="welcome-panel-close" href="?welcome=0">Dismiss</a>
+			<div class="welcome-panel-content">
+	<h3>Welcome to WordPress!</h3>
+	<p class="about-description">We’ve assembled some links to get you started:</p>
+	<div class="welcome-panel-column-container">
+	<div class="welcome-panel-column">
+		<h4>Get Started</h4>
+		<a class="button button-primary button-hero load-customize hide-if-no-customize" href="customize.php">Customize Your Site</a>
+		<a class="button button-primary button-hero hide-if-customize" href="themes.html">Customize Your Site</a>
+					<p class="hide-if-no-customize">or, <a href="themes.html">change your theme completely</a></p>
+			</div>
+	<div class="welcome-panel-column">
+		<h4>Next Steps</h4>
+		<ul>
+					<li><a href="post-new.html" class="welcome-icon welcome-write-blog">Write your first blog post</a></li>
+			<li><a href="post-new.html?post_type=page" class="welcome-icon welcome-add-page">Add an About page</a></li>
+					<li><a href="#" class="welcome-icon welcome-view-site">View your site</a></li>
+		</ul>
+	</div>
+	<div class="welcome-panel-column welcome-panel-last">
+		<h4>More Actions</h4>
+		<ul>
+			<li><div class="welcome-icon welcome-widgets-menus">Manage <a href="#">widgets</a> or <a href="nav-menus.php">menus</a></div></li>
+			<li><a href="#" class="welcome-icon welcome-comments">Turn comments on or off</a></li>
+			<li><a href="http://codex.wordpress.org/First_Steps_With_WordPress" class="welcome-icon welcome-learn-more">Learn more about getting started</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+		</div>
+
+<div id="dashboard-widgets-wrap">
+
+<div id="dashboard-widgets" class="metabox-holder columns-2">
+	<div id="postbox-container-1" class="postbox-container">
+	<div id="normal-sortables" class="meta-box-sortables ui-sortable"><div id="dashboard_right_now" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>Right Now</span></h3>
+<div class="inside">
+
+	<div class="table table_content">
+	<p class="sub">Content</p>
+	<table>
+	<tbody><tr class="first"><td class="first b b-posts"><a href="edit.html">1</a></td><td class="t posts"><a href="edit.html">Post</a></td></tr><tr><td class="first b b_pages"><a href="edit.php?post_type=page">1</a></td><td class="t pages"><a href="edit.php?post_type=page">Page</a></td></tr><tr><td class="first b b-cats"><a href="edit-tags.php?taxonomy=category">1</a></td><td class="t cats"><a href="edit-tags.php?taxonomy=category">Category</a></td></tr><tr><td class="first b b-tags"><a href="edit-tags.php">0</a></td><td class="t tags"><a href="edit-tags.php">Tags</a></td></tr>
+	</tbody></table>
+	</div>
+	<div class="table table_discussion">
+	<p class="sub">Discussion</p>
+	<table>
+	<tbody><tr class="first"><td class="b b-comments"><a href="edit-comments.html"><span class="total-count">1</span></a></td><td class="last t comments"><a href="edit-comments.html">Comment</a></td></tr><tr><td class="b b_approved"><a href="edit-comments.php?comment_status=approved"><span class="approved-count">1</span></a></td><td class="last t"><a class="approved" href="edit-comments.php?comment_status=approved">Approved</a></td></tr>
+	<tr><td class="b b-waiting"><a href="edit-comments.php?comment_status=moderated"><span class="pending-count">0</span></a></td><td class="last t"><a class="waiting" href="edit-comments.php?comment_status=moderated">Pending</a></td></tr>
+	<tr><td class="b b-spam"><a href="edit-comments.php?comment_status=spam"><span class="spam-count">0</span></a></td><td class="last t"><a class="spam" href="edit-comments.php?comment_status=spam">Spam</a></td></tr>
+	</tbody></table>
+	</div>
+	<div class="versions">
+	<p>Theme <span class="b"><a href="themes.html">Twenty Twelve</a></span> with <span class="b"><a href="#">6 Widgets</a></span></p><span id="wp-version-message">You are using <span class="b">WordPress 3.5</span>. <a href="update-core.php" class="button">Update to 3.5.1</a></span>
+	<br class="clear"></div></div>
+</div>
+<div id="dashboard_recent_comments" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>Recent Comments <span class="postbox-title-action"><a href="?edit=dashboard_recent_comments#dashboard_recent_comments" class="edit-box open-box">Configure</a></span></span></h3>
+<div class="inside">
+<div id="the-comment-list" data-wp-lists="list:comment">
+		<div id="comment-1" class="comment even thread-even depth-1 comment-item approved">
+			
+			<img alt="" src="./dashboard_files/ad516503a11cd5ca435acc9bb6523536" class="avatar avatar-50 photo avatar-default" height="50" width="50">
+			<div class="dashboard-comment-wrap">
+			<h4 class="comment-meta">
+				From <cite class="comment-author"><a href="http://wordpress.org/" rel="external nofollow" class="url">Mr WordPress</a></cite> on <a href="post.php?post=1&action=edit">Hello world!</a> <a class="comment-link" href="hello-world.html#comment-1">#</a> <span class="approve">[Pending]</span>			</h4>
+
+						<blockquote><p>Hi, this is a comment.
+To delete a comment, just log in and view the post's comments. There you will have ...</p></blockquote>
+			<p class="row-actions"><span class="approve"><a href="#03939272ac" data-wp-lists="dim:the-comment-list:comment-1:unapproved:e7e7d3:e7e7d3:new=approved" class="vim-a" title="Approve this comment">Approve</a></span><span class="unapprove"><a href="#03939272ac" data-wp-lists="dim:the-comment-list:comment-1:unapproved:e7e7d3:e7e7d3:new=unapproved" class="vim-u" title="Unapprove this comment">Unapprove</a></span><span class="reply hide-if-no-js"> | <a onclick="commentReply.open(&#39;1&#39;,&#39;1&#39;);return false;" class="vim-r hide-if-no-js" title="Reply to this comment" href="#">Reply</a></span><span class="edit"> | <a href="#" title="Edit comment">Edit</a></span><span class="spam"> | <a href="comment.php?action=spamcomment&p=1&c=1&_wpnonce=ac7d22e47b" data-wp-lists="delete:the-comment-list:comment-1::spam=1" class="vim-s vim-destructive" title="Mark this comment as spam">Spam</a></span><span class="trash"> | <a href="comment.php?action=trashcomment&p=1&c=1&_wpnonce=ac7d22e47b" data-wp-lists="delete:the-comment-list:comment-1::trash=1" class="delete vim-d vim-destructive" title="Move this comment to the trash">Trash</a></span></p>
+			</div>
+		</div>
+</div><ul class="subsubsub">
+	<li class="all"><a href="edit-comments.php?comment_status=all">All</a> |</li>
+	<li class="moderated"><a href="edit-comments.php?comment_status=moderated">Pending <span class="count">(<span class="pending-count">0</span>)</span></a> |</li>
+	<li class="approved"><a href="edit-comments.php?comment_status=approved">Approved</a> |</li>
+	<li class="spam"><a href="edit-comments.php?comment_status=spam">Spam <span class="count">(<span class="spam-count">0</span>)</span></a> |</li>
+	<li class="trash"><a href="edit-comments.php?comment_status=trash">Trash <span class="count">(<span class="trash-count">0</span>)</span></a></li>
+</ul><form method="get" action="">
+<div id="com-reply" style="display:none;"><div id="replyrow" style="display:none;">
+	<div id="replyhead" style="display:none;"><h5>Reply to Comment</h5></div>
+	<div id="addhead" style="display:none;"><h5>Add new Comment</h5></div>
+	<div id="edithead" style="display:none;">
+		<div class="inside">
+		<label for="author">Name</label>
+		<input type="text" name="newcomment_author" size="50" value="" id="author">
+		</div>
+
+		<div class="inside">
+		<label for="author-email">E-mail</label>
+		<input type="text" name="newcomment_author_email" size="50" value="" id="author-email">
+		</div>
+
+		<div class="inside">
+		<label for="author-url">URL</label>
+		<input type="text" id="author-url" name="newcomment_author_url" size="103" value="">
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+
+	<div id="replycontainer">
+	<div id="wp-replycontent-wrap" class="wp-core-ui wp-editor-wrap html-active"><link rel="stylesheet" id="editor-buttons-css" href="./dashboard_files/editor.min.css" type="text/css" media="all">
+<div id="wp-replycontent-editor-container" class="wp-editor-container"><div id="qt_replycontent_toolbar" class="quicktags-toolbar"><input type="button" id="qt_replycontent_strong" accesskey="b" class="ed_button" title="" value="b"><input type="button" id="qt_replycontent_em" accesskey="i" class="ed_button" title="" value="i"><input type="button" id="qt_replycontent_link" accesskey="a" class="ed_button" title="" value="link"><input type="button" id="qt_replycontent_block" accesskey="q" class="ed_button" title="" value="b-quote"><input type="button" id="qt_replycontent_del" accesskey="d" class="ed_button" title="" value="del"><input type="button" id="qt_replycontent_ins" accesskey="s" class="ed_button" title="" value="ins"><input type="button" id="qt_replycontent_img" accesskey="m" class="ed_button" title="" value="img"><input type="button" id="qt_replycontent_ul" accesskey="u" class="ed_button" title="" value="ul"><input type="button" id="qt_replycontent_ol" accesskey="o" class="ed_button" title="" value="ol"><input type="button" id="qt_replycontent_li" accesskey="l" class="ed_button" title="" value="li"><input type="button" id="qt_replycontent_code" accesskey="c" class="ed_button" title="" value="code"><input type="button" id="qt_replycontent_spell" class="ed_button" title="Dictionary lookup" value="lookup"><input type="button" id="qt_replycontent_close" class="ed_button" title="Close all open tags" value="close tags"></div><textarea class="wp-editor-area" rows="20" cols="40" name="replycontent" id="replycontent"></textarea></div>
+</div>
+
+	</div>
+
+	<p id="replysubmit" class="submit">
+	<a href="#comments-form" class="save button-primary alignright">
+	<span id="addbtn" style="display:none;">Add Comment</span>
+	<span id="savebtn" style="display:none;">Update Comment</span>
+	<span id="replybtn" style="display:none;">Submit Reply</span></a>
+	<a href="#comments-form" class="cancel button-secondary alignleft">Cancel</a>
+	<span class="waiting spinner"></span>
+	<span class="error" style="display:none;"></span>
+	<br class="clear">
+	</p>
+
+	<input type="hidden" name="user_ID" id="user_ID" value="1">
+	<input type="hidden" name="action" id="action" value="">
+	<input type="hidden" name="comment_ID" id="comment_ID" value="">
+	<input type="hidden" name="comment_post_ID" id="comment_post_ID" value="">
+	<input type="hidden" name="status" id="status" value="">
+	<input type="hidden" name="position" id="position" value="-1">
+	<input type="hidden" name="checkbox" id="checkbox" value="0">
+	<input type="hidden" name="mode" id="mode" value="dashboard">
+	<input type="hidden" id="_ajax_nonce-replyto-comment" name="_ajax_nonce-replyto-comment" value="042a413bde"><input type="hidden" id="_wp_unfiltered_html_comment" name="_wp_unfiltered_html_comment" value="da22a56a40"></div></div>
+</form>
+<div class="hidden" id="trash-undo-holder">
+	<div class="trash-undo-inside">Comment by <strong></strong> moved to the trash. <span class="undo untrash"><a href="#">Undo</a></span></div>
+</div>
+<div class="hidden" id="spam-undo-holder">
+	<div class="spam-undo-inside">Comment by <strong></strong> marked as spam. <span class="undo unspam"><a href="#">Undo</a></span></div>
+</div>
+</div>
+</div>
+<div id="dashboard_incoming_links" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>Incoming Links <span class="postbox-title-action"><a href="?edit=dashboard_incoming_links#dashboard_incoming_links" class="edit-box open-box">Configure</a></span></span></h3>
+<div class="inside" style=""><ul>
+	<li><strong>Irina Sandu (Romania)</strong> linked here <a href="http://planet.mozilla.org/?post/2012/03/25/Security-incident-at-our-Danish-community-site">saying</a>, "This will reduce the chance of the history of HTML ..."</li>
+	<li><strong>Kevin McGuire</strong> linked here <a href="http://www.planeteclipse.org/">saying</a>, "This blog post is part of a series on things you s ..."</li>
+	<li><strong>Ltkije</strong> linked here <a href="http://docs.joomla.org/Vulnerable_Extensions_List">saying</a>, "Report Vulnerable extensions in the vel website. I ..."</li>
+	<li><strong>Rliskey</strong> linked here <a href="http://docs.joomla.org/Security_and_Performance_FAQs">saying</a>, "3.5 Why is there a warning in the extensions insta ..."</li>
+	<li><strong>Mike Feehan</strong> linked here <a href="http://insurance.forcednews.com/war-is-peace-freedom-is-slavery-ignorance-is-strength/">saying</a>, "UPDATE wp_links SET link_notes = 'feed/genera ..."</li>
+	<li><strong>Monyo</strong> linked here <a href="http://wiki.nginx.org/HttpCoreModuleJa">saying</a>, "HTTP/1.1 におけるチャンク化された転送エンコーディングの有効化、無効化を制御します (0.7 ..."</li>
+	<li><strong>Jeremy Largman [Atlassian]</strong> linked here <a href="https://confluence.atlassian.com/display/DOC/Using+Apache+with+mod_proxy">saying</a>, "You have two or more Java applications, each runni ..."</li>
+	<li><strong>Roger Jennings (--rj)</strong> linked here <a href="http://oakleafblog.blogspot.com/2013/04/windows-azure-and-cloud-computing-posts_30.html">saying</a>, "Originally posted on: http://geekswithblogs.net/as ..."</li>
+	<li><strong>Christopher Owen</strong> linked here <a href="https://confluence.atlassian.com/display/DOC/Configuring+Database+Character+Encoding">saying</a>, "CREATE DATABASE confluence WITH ENCODING 'UNI ..."</li>
+	<li><strong>Dharmalingam A</strong> linked here <a href="http://openguider.wordpress.com/2013/05/08/installing-magento-test-automation-framework-on-windows/">saying</a>, "Magento Community Edition 1.5 or later; PHP 5.2.0  ..."</li>
+</ul>
+</div>
+</div>
+<div id="dashboard_plugins" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>Plugins</span></h3>
+<div class="inside" style=""><h4>Most Popular</h4>
+<h5><a href="http://wordpress.org/plugins/better-wp-security/">Better WP Security</a></h5>&nbsp;<span>(<a href="plugin-install.php?tab=plugin-information&plugin=better-wp-security&_wpnonce=a5829a49d6&TB_iframe=true&width=600&height=800" class="thickbox" title="Better WP Security">Install</a>)</span>
+<p>The easiest, most effective way to secure WordPress. Improve the security of any WordPress site in seconds.</p>
+<h4>Newest Plugins</h4>
+<h5><a href="http://wordpress.org/plugins/pinterest-master/">Pinterest Master</a></h5>&nbsp;<span>(<a href="plugin-install.php?tab=plugin-information&plugin=pinterest-master&_wpnonce=f473610134&TB_iframe=true&width=600&height=800" class="thickbox" title="Pinterest Master">Install</a>)</span>
+<p>Pinterest Master adds the follow me on pinterest, pin it button, show pinterest profile and show pinterest board to your wordpress website.</p>
+</div>
+</div>
+</div>	</div>
+	<div id="postbox-container-2" class="postbox-container">
+	<div id="side-sortables" class="meta-box-sortables ui-sortable"><div id="dashboard_quick_press" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>QuickPress</span></h3>
+<div class="inside">
+
+	<form name="post" action="post.html" method="post" id="quick-press">
+		<div class="input-text-wrap" id="title-wrap">
+			<label class="prompt" for="title" id="title-prompt-text">Enter title here</label>
+			<input type="text" name="post_title" id="title" autocomplete="off" value="">
+		</div>
+
+				<div id="wp-content-wrap" class="wp-editor-wrap hide-if-no-js wp-media-buttons">
+			<a href="#" class="button insert-media add_media" data-editor="content" title="Add Media"><span class="wp-media-buttons-icon"></span> Add Media</a>		</div>
+		
+		<div class="textarea-wrap">
+			<label class="screen-reader-text" for="content">Content</label>
+			<textarea name="content" id="content" class="mceEditor" rows="3" cols="15"></textarea>
+		</div>
+
+		<script type="text/javascript">
+		edCanvas = document.getElementById('content');
+		edInsertContent = null;
+				</script>
+
+		<div class="input-text-wrap" id="tags-input-wrap">
+			<label class="prompt" for="tags-input" id="tags-input-prompt-text">Tags (separate with commas)</label>
+			<input type="text" name="tags_input" id="tags-input" value="">
+		</div>
+
+		<p class="submit">
+			<span id="publishing-action">
+				<input type="submit" name="publish" id="publish" accesskey="p" class="button-primary" value="Publish">
+				<span class="spinner"></span>
+			</span>
+			<input type="hidden" name="action" id="quickpost-action" value="post-quickpress-save">
+			<input type="hidden" name="post_ID" value="3">
+			<input type="hidden" name="post_type" value="post">
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="0fc175dc09"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/3.5/wp-admin/">			<input type="submit" name="save" id="save-post" class="button" value="Save Draft">			<input type="reset" value="Reset" class="button">
+			<br class="clear">
+		</p>
+
+	</form>
+
+</div>
+</div>
+<div id="dashboard_recent_drafts" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>Recent Drafts</span></h3>
+<div class="inside">
+There are no drafts at the moment</div>
+</div>
+<div id="dashboard_primary" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>WordPress Blog <span class="postbox-title-action"><a href="?edit=dashboard_primary#dashboard_primary" class="edit-box open-box">Configure</a></span></span></h3>
+<div class="inside" style="">
+<p class="widget-loading hide-if-no-js">Loading…</p><p class="hide-if-js">This widget requires JavaScript.</p></div>
+</div>
+<div id="dashboard_secondary" class="postbox ">
+<div class="handlediv" title="Click to toggle"><br></div><h3 class="hndle"><span>Other WordPress News <span class="postbox-title-action"><a href="?edit=dashboard_secondary#dashboard_secondary" class="edit-box open-box">Configure</a></span></span></h3>
+<div class="inside" style="">
+<p class="widget-loading hide-if-no-js">Loading…</p><p class="hide-if-js">This widget requires JavaScript.</p></div>
+</div>
+</div>	</div>
+	<div id="postbox-container-3" class="postbox-container">
+	<div id="column3-sortables" class="meta-box-sortables ui-sortable empty-container"></div>	</div>
+	<div id="postbox-container-4" class="postbox-container">
+	<div id="column4-sortables" class="meta-box-sortables ui-sortable empty-container"></div>	</div>
+</div>
+
+<input type="hidden" id="closedpostboxesnonce" name="closedpostboxesnonce" value="3029e2dfe6"><input type="hidden" id="meta-box-order-nonce" name="meta-box-order-nonce" value="b484d673c4">
+<div class="clear"></div>
+</div><!-- dashboard-widgets-wrap -->
+
+</div><!-- wrap -->
+
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="wpfooter">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span></p>
+<p id="footer-upgrade" class="alignright"><strong><a href="update-core.php">Get Version 3.5.1</a></strong></p>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">list_args = {"class":"WP_Comments_List_Table","screen":{"id":"dashboard","base":"dashboard"}};</script>
+<script type="text/javascript">list_args = {"class":"WP_Comments_List_Table","screen":{"id":"dashboard","base":"dashboard"}};</script>
+	<script type="text/html" id="tmpl-media-frame">
+		<div class="media-frame-menu"></div>
+		<div class="media-frame-title"></div>
+		<div class="media-frame-router"></div>
+		<div class="media-frame-content"></div>
+		<div class="media-frame-toolbar"></div>
+		<div class="media-frame-uploader"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-media-modal">
+		<div class="media-modal wp-core-ui">
+			<a class="media-modal-close" href="#" title="Close"><span class="media-modal-icon"></span></a>
+			<div class="media-modal-content"></div>
+		</div>
+		<div class="media-modal-backdrop"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-window">
+		<div class="uploader-window-content">
+			<h3>Drop files to upload</h3>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-inline">
+		<# var messageClass = data.message ? 'has-upload-message' : 'no-upload-message'; #>
+		<div class="uploader-inline-content {{ messageClass }}">
+		<# if ( data.message ) { #>
+			<h3 class="upload-message">{{ data.message }}</h3>
+		<# } #>
+					<div class="upload-ui">
+				<h3 class="upload-instructions drop-instructions">Drop files anywhere to upload</h3>
+				<a href="#" class="browser button button-hero">Select Files</a>
+			</div>
+
+			<div class="upload-inline-status"></div>
+
+			<div class="post-upload-ui">
+				
+				<p class="max-upload-size">Maximum upload file size: 100MB.</p>
+
+				
+							</div>
+				</div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-status">
+		<h3>Uploading</h3>
+		<a class="upload-dismiss-errors" href="#">Dismiss Errors</a>
+
+		<div class="media-progress-bar"><div></div></div>
+		<div class="upload-details">
+			<span class="upload-count">
+				<span class="upload-index"></span> / <span class="upload-total"></span>
+			</span>
+			<span class="upload-detail-separator">&ndash;</span>
+			<span class="upload-filename"></span>
+		</div>
+		<div class="upload-errors"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-status-error">
+		<span class="upload-error-label">Error</span>
+		<span class="upload-error-filename">{{{ data.filename }}}</span>
+		<span class="upload-error-message">{{ data.message }}</span>
+	</script>
+
+	<script type="text/html" id="tmpl-attachment">
+		<div class="attachment-preview type-{{ data.type }} subtype-{{ data.subtype }} {{ data.orientation }}">
+			<# if ( data.uploading ) { #>
+				<div class="media-progress-bar"><div></div></div>
+			<# } else if ( 'image' === data.type ) { #>
+				<div class="thumbnail">
+					<div class="centered">
+						<img src="{{ data.size.url }}" draggable="false" />
+					</div>
+				</div>
+			<# } else { #>
+				<img src="{{ data.icon }}" class="icon" draggable="false" />
+				<div class="filename">
+					<div>{{ data.filename }}</div>
+				</div>
+			<# } #>
+
+			<# if ( data.buttons.close ) { #>
+				<a class="close media-modal-icon" href="#" title="Remove"></a>
+			<# } #>
+
+			<# if ( data.buttons.check ) { #>
+				<a class="check" href="#" title="Deselect"><div class="media-modal-icon"></div></a>
+			<# } #>
+		</div>
+		<#
+		var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly';
+		if ( data.describe ) { #>
+			<# if ( 'image' === data.type ) { #>
+				<input type="text" value="{{ data.caption }}" class="describe" data-setting="caption"
+					placeholder="Caption this image&hellip;" {{ maybeReadOnly }} />
+			<# } else { #>
+				<input type="text" value="{{ data.title }}" class="describe" data-setting="title"
+					<# if ( 'video' === data.type ) { #>
+						placeholder="Describe this video&hellip;"
+					<# } else if ( 'audio' === data.type ) { #>
+						placeholder="Describe this audio file&hellip;"
+					<# } else { #>
+						placeholder="Describe this media file&hellip;"
+					<# } #> {{ maybeReadOnly }} />
+			<# } #>
+		<# } #>
+	</script>
+
+	<script type="text/html" id="tmpl-attachment-details">
+		<h3>
+			Attachment Details
+			<span class="settings-save-status">
+				<span class="spinner"></span>
+				<span class="saved">Saved.</span>
+			</span>
+		</h3>
+		<div class="attachment-info">
+			<div class="thumbnail">
+				<# if ( data.uploading ) { #>
+					<div class="media-progress-bar"><div></div></div>
+				<# } else if ( 'image' === data.type ) { #>
+					<img src="{{ data.size.url }}" draggable="false" />
+				<# } else { #>
+					<img src="{{ data.icon }}" class="icon" draggable="false" />
+				<# } #>
+			</div>
+			<div class="details">
+				<div class="filename">{{ data.filename }}</div>
+				<div class="uploaded">{{ data.dateFormatted }}</div>
+
+				<# if ( 'image' === data.type && ! data.uploading ) { #>
+					<# if ( data.width && data.height ) { #>
+						<div class="dimensions">{{ data.width }} &times; {{ data.height }}</div>
+					<# } #>
+
+					<# if ( data.can.save ) { #>
+						<a class="edit-attachment" href="{{ data.editLink }}&amp;image-editor" target="_blank">Edit Image</a>
+						<a class="refresh-attachment" href="#">Refresh</a>
+					<# } #>
+				<# } #>
+
+				<# if ( ! data.uploading && data.can.remove ) { #>
+					<a class="delete-attachment" href="#">Delete Permanently</a>
+				<# } #>
+
+				<div class="compat-meta">
+					<# if ( data.compat && data.compat.meta ) { #>
+						{{{ data.compat.meta }}}
+					<# } #>
+				</div>
+			</div>
+		</div>
+
+		<# var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly'; #>
+			<label class="setting" data-setting="title">
+				<span>Title</span>
+				<input type="text" value="{{ data.title }}" {{ maybeReadOnly }} />
+			</label>
+			<label class="setting" data-setting="caption">
+				<span>Caption</span>
+				<textarea {{ maybeReadOnly }}>{{ data.caption }}</textarea>
+			</label>
+		<# if ( 'image' === data.type ) { #>
+			<label class="setting" data-setting="alt">
+				<span>Alt Text</span>
+				<input type="text" value="{{ data.alt }}" {{ maybeReadOnly }} />
+			</label>
+		<# } #>
+			<label class="setting" data-setting="description">
+				<span>Description</span>
+				<textarea {{ maybeReadOnly }}>{{ data.description }}</textarea>
+			</label>
+	</script>
+
+	<script type="text/html" id="tmpl-media-selection">
+		<div class="selection-info">
+			<span class="count"></span>
+			<# if ( data.editable ) { #>
+				<a class="edit-selection" href="#">Edit</a>
+			<# } #>
+			<# if ( data.clearable ) { #>
+				<a class="clear-selection" href="#">Clear</a>
+			<# } #>
+		</div>
+		<div class="selection-view"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-attachment-display-settings">
+		<h3>Attachment Display Settings</h3>
+
+		<# if ( 'image' === data.type ) { #>
+			<label class="setting">
+				<span>Alignment</span>
+				<select class="alignment"
+					data-setting="align"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="align"
+					<# } #>>
+
+					<option value="left">
+						Left					</option>
+					<option value="center">
+						Center					</option>
+					<option value="right">
+						Right					</option>
+					<option value="none" selected>
+						None					</option>
+				</select>
+			</label>
+		<# } #>
+
+		<div class="setting">
+			<label>
+				<span>Link To</span>
+				<select class="link-to"
+					data-setting="link"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="urlbutton"
+					<# } #>>
+
+					<option value="custom">
+						Custom URL					</option>
+					<option value="post" selected>
+						Attachment Page					</option>
+					<option value="file">
+						Media File					</option>
+					<option value="none">
+						None					</option>
+				</select>
+			</label>
+			<input type="text" class="link-to-custom" data-setting="linkUrl" />
+		</div>
+
+		<# if ( 'undefined' !== typeof data.sizes ) { #>
+			<label class="setting">
+				<span>Size</span>
+				<select class="size" name="size"
+					data-setting="size"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="imgsize"
+					<# } #>>
+											<#
+						var size = data.sizes['thumbnail'];
+						if ( size ) { #>
+							<option value="thumbnail" >
+								Thumbnail &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['medium'];
+						if ( size ) { #>
+							<option value="medium" >
+								Medium &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['large'];
+						if ( size ) { #>
+							<option value="large" >
+								Large &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['full'];
+						if ( size ) { #>
+							<option value="full"  selected='selected'>
+								Full Size &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+									</select>
+			</label>
+		<# } #>
+	</script>
+
+	<script type="text/html" id="tmpl-gallery-settings">
+		<h3>Gallery Settings</h3>
+
+		<label class="setting">
+			<span>Link To</span>
+			<select class="link-to"
+				data-setting="link"
+				<# if ( data.userSettings ) { #>
+					data-user-setting="urlbutton"
+				<# } #>>
+
+				<option value="post" selected>
+					Attachment Page				</option>
+				<option value="file">
+					Media File				</option>
+			</select>
+		</label>
+
+		<label class="setting">
+			<span>Columns</span>
+			<select class="columns" name="columns"
+				data-setting="columns">
+									<option value="1" >
+						1					</option>
+									<option value="2" >
+						2					</option>
+									<option value="3"  selected='selected'>
+						3					</option>
+									<option value="4" >
+						4					</option>
+									<option value="5" >
+						5					</option>
+									<option value="6" >
+						6					</option>
+									<option value="7" >
+						7					</option>
+									<option value="8" >
+						8					</option>
+									<option value="9" >
+						9					</option>
+							</select>
+		</label>
+
+		<label class="setting">
+			<span>Random Order</span>
+			<input type="checkbox" data-setting="_orderbyRandom" />
+		</label>
+	</script>
+
+	<script type="text/html" id="tmpl-embed-link-settings">
+		<label class="setting">
+			<span>Title</span>
+			<input type="text" class="alignment" data-setting="title" />
+		</label>
+	</script>
+
+	<script type="text/html" id="tmpl-embed-image-settings">
+		<div class="thumbnail">
+			<img src="{{ data.model.url }}" draggable="false" />
+		</div>
+
+					<label class="setting caption">
+				<span>Caption</span>
+				<textarea data-setting="caption" />
+			</label>
+		
+		<label class="setting alt-text">
+			<span>Alt Text</span>
+			<input type="text" data-setting="alt" />
+		</label>
+
+		<div class="setting align">
+			<span>Align</span>
+			<div class="button-group button-large" data-setting="align">
+				<button class="button" value="left">
+					Left				</button>
+				<button class="button" value="center">
+					Center				</button>
+				<button class="button" value="right">
+					Right				</button>
+				<button class="button active" value="none">
+					None				</button>
+			</div>
+		</div>
+
+		<div class="setting link-to">
+			<span>Link To</span>
+			<div class="button-group button-large" data-setting="link">
+				<button class="button" value="file">
+					Image URL				</button>
+				<button class="button" value="custom">
+					Custom URL				</button>
+				<button class="button active" value="none">
+					None				</button>
+			</div>
+			<input type="text" class="link-to-custom" data-setting="linkUrl" />
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-attachments-css">
+		<style type="text/css" id="{{ data.id }}-css">
+			#{{ data.id }} {
+				padding: 0 {{ data.gutter }}px;
+			}
+
+			#{{ data.id }} .attachment {
+				margin: {{ data.gutter }}px;
+				width: {{ data.edge }}px;
+			}
+
+			#{{ data.id }} .attachment-preview,
+			#{{ data.id }} .attachment-preview .thumbnail {
+				width: {{ data.edge }}px;
+				height: {{ data.edge }}px;
+			}
+
+			#{{ data.id }} .portrait .thumbnail img {
+				max-width: {{ data.edge }}px;
+				height: auto;
+			}
+
+			#{{ data.id }} .landscape .thumbnail img {
+				width: auto;
+				max-height: {{ data.edge }}px;
+			}
+		</style>
+	</script>
+	<link rel="stylesheet" href="./dashboard_files/load-styles(1).php" type="text/css" media="all">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var commonL10n = {"warnDelete":"You are about to permanently delete the selected items.\n  'Cancel' to stop, 'OK' to delete."};var wpAjax = {"noPerm":"You do not have permission to do that.","broken":"An unidentified error has occurred."};var quicktagsL10n = {"wordLookup":"Enter a word to look up:","dictionaryLookup":"Dictionary lookup","lookup":"lookup","closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","fullscreen":"fullscreen","toggleFullscreen":"Toggle fullscreen mode","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction"};var adminCommentsL10n = {"hotkeys_highlight_first":"","hotkeys_highlight_last":"","replyApprove":"Approve and Reply","reply":"Reply"};var _wpCustomizeLoaderSettings = {"url":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-admin\/customize.php","isCrossDomain":false,"browser":{"mobile":false,"ios":false}};var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-includes\/js\/thickbox\/tb-close.png"};var plugininstallL10n = {"plugin_information":"Plugin Information:","ays":"Are you sure you want to install this plugin?"};var _wpMediaModelsL10n = {"settings":{"ajaxurl":"\/historic-wordpress\/3.5\/wp-admin\/admin-ajax.php","post":{"id":0}}};var pluploadL10n = {"queue_limit_exceeded":"You have attempted to queue too many files.","file_exceeds_size_limit":"%s exceeds the maximum upload size for this site.","zero_byte_file":"This file is empty. Please try another.","invalid_filetype":"This file type is not allowed. Please try another.","not_an_image":"This file is not an image. Please try another.","image_memory_exceeded":"Memory exceeded. Please try another smaller file.","image_dimensions_exceeded":"This is larger than the maximum size. Please try another.","default_error":"An error occurred in the upload. Please try again later.","missing_upload_url":"There was a configuration error. Please contact the server administrator.","upload_limit_exceeded":"You may only upload 1 file.","http_error":"HTTP error.","upload_failed":"Upload failed.","big_upload_failed":"Please try uploading this file with the %1$sbrowser uploader%2$s.","big_upload_queued":"%s exceeds the maximum upload size for the multi-file uploader when used in your browser.","io_error":"IO error.","security_error":"Security error.","file_cancelled":"File canceled.","upload_stopped":"Upload stopped.","dismiss":"Dismiss","crunching":"Crunching\u2026","deleted":"moved to the trash.","error_uploading":"\u201c%s\u201d has failed to upload."};
+var _wpPluploadSettings = {"defaults":{"runtimes":"html5,silverlight,flash,html4","file_data_name":"async-upload","multiple_queues":true,"max_file_size":"104857600b","url":"\/historic-wordpress\/3.5\/wp-admin\/async-#","flash_swf_url":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-includes\/js\/plupload\/plupload.flash.swf","silverlight_xap_url":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-includes\/js\/plupload\/plupload.silverlight.xap","filters":[{"title":"Allowed Files","extensions":"*"}],"multipart":true,"urlstream_upload":true,"multipart_params":{"action":"upload-attachment","_wpnonce":"443d05ef6d"}},"browser":{"mobile":false,"supported":true},"limitExceeded":false};var _wpMediaViewsL10n = {"url":"URL","addMedia":"Add Media","search":"Search","select":"Select","cancel":"Cancel","selected":"%d selected","dragInfo":"Drag and drop to reorder images.","uploadFilesTitle":"Upload Files","uploadImagesTitle":"Upload Images","mediaLibraryTitle":"Media Library","insertMediaTitle":"Insert Media","createNewGallery":"Create a new gallery","returnToLibrary":"\u2190 Return to library","allMediaItems":"All media items","noItemsFound":"No items found.","insertIntoPost":"Insert into post","uploadedToThisPost":"Uploaded to this post","warnDelete":"You are about to permanently delete this item.\n  'Cancel' to stop, 'OK' to delete.","insertFromUrlTitle":"Insert from URL","setFeaturedImageTitle":"Set Featured Image","setFeaturedImage":"Set featured image","createGalleryTitle":"Create Gallery","editGalleryTitle":"Edit Gallery","cancelGalleryTitle":"\u2190 Cancel Gallery","insertGallery":"Insert gallery","updateGallery":"Update gallery","addToGallery":"Add to gallery","addToGalleryTitle":"Add to Gallery","reverseOrder":"Reverse order","settings":{"tabs":[],"tabUrl":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-admin\/media-#?chromeless=1","mimeTypes":{"image":"Images","audio":"Audio","video":"Video"},"captions":true,"nonce":{"sendToEditor":"4d7de14584"},"post":{"id":3,"nonce":"e615b5f8a1","featuredImageId":-1}}};var wordCountL10n = {"type":"w"};var wpLinkL10n = {"title":"Insert\/edit link","update":"Update","save":"Add Link","noTitle":"(no title)","noMatchesFound":"No matches found."};/* ]]> */
+</script>
+<script type="text/javascript" src="./dashboard_files/load-scripts(1).php"></script>
+
+	<script type="text/javascript">
+		tinyMCEPreInit = {
+			base : "",
+			suffix : "",
+			query : "ver=358-23156",
+			mceInit : {},
+			qtInit : {'replycontent':{id:"replycontent",buttons:"strong,em,link,block,del,ins,img,ul,ol,li,code,spell,close"}},
+			ref : {plugins:"",theme:"advanced",language:""},
+			load_ext : function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+		};
+	</script>
+
+	<script type="text/javascript">
+		var wpActiveEditor;
+
+		(function(){
+			var init, ed, qt, first_init, DOM, el, i, mce = 0;
+
+			if ( typeof(tinymce) == 'object' ) {
+				DOM = tinymce.DOM;
+				// mark wp_theme/ui.css as loaded
+				DOM.files[tinymce.baseURI.getURI() + '/themes/advanced/skins/wp_theme/ui.css'] = true;
+
+				DOM.events.add( DOM.select('.wp-editor-wrap'), 'mousedown', function(e){
+					if ( this.id )
+						wpActiveEditor = this.id.slice(3, -5);
+				});
+
+				for ( ed in tinyMCEPreInit.mceInit ) {
+					if ( first_init ) {
+						init = tinyMCEPreInit.mceInit[ed] = tinymce.extend( {}, first_init, tinyMCEPreInit.mceInit[ed] );
+					} else {
+						init = first_init = tinyMCEPreInit.mceInit[ed];
+					}
+
+					if ( mce )
+						try { tinymce.init(init); } catch(e){}
+				}
+			} else {
+				if ( tinyMCEPreInit.qtInit ) {
+					for ( i in tinyMCEPreInit.qtInit ) {
+						el = tinyMCEPreInit.qtInit[i].id;
+						if ( el )
+							document.getElementById('wp-'+el+'-wrap').onmousedown = function(){ wpActiveEditor = this.id.slice(3, -5); }
+					}
+				}
+			}
+
+			if ( typeof(QTags) == 'function' ) {
+				for ( qt in tinyMCEPreInit.qtInit ) {
+					try { quicktags( tinyMCEPreInit.qtInit[qt] ); } catch(e){}
+				}
+			}
+		})();
+				</script>
+			<div style="display:none;">
+	<form id="wp-link" tabindex="-1">
+	<input type="hidden" id="_ajax_linking_nonce" name="_ajax_linking_nonce" value="d0544bb4c8">	<div id="link-selector">
+		<div id="link-options">
+			<p class="howto">Enter the destination URL</p>
+			<div>
+				<label><span>URL</span><input id="url-field" type="text" name="href"></label>
+			</div>
+			<div>
+				<label><span>Title</span><input id="link-title-field" type="text" name="linktitle"></label>
+			</div>
+			<div class="link-target">
+				<label><input type="checkbox" id="link-target-checkbox"> Open link in a new window/tab</label>
+			</div>
+		</div>
+				<p class="howto toggle-arrow " id="internal-toggle">Or link to existing content</p>
+		<div id="search-panel" style="display:none">
+			<div class="link-search-wrapper">
+				<label>
+					<span class="search-label">Search</span>
+					<input type="search" id="search-field" class="link-search-field" autocomplete="off">
+					<span class="spinner"></span>
+				</label>
+			</div>
+			<div id="search-results" class="query-results">
+				<ul></ul>
+				<div class="river-waiting">
+					<span class="spinner"></span>
+				</div>
+			</div>
+			<div id="most-recent-results" class="query-results">
+				<div class="query-notice"><em>No search term specified. Showing recent items.</em></div>
+				<ul></ul>
+				<div class="river-waiting">
+					<span class="spinner"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="submitbox">
+		<div id="wp-link-update">
+			<input type="submit" value="Add Link" class="button-primary" id="wp-link-submit" name="wp-link-submit">
+		</div>
+		<div id="wp-link-cancel">
+			<a class="submitdelete deletion" href="#">Cancel</a>
+		</div>
+	</div>
+	</form>
+	</div>
+		<script type="text/javascript">
+	/* <![CDATA[ */
+	var testCompression = {
+		get : function(test) {
+			var x;
+			if ( window.XMLHttpRequest ) {
+				x = new XMLHttpRequest();
+			} else {
+				try{x=new ActiveXObject('Msxml2.XMLHTTP');}catch(e){try{x=new ActiveXObject('Microsoft.XMLHTTP');}catch(e){};}
+			}
+
+			if (x) {
+				x.onreadystatechange = function() {
+					var r, h;
+					if ( x.readyState == 4 ) {
+						r = x.responseText.substr(0, 18);
+						h = x.getResponseHeader('Content-Encoding');
+						testCompression.check(r, h, test);
+					}
+				}
+
+				x.open('GET', ajaxurl + '?action=wp-compression-test&test='+test+'&'+(new Date()).getTime(), true);
+				x.send('');
+			}
+		},
+
+		check : function(r, h, test) {
+			if ( ! r && ! test )
+				this.get(1);
+
+			if ( 1 == test ) {
+				if ( h && ( h.match(/deflate/i) || h.match(/gzip/i) ) )
+					this.get('no');
+				else
+					this.get(2);
+
+				return;
+			}
+
+			if ( 2 == test ) {
+				if ( '"wpCompressionTest' == r )
+					this.get('yes');
+				else
+					this.get('no');
+			}
+		}
+	};
+	testCompression.check();
+	/* ]]> */
+	</script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+<div id="customize-container"></div></body></html>

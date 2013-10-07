@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Template &amp; file editing</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html" class="current">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+ <div class="wrap"> 
+  <p>Editing <strong>index.php</strong> </p> 
+  <form name="template" action="templates.html" method="post"> 
+     <textarea cols="80" rows="21" style="width:98%; font-family: &#39;Courier New&#39;, Courier, monopace; font-size:small;" name="newcontent" tabindex="1">&lt;?php 
+/* Don't remove this line. */
+require('./wp-blog-header.php');
+?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;head profile="http://gmpg.org/xfn/1"&gt;
+	&lt;title&gt;&lt;?php bloginfo('name'); ?&gt;&lt;?php wp_title(); ?&gt;&lt;/title&gt;
+	
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=&lt;?php bloginfo('charset'); ?&gt;" /&gt;
+	&lt;meta name="generator" content="WordPress &lt;?php bloginfo('version'); ?&gt;" /&gt; &lt;!-- leave this for stats --&gt;
+
+	&lt;style type="text/css" media="screen"&gt;
+		@import url( &lt;?php echo get_settings('siteurl'); ?&gt;/wp-layout.css );
+	&lt;/style&gt;
+	
+	&lt;link rel="stylesheet" type="text/css" media="print" href="&lt;?php echo get_settings('siteurl'); ?&gt;/print.css" /&gt;
+	&lt;link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="&lt;?php bloginfo('rss2_url'); ?&gt;" /&gt;
+	&lt;link rel="alternate" type="text/xml" title="RSS .92" href="&lt;?php bloginfo('rss_url'); ?&gt;" /&gt;
+	&lt;link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="&lt;?php bloginfo('atom_url'); ?&gt;" /&gt;
+	
+	&lt;link rel="pingback" href="&lt;?php bloginfo('pingback_url'); ?&gt;" /&gt;
+    &lt;?php wp_get_archives('type=monthly&amp;format=link'); ?&gt;
+	&lt;?php //comments_popup_script(); // off by default ?&gt;
+	&lt;?php wp_head(); ?&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id="rap"&gt;
+&lt;h1 id="header"&gt;&lt;a href="&lt;?php bloginfo('url'); ?&gt;"&gt;&lt;?php bloginfo('name'); ?&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;div id="content"&gt;
+&lt;?php if ($posts) : foreach ($posts as $post) : start_wp(); ?&gt;
+
+&lt;?php the_date('','&lt;h2&gt;','&lt;/h2&gt;'); ?&gt;
+	
+&lt;div class="post"&gt;
+	 &lt;h3 class="storytitle" id="post-&lt;?php the_ID(); ?&gt;"&gt;&lt;a href="&lt;?php the_permalink() ?&gt;" rel="bookmark" title="Permanent Link: &lt;?php the_title(); ?&gt;"&gt;&lt;?php the_title(); ?&gt;&lt;/a&gt;&lt;/h3&gt;
+	&lt;div class="meta"&gt;&lt;?php _e("Filed under:"); ?&gt; &lt;?php the_category() ?&gt; &amp;#8212; &lt;?php the_author() ?&gt; @ &lt;?php the_time() ?&gt; &lt;?php edit_post_link(); ?&gt;&lt;/div&gt;
+	
+	&lt;div class="storycontent"&gt;
+		&lt;?php the_content(); ?&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="feedback"&gt;
+            &lt;?php wp_link_pages(); ?&gt;
+            &lt;?php comments_popup_link(__('Comments (0)'), __('Comments (1)'), __('Comments (%)')); ?&gt;
+	&lt;/div&gt;
+	
+	&lt;!--
+	&lt;?php trackback_rdf(); ?&gt;
+	--&gt;
+
+&lt;?php include(ABSPATH . 'wp-comments.php'); ?&gt;
+&lt;/div&gt;
+
+&lt;?php endforeach; else: ?&gt;
+&lt;p&gt;&lt;?php _e('Sorry, no posts matched your criteria.'); ?&gt;&lt;/p&gt;
+&lt;?php endif; ?&gt;
+&lt;/div&gt;
+
+
+
+&lt;div id="menu"&gt;
+
+&lt;ul&gt;
+	&lt;?php get_links_list(); ?&gt;
+ &lt;li id="categories"&gt;&lt;?php _e('Categories:'); ?&gt;
+	&lt;ul&gt;
+	&lt;?php wp_list_cats(); ?&gt;
+	&lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li id="search"&gt;
+   &lt;label for="s"&gt;&lt;?php _e('Search:'); ?&gt;&lt;/label&gt;	
+   &lt;form id="searchform" method="get" action="&lt;?php echo $PHP_SELF; ?&gt;"&gt;
+	&lt;div&gt;
+		&lt;input type="text" name="s" id="s" size="15" /&gt;&lt;br /&gt;
+		&lt;input type="submit" name="submit" value="&lt;?php _e('Search'); ?&gt;" /&gt;
+	&lt;/div&gt;
+	&lt;/form&gt;
+ &lt;/li&gt;
+ &lt;li id="archives"&gt;&lt;?php _e('Archives:'); ?&gt;
+ 	&lt;ul&gt;
+	 &lt;?php wp_get_archives('type=monthly'); ?&gt;
+ 	&lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li id="calendar"&gt;
+	&lt;?php get_calendar(); ?&gt;
+ &lt;/li&gt;
+ &lt;li id="other"&gt;&lt;?php _e('Other:'); ?&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="&lt;?php echo get_settings('siteurl'); ?&gt;/wp-login.php"&gt;&lt;?php _e('Login'); ?&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="&lt;?php echo get_settings('siteurl'); ?&gt;/wp-register.php"&gt;&lt;?php _e('Register'); ?&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li id="meta"&gt;&lt;?php _e('Meta:'); ?&gt;
+ 	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="&lt;?php bloginfo('rss2_url'); ?&gt;" title="&lt;?php _e('Syndicate this site using RSS'); ?&gt;"&gt;&lt;?php _e('&lt;abbr title="Really Simple Syndication"&gt;RSS&lt;/abbr&gt; 2.0'); ?&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="&lt;?php bloginfo('comments_rss2_url'); ?&gt;" title="&lt;?php _e('The latest comments to all posts in RSS'); ?&gt;"&gt;&lt;?php _e('Comments &lt;abbr title="Really Simple Syndication"&gt;RSS&lt;/abbr&gt; 2.0'); ?&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://validator.w3.org/check/referer" title="&lt;?php _e('This page validates as XHTML 1.0 Transitional'); ?&gt;"&gt;&lt;?php _e('Valid &lt;abbr title="eXtensible HyperText Markup Language"&gt;XHTML&lt;/abbr&gt;'); ?&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://wordpress.org/" title="&lt;?php _e('Powered by WordPress; state-of-the-art semantic personal publishing platform.'); ?&gt;"&gt;WP&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+ &lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p class="credit"&gt;&lt;!--&lt;?php echo $wpdb-&gt;num_queries; ?&gt; queries. &lt;?php timer_stop(1); ?&gt; seconds. --&gt; &lt;cite&gt;&lt;?php echo sprintf(__("Powered by &lt;a href='http://wordpress.org' title='%s'&gt;&lt;strong&gt;WordPress&lt;/strong&gt;&lt;/a&gt;"), __("Powered by WordPress, state-of-the-art semantic personal publishing platform")); ?&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea> 
+     <input type="hidden" name="action" value="update"> 
+     <input type="hidden" name="file" value="dashboard.html"> 
+     <p class="submit">
+     <input type="button" name="oops" value="(You cannot update that file/template: must make it writable, e.g. CHMOD 666)" tabindex="2"> 
+</p>
+   </form> 
+   
+</div> 
+<div class="wrap">
+  <p>To edit a file, type its name here. You can edit any file <a href="http://wiki.wordpress.org/index.php/MakeWritable" title="Read more about making files writable">writable by the server</a>, e.g. CHMOD 666.</p> 
+  <form name="file" action="./templates_files/templates.html" method="get"> 
+    <input type="text" name="file"> 
+    <input type="submit" name="submit" value="Edit file »"> 
+  </form> 
+  <p>Common files: (click to edit)</p>
+  <ul>
+    <li><a href="#">Main Index </a></li>
+    <li><a href="#">Comments</a></li>
+    <li><a href="#">Popup comments </a></li>
+    <li><a href="#">.htaccess (for rewrite rules)</a></li>
+    <li><a href="#">my-hacks.php (legacy hacks support)</a></li>
+    </ul>
+  <p>Plugin files:</p>
+  <ul>
+	<li><a href="#">textile1.php</a></li>
+	<li><a href="#">textile2.php</a></li>
+	<li><a href="#">._google-hilite.php</a></li>
+	<li><a href="#">google-hilite.php</a></li>
+	<li><a href="#">._textile1.php</a></li>
+	<li><a href="#">._markdown.php</a></li>
+	<li><a href="#">markdown.php</a></li>
+	<li><a href="#">._textile2.php</a></li>
+	<li><a href="#"></a></li>
+	<li><a href="#">._</a></li>
+  </ul>
+  <p>Note: of course, you can also edit the files/templates in your text editor of choice and upload them. This online editor is only meant to be used when you don’t have access to a text editor or FTP client.</p>
+</div> 
+
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.00 seconds</p>
+
+ 
+</body></html>

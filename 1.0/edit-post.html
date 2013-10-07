@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0052)#wp-admin/edit.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+<title>WordPress &#8250; my weblog &#8250; Edit Posts</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+	function profile(userID) {
+		window.open ("profile.php?action=viewprofile&user="+userID, "Profile", "width=500, height=450, location=0, menubar=0, resizable=0, scrollbars=1, status=1, titlebar=0, toolbar=0, screenX=60, left=60, screenY=60, top=60");
+	}
+
+	function launchupload() {
+		window.open ("#", "wpupload", "width=380,height=360,location=0,menubar=0,resizable=1,scrollbars=yes,status=1,toolbar=0");
+	}
+
+    function helpWindow(url) {
+		window.open(url, "Help", "width=640, height=450, location=0, menubar=0, resizable=0, scrollbars=1, status=1, titlebar=0, toolbar=0, screenX=60, left=60, screenY=60, top=60");
+	}
+	function GetElementsWithClassName(elementName, className) {
+	   var allElements = document.getElementsByTagName(elementName);
+	   var elemColl = new Array();
+	   for (i = 0; i < allElements.length; i++) {
+		   if (allElements[i].className == className) {
+			   elemColl[elemColl.length] = allElements[i];
+		   }
+	   }
+	   return elemColl;
+	}
+	
+	function blurry() {
+	   if (!document.getElementById) return;
+	
+	   var aInputs = document.getElementsByTagName('input');
+	
+	   for (var i = 0; i < aInputs.length; i++) {      
+	
+		   aInputs[i].onclick = function() {
+			   var inputColl = GetElementsWithClassName('input','valinp');
+			   var rel = document.getElementById('rel');
+			   var inputs = '';
+			   for (i = 0; i < inputColl.length; i++) {
+				   if (inputColl[i].checked) {
+					   if (inputColl[i].value != '') inputs += inputColl[i].value + ' ';
+					   }
+				   }
+			   inputs = inputs.substr(0,inputs.length - 1);
+			   rel.value = inputs;
+		   }
+	
+		   aInputs[i].onkeyup = function() {
+			   var inputColl = GetElementsWithClassName('input','valinp');
+			   var rel = document.getElementById('rel');
+			   var inputs = '';
+			   for (i = 0; i < inputColl.length; i++) {
+				   if (inputColl[i].checked) {
+					   inputs += inputColl[i].value + ' ';
+					   }
+				   }
+			   inputs = inputs.substr(0,inputs.length - 1);
+			   rel.value = inputs;
+		   }
+	   
+	   }
+	}
+	
+	window.onload = blurry;
+//]]>
+</script>
+<body>
+
+<h1 id="wphead"><a href="http://wordpress.org/" rel="external">WordPress</a></h1>
+
+<ul id="adminmenu">
+
+	<li><a href="#wp-admin/post.php">Post</a></li>
+	<li><a href="./edit-post_files/edit-post.html">Edit</a></li>
+	<li><a href="#wp-admin/#">Categories</a></li>
+	<li><a href="#wp-admin/#">Links</a></li>
+	<li><a href="#wp-admin/users.html">Users</a></li>
+	<li><a href="#wp-admin/options.php">Options</a></li>
+	<li><a href="#wp-admin/#">Templates</a></li>
+	<li><a href="#wp-admin/profile.php">My Profile</a></li>
+	<li><a href="#index.php">View site</a></li>
+	<li class="last"><a href="#wp-login.php?action=logout">Logout (admin)</a></li>
+</ul>
+
+<h2>Edit Posts</h2>
+
+<ul id="adminmenu2">
+	<li><a href="./edit-post_files/edit-post.html" class="current">Latest Posts</a></li>
+	<li><a href="#wp-admin/edit-comments.php">Latest Comments</a></li>
+	<li class="last"><a href="#wp-admin/#">Comments Awaiting Moderation</a></li>
+</ul>
+<div class="wrap">
+<table width="100%">
+  <tbody><tr>
+    <td valign="top" width="200">
+      Show posts:
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody><tr>
+          <td colspan="2" align="center"><!-- show next/previous X posts -->
+            <form name="previousXposts" method="get" action="">
+            </form>
+          </td>
+          <td>
+            <form name="nextXposts" method="get" action="">
+              <input type="hidden" name="showposts" value="20">
+              <input type="hidden" name="poststart" value="20">
+              <input type="hidden" name="postend" value="40">
+              <input type="submit" name="submitnext" class="search" value="20 &gt;">
+            </form>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="200"><!-- show X first/last posts -->
+      <form name="showXfirstlastposts" method="get" action="">
+        <input type="text" name="showposts" value="20" style="width:40px;" ?="">
+        <select name="order">
+          <option value="DESC" selected="selected">last posts</option>
+          <option value="ASC">first posts</option>
+        </select>&nbsp;
+        <input type="submit" name="submitfirstlast" class="search" value="OK">
+      </form>
+    </td>
+    <td valign="top"><!-- show post X to post X -->
+      <form name="showXfirstlastposts" method="get" action="">
+        <input type="text" name="poststart" value="0" style="width:40px;" ?="">&nbsp;to&nbsp;<input type="text" name="postend" value="20" style="width:40px;" ?="">&nbsp;
+        <select name="order">
+          <option value="DESC" "selected="selected" "="">from the end</option>
+        <option value="ASC" ""="">from the start</option>
+        </select>&nbsp;
+        <input type="submit" name="submitXtoX" class="search" value="OK">
+      </form>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+
+
+<div class="wrap">
+<table width="100%">
+  <tbody><tr>
+	<td valign="top" width="33%">
+		<form name="searchform" action="" method="get">
+			<input type="hidden" name="a" value="s">
+			<input onfocus="this.value=&#39;&#39;;" onblur="if (this.value==&#39;&#39;) {this.value=&#39;search...&#39;;}" type="text" name="s" value="search..." size="7" style="width: 100px;">
+			<input type="submit" name="submit" value="search" class="search">
+		</form>
+	</td>
+    <td valign="top" width="33%" align="center">
+	  <form name="viewcat" action="" method="get">
+		<select name="cat" style="width:140px;">
+		<option value="all">All Categories</option>
+		<option value="1">General</option>		</select>
+		<input type="submit" name="submit" value="View" class="search">
+	  </form>
+    </td>
+    <td valign="top" width="33%" align="right">
+    <form name="viewarc" action="" method="get">
+	<select name="m" style="width:120px;"><option value="201305">May 2013</option>
+</select>	    <input type="submit" name="submit" value="View" class="search">
+      </form>
+    </td>
+  </tr>
+</tbody></table>
+
+			<p>
+				<strong>2013/05/22 @ 20:08:42</strong> [ <a href="#wp-admin/#">1 comment</a>
+				 - <a href="#wp-admin/#">Edit</a> - <a href="#wp-admin/post.php?action=delete&post=1" onclick="return confirm(&#39;You are about to delete this post \&#39;Hello world!\&#39;\n  \&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39;)">Delete</a> 				]
+				<br>
+				<strong><a href="#index.php?p=1" rel="permalink">Hello world!</a></strong> &#8212; <cite>admin (<a href="javascript:profile(1)">admin</a>)</cite>, in <strong></strong></p><ul class="post-categories"><strong>
+	<li><a href="#index.php?cat=1" title="View all posts in General">General</a></li></strong></ul><br>
+					<p>Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!
+</p>
+			<p></p>
+							<br>
+
+	
+</div>
+
+<ul id="adminmenu2">
+	<li><a href="./edit-post_files/edit-post.html" class="current">Latest Posts</a></li>
+	<li><a href="#wp-admin/edit-comments.php">Latest Comments</a></li>
+	<li class="last"><a href="#wp-admin/#">Comments Awaiting Moderation</a></li>
+</ul>
+<div class="wrap">
+<table width="100%">
+  <tbody><tr>
+    <td valign="top" width="200">
+      Show posts:
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody><tr>
+          <td colspan="2" align="center"><!-- show next/previous X posts -->
+            <form name="previousXposts" method="get" action="">
+            </form>
+          </td>
+          <td>
+            <form name="nextXposts" method="get" action="">
+              <input type="hidden" name="showposts" value="20">
+              <input type="hidden" name="poststart" value="20">
+              <input type="hidden" name="postend" value="40">
+              <input type="submit" name="submitnext" class="search" value="20 &gt;">
+            </form>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="200"><!-- show X first/last posts -->
+      <form name="showXfirstlastposts" method="get" action="">
+        <input type="text" name="showposts" value="20" style="width:40px;" ?="">
+        <select name="order">
+          <option value="DESC" selected="selected">last posts</option>
+          <option value="ASC">first posts</option>
+        </select>&nbsp;
+        <input type="submit" name="submitfirstlast" class="search" value="OK">
+      </form>
+    </td>
+    <td valign="top"><!-- show post X to post X -->
+      <form name="showXfirstlastposts" method="get" action="">
+        <input type="text" name="poststart" value="0" style="width:40px;" ?="">&nbsp;to&nbsp;<input type="text" name="postend" value="20" style="width:40px;" ?="">&nbsp;
+        <select name="order">
+          <option value="DESC" "selected="selected" "="">from the end</option>
+        <option value="ASC" ""="">from the start</option>
+        </select>&nbsp;
+        <input type="submit" name="submitXtoX" class="search" value="OK">
+      </form>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+
+
+
+<p align="center" style="width: 100%" class="tabletoprow"><strong><a href="http://wordpress.org/">WordPress</a></strong> 1.0 &#8212; <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.01 seconds</p>
+
+
+
+</body></html>

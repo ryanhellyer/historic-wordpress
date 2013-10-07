@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Create New Post</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html" class="current">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+
+<div class="wrap">
+
+<form name="post" action="#" method="post" id="post">
+
+<input type="hidden" name="user_ID" value="1">
+<input type="hidden" name="action" value="post">
+
+<script type="text/javascript">
+<!--
+function focusit() {
+	// focus on first input field
+	document.post.title.focus();
+}
+window.onload = focusit;
+//-->
+</script>
+<style media="screen" type="text/css">
+#titlediv, #postpassworddiv {
+	height: 3.5em;
+}
+</style>
+<div id="poststuff">
+    <fieldset id="titlediv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#title" title="Help on titles">Title</a></legend> 
+	  <div><input type="text" name="post_title" size="30" tabindex="1" value="" id="title"></div>
+    </fieldset>
+
+    <fieldset id="categorydiv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#category" title="Help on categories">Categories</a></legend> 
+	  <div><label for="category-1" class="selectit"><input value="1" type="checkbox" name="post_category[]" id="category-1" checked="checked"> General</label>
+</div>
+    </fieldset>
+
+<br>
+<fieldset id="postdiv">
+    <legend><a href="http://wordpress.org/docs/reference/post/#post" title="Help with post field">Post</a></legend>
+		<div id="quicktags">
+<a href="http://wordpress.org/docs/reference/post/#quicktags" title="Help with quicktags">Quicktags</a>: <script src="files/quicktags.js" language="JavaScript" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">edToolbar();</script><div id="ed_toolbar"><input type="button" id="ed_strong" accesskey="b" class="ed_button" onclick="edInsertTag(edCanvas, 0);" value="str"><input type="button" id="ed_em" accesskey="i" class="ed_button" onclick="edInsertTag(edCanvas, 1);" value="em"><input type="button" id="ed_link" accesskey="a" class="ed_button" onclick="edInsertLink(edCanvas, 2);" value="link"><input type="button" id="ed_block" accesskey="q" class="ed_button" onclick="edInsertTag(edCanvas, 3);" value="b-quote"><input type="button" id="ed_del" accesskey="d" class="ed_button" onclick="edInsertTag(edCanvas, 4);" value="del"><input type="button" id="ed_ins" accesskey="d" class="ed_button" onclick="edInsertTag(edCanvas, 5);" value="ins"><input type="button" id="ed_img" accesskey="m" class="ed_button" onclick="edInsertImage(edCanvas);" value="img"><input type="button" id="ed_ul" accesskey="u" class="ed_button" onclick="edInsertTag(edCanvas, 7);" value="ul"><input type="button" id="ed_ol" accesskey="o" class="ed_button" onclick="edInsertTag(edCanvas, 8);" value="ol"><input type="button" id="ed_li" accesskey="l" class="ed_button" onclick="edInsertTag(edCanvas, 9);" value="li"><input type="button" id="ed_pre" accesskey="undefined" class="ed_button" onclick="edInsertTag(edCanvas, 10);" value="code"><input type="button" id="ed_more" accesskey="t" class="ed_button" onclick="edInsertTag(edCanvas, 11);" value="more"><input type="button" id="ed_next" accesskey="p" class="ed_button" onclick="edInsertTag(edCanvas, 12);" value="page"><input type="button" id="ed_spell" class="ed_button" onclick="edSpell(edCanvas);" title="Dictionary lookup" value="Dict."><input type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" title="Close all open tags" value="Close Tags"></div></div>
+<div><textarea rows="9" cols="40" name="content" tabindex="4" id="content"></textarea></div>
+</fieldset>
+
+
+<script type="text/javascript" language="JavaScript">
+<!--
+edCanvas = document.getElementById('content');
+//-->
+</script>
+
+<input type="checkbox" class="checkbox" name="post_pingback" value="1" checked="checked" tabindex="7" id="pingback"> <label for="pingback"><strong>PingBack</strong> the <abbr title="Universal Resource Identifier">URI</abbr>s in this post</label> <a href="http://wordpress.org/docs/reference/post/#pingback" title="Help on Pingbacks">?</a><br><p><label for="trackback"><a href="http://wordpress.org/docs/reference/post/#trackback" title="Help on trackbacks"><strong>TrackBack</strong> an <acronym title="Uniform Resource Locator">URL</acronym></a>:</label> (Separate multiple <abbr title="Universal Resource Identifier">URI</abbr>s with spaces.)<br><input type="text" name="trackback_url" style="width: 360px" id="trackback" tabindex="7"></p><p class="submit"><input name="saveasdraft" type="submit" id="saveasdraft" tabindex="9" value="Save as Draft"> 
+  <input name="saveasprivate" type="submit" id="saveasprivate" tabindex="10" value="Save as Private"> 
+  <input name="publish" type="submit" id="publish" tabindex="6" style="font-weight: bold;" value="Publish"> 
+  <input name="advanced" type="submit" id="advancededit" tabindex="7" value="Advanced Editing »">  <input name="referredby" type="hidden" id="referredby" value="wp-login.html">
+</p>
+
+</div>
+</form>
+
+</div>
+<div class="wrap">
+<h3>WordPress bookmarklet</h3>
+<p>You can drag the following link to your links bar or add it to your bookmarks and when you "Press it" it will open up a popup window with information and a link to the site you’re currently browsing so you can make a quick post about it. Try it out:</p><p>
+
+<a href="javascript:if(navigator.userAgent.indexOf('Safari') >= 0){Q=getSelection();}else{Q=document.selection?document.selection.createRange().text:document.getSelection();}void(window.open('bookmarklet.php?text='+escape(Q)+'&popupurl='+escape(location.href)+'&popuptitle='+escape(document.title),'WordPress bookmarklet','scrollbars=yes,width=600,height=460,left=100,top=150,status=yes'));">Press It - my weblog</a> 
+</p>
+</div>
+
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.01 seconds</p>
+
+</body></html>

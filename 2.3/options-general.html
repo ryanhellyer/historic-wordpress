@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › General Options — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<script type="text/javascript">
+//<![CDATA[
+function addLoadEvent(func) {if ( typeof wpOnload!='function'){wpOnload=func;}else{ var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}}
+//]]>
+</script>
+<script type="text/javascript" src="files/fat.js"></script>
+</head>
+<body class="wp-admin ">
+<div id="wphead">
+<h1>Test blog <span id="viewsite">(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Profile</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="edit-comments.html">Comments</a></li>
+	<li><a href="link-manager.html">Blogroll</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html" class="current">Options</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="options-general.html" class="current">General</a></li>
+	<li><a href="#">Writing</a></li>
+	<li><a href="#">Reading</a></li>
+	<li><a href="#">Discussion</a></li>
+	<li><a href="#">Privacy</a></li>
+	<li><a href="#">Permalinks</a></li>
+	<li><a href="#">Miscellaneous</a></li>
+</ul>
+<div id="update-nag">A new version of WordPress is available! <a href="http://wordpress.org/download/">Please update now</a>.</div>
+
+<div class="wrap">
+<h2>General Options</h2>
+<form method="post" action="#">
+<input type="hidden" name="_wpnonce" value="3529877d0b"><input type="hidden" name="_wp_http_referer" value="#"><p class="submit"><input type="submit" name="Submit" value="Update Options »"></p>
+<table class="optiontable">
+<tbody><tr valign="top">
+<th scope="row">Blog title:</th>
+<td><input name="blogname" type="text" id="blogname" value="Test blog" size="40"></td>
+</tr>
+<tr valign="top">
+<th scope="row">Tagline:</th>
+<td><input name="blogdescription" type="text" id="blogdescription" style="width: 95%" value="Just another WordPress weblog" size="45">
+<br>
+In a few words, explain what this blog is about.</td>
+</tr>
+<tr valign="top">
+<th scope="row">WordPress address (URL):</th>
+<td><input name="siteurl" type="text" id="siteurl" value="#" size="40" class="code"></td>
+</tr>
+<tr valign="top">
+<th scope="row">Blog address (URL):</th>
+<td><input name="home" type="text" id="home" value="#" size="40" class="code"><br>Enter the address here if you want your blog homepage <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">to be different from the directory</a> you installed WordPress.</td>
+</tr>
+<tr valign="top">
+<th scope="row">E-mail address: </th>
+<td><input name="admin_email" type="text" id="admin_email" value="admin@admin.com" size="40" class="code">
+<br>
+This address is used only for admin purposes.</td>
+</tr>
+<tr valign="top">
+<th scope="row">Membership:</th>
+<td> <label for="users_can_register">
+<input name="users_can_register" type="checkbox" id="users_can_register" value="1">
+Anyone can register</label><br>
+<label for="comment_registration">
+<input name="comment_registration" type="checkbox" id="comment_registration" value="1">
+Users must be registered and logged in to comment</label>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row">New User Default Role:</th>
+<td><label for="default_role">
+<select name="default_role" id="default_role">
+	<option selected="selected" value="subscriber">Subscriber</option>
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option></select></label>
+</td>
+</tr>
+</tbody></table>
+<fieldset class="options">
+<legend>Date and Time</legend>
+<table class="optiontable">
+<tbody><tr>
+<th scope="row"><abbr title="Coordinated Universal Time">UTC</abbr> time is: </th>
+<td><code>2013-05-23 1:19:33 pm</code></td>
+</tr>
+<tr>
+<th scope="row">Times in the blog should differ by: </th>
+<td><input name="gmt_offset" type="text" id="gmt_offset" size="2" value="2">
+hours (Your timezone offset, for example <code>-6</code> for Central Time.)</td>
+</tr>
+<tr>
+<th scope="row">Default date format:</th>
+<td><input name="date_format" type="text" id="date_format" size="30" value="F j, Y"><br>
+Output: <strong>May 23, 2013</strong></td>
+</tr>
+<tr>
+<th scope="row">Default time format:</th>
+<td><input name="time_format" type="text" id="time_format" size="30" value="g:i a"><br>
+Output: <strong>3:19 pm</strong></td>
+</tr>
+<tr>
+<th scope="row">&nbsp;</th>
+<td><a href="http://codex.wordpress.org/Formatting_Date_and_Time">Documentation on date formatting</a>. Click "Update options" to update sample output. </td>
+</tr>
+<tr>
+<th scope="row">Weeks in the calendar should start on:</th>
+<td><select name="start_of_week" id="start_of_week">
+
+	<option value="0">Sunday</option>
+	<option value="1" selected="selected">Monday</option>
+	<option value="2">Tuesday</option>
+	<option value="3">Wednesday</option>
+	<option value="4">Thursday</option>
+	<option value="5">Friday</option>
+	<option value="6">Saturday</option></select></td>
+</tr>
+</tbody></table>
+</fieldset>
+
+<p class="submit"><input type="submit" name="Submit" value="Update Options »">
+<input type="hidden" name="action" value="update">
+<input type="hidden" name="page_options" value="siteurl,home,blogname,blogdescription,admin_email,users_can_register,gmt_offset,date_format,time_format,start_of_week,comment_registration,default_role">
+</p>
+</form>
+
+</div>
+
+
+<div id="footer">
+<p>Thank you for creating with <a href="http://wordpress.org/">WordPress</a> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a> | <strong>Your WordPress 2.3 is out of date. <a href="http://wordpress.org/download/">Please update</a>.</strong></p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+</body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)tools.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Tools ‹ Test blog — WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var userSettings = {
+		'url': '/historic-wordpress/3.3/',
+		'uid': '1',
+		'time':'1369317165'
+	},
+	ajaxurl = 'admin-ajax.php',
+	pagenow = 'tools',
+	typenow = '',
+	adminpage = 'tools-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<link rel="stylesheet" href="./tools_files/load-styles.php" type="text/css" media="all">
+<link rel="stylesheet" id="colors-css" href="./tools_files/colors-fresh.css" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='css/ie.css?ver=20111130' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./tools_files/load-scripts.php"></script>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+</head>
+<body class="wp-admin js  tools-php admin-bar branch-3-3 version-3-3 admin-color-fresh">
+<script type="text/javascript">document.body.className = document.body.className.replace('no-js','js');</script>
+
+<div id="wpwrap">
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<div id="adminmenushadow"></div>
+<ul id="adminmenu" role="navigation">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<div class="wp-menu-image"><a href="dashboard.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="dashboard.html" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" tabindex="1" aria-haspopup="true">Dashboard</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Dashboard</div><ul><li class="wp-first-item"><a href="dashboard.html" class="wp-first-item" tabindex="1">Home</a></li><li><a href="update-core.php" tabindex="1">Updates <span class="update-plugins count-4" title="1 WordPress Update, 1 Plugin Update, 2 Theme Updates"><span class="update-count">4</span></span></a></li></ul></div></div></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
+	<div class="wp-menu-image"><a href="edit.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="edit.html" class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" tabindex="1" aria-haspopup="true">Posts</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Posts</div><ul><li class="wp-first-item"><a href="edit.html" class="wp-first-item" tabindex="1">All Posts</a></li><li><a href="post-new.html" tabindex="1">Add New</a></li><li><a href="edit-tags.php?taxonomy=category" tabindex="1">Categories</a></li><li><a href="edit-tags.php?taxonomy=post_tag" tabindex="1">Tags</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<div class="wp-menu-image"><a href="#"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="#" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" tabindex="1" aria-haspopup="true">Media</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Media</div><ul><li class="wp-first-item"><a href="#" class="wp-first-item" tabindex="1">Library</a></li><li><a href="media-new.php" tabindex="1">Add New</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-links" id="menu-links">
+	<div class="wp-menu-image"><a href=""><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-links" tabindex="1" aria-haspopup="true">Links</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Links</div><ul><li class="wp-first-item"><a href="" class="wp-first-item" tabindex="1">All Links</a></li><li><a href="#" tabindex="1">Add New</a></li><li><a href="edit-tags.php?taxonomy=link_category" tabindex="1">Link Categories</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<div class="wp-menu-image"><a href="edit.php?post_type=page"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="edit.php?post_type=page" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" tabindex="1" aria-haspopup="true">Pages</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Pages</div><ul><li class="wp-first-item"><a href="edit.php?post_type=page" class="wp-first-item" tabindex="1">All Pages</a></li><li><a href="post-new.html?post_type=page" tabindex="1">Add New</a></li></ul></div></div></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" id="menu-comments">
+	<div class="wp-menu-image"><a href="edit-comments.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="edit-comments.html" class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" tabindex="1">Comments <span class="awaiting-mod count-0"><span class="pending-count">0</span></span></a></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<div class="wp-menu-image"><a href="themes.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="themes.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" tabindex="1" aria-haspopup="true">Appearance</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Appearance</div><ul><li class="wp-first-item"><a href="themes.html" class="wp-first-item" tabindex="1">Themes</a></li><li><a href="#" tabindex="1">Widgets</a></li><li><a href="nav-menus.php" tabindex="1">Menus</a></li><li><a href="#page=theme_options" tabindex="1">Theme Options</a></li><li><a href="#page=custom-background" tabindex="1">Background</a></li><li><a href="#page=custom-header" tabindex="1">Header</a></li><li><a href="#" tabindex="1">Editor</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<div class="wp-menu-image"><a href="plugins.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="plugins.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" tabindex="1" aria-haspopup="true">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></div><ul><li class="wp-first-item"><a href="plugins.html" class="wp-first-item" tabindex="1">Installed Plugins</a></li><li><a href="plugin-install.php" tabindex="1">Add New</a></li><li><a href="#" tabindex="1">Editor</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<div class="wp-menu-image"><a href="users.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="users.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" tabindex="1" aria-haspopup="true">Users</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Users</div><ul><li class="wp-first-item"><a href="users.html" class="wp-first-item" tabindex="1">All Users</a></li><li><a href="user-new.php" tabindex="1">Add New</a></li><li><a href="profile.html" tabindex="1">Your Profile</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-tools" id="menu-tools">
+	<div class="wp-menu-image"><a href="./tools_files/tools.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="./tools_files/tools.html" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-tools" tabindex="1">Tools</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Tools</div><ul><li class="wp-first-item current"><a href="./tools_files/tools.html" class="wp-first-item current" tabindex="1">Available Tools</a></li><li><a href="import.html" tabindex="1">Import</a></li><li><a href="#" tabindex="1">Export</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<div class="wp-menu-image"><a href="options-general.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="options-general.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" tabindex="1" aria-haspopup="true">Settings</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Settings</div><ul><li class="wp-first-item"><a href="options-general.html" class="wp-first-item" tabindex="1">General</a></li><li><a href="#" tabindex="1">Writing</a></li><li><a href="#" tabindex="1">Reading</a></li><li><a href="#" tabindex="1">Discussion</a></li><li><a href="options-media.php" tabindex="1">Media</a></li><li><a href="#" tabindex="1">Privacy</a></li><li><a href="#" tabindex="1">Permalinks</a></li></ul></div></div></li><li id="collapse-menu" class="hide-if-no-js"><div id="collapse-button"><div></div></div><span>Collapse menu</span></li></ul>
+</div>
+<div id="wpcontent">
+
+
+<div id="wpbody">
+
+<div id="wpbody-content">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-press-this" class="active">
+								<a href="tools.php#tab-panel-press-this">
+									Press This								</a>
+							</li>
+						
+							<li id="tab-link-converter" class="">
+								<a href="tools.php#tab-panel-converter">
+									Categories and Tags Converter								</a>
+							</li>
+												</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Tools_Screen" target="_blank">Documentation on Tools</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-press-this" class="active help-tab-content">
+								<p>Press This is a bookmarklet that makes it easy to blog about something you come across on the web. You can use it to just grab a link, or to post an excerpt. Press This will even allow you to choose from images included on the page and use them in your post. Just drag the Press This link on this screen to your bookmarks bar in your browser, and you’ll be on your way to easier content creation. Clicking on it while on another website opens a popup window with all these options.</p>							</div>
+						
+							<div id="tab-panel-converter" class=" help-tab-content">
+								<p>Categories have hierarchy, meaning that you can nest sub-categories. Tags do not have hierachy and cannot be nested. Sometimes people start out using one on their posts, then later realize that the other would work better for their content.</p><p>The Categories and Tags Converter link on this screen will take you to the Import screen, where that Converter is one of the plugins you can install. Once that plugin is installed, return to this screen  and the link will take you to a screen where you can choose to convert tags into categories or vice versa.</p>							</div>
+											</div>
+				</div>
+			</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="tools.php#contextual-help-wrap" id="contextual-help-link" class="show-settings">Help</a>
+			</div>
+				</div>
+		<div class="update-nag"><a href="http://codex.wordpress.org/Version_3.5.1">WordPress 3.5.1</a> is available! <a href="update-core.php">Please update now</a>.</div><div class="wrap">
+<div id="icon-tools" class="icon32"><br></div><h2>Tools</h2>
+
+<div class="tool-box">
+	<h3 class="title">Press This</h3>
+	<p>Press This is a bookmarklet: a little app that runs in your browser and lets you grab bits of the web.</p>
+
+	<p>Use Press This to clip text, images and videos from any web page. Then edit and add more straight from Press This before you save or publish it in a post on your site.</p>
+	<p class="description">Drag-and-drop the following link to your bookmarks bar or right click it and add it to your favorites for a posting shortcut.</p>
+	<p class="pressthis"><a onclick="return false;" oncontextmenu="if(window.navigator.userAgent.indexOf(&#39;WebKit&#39;)!=-1||window.navigator.userAgent.indexOf(&#39;MSIE&#39;)!=-1)jQuery(&#39;.pressthis-code&#39;).show().find(&#39;textarea&#39;).focus().select();return false;" href="javascript:var d=document,w=window,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='press-this.php',l=d.location,e=encodeURIComponent,u=f+'?u='+e(l.href)+'&t='+e(d.title)+'&s='+e(s)+'&v=4';a=function(){if(!w.open(u,'t','toolbar=0,resizable=1,scrollbars=1,status=1,width=720,height=570'))l.href=u;};if (/Firefox/.test(navigator.userAgent)) setTimeout(a, 0); else a();void(0)"><span>Press This</span></a></p>
+	<div class="pressthis-code" style="display:none;">
+	<p class="description">If your bookmarks toolbar is hidden: copy the code below, open your Bookmarks manager, create new bookmark, type Press This into the name field and paste the code into the URL field.</p>
+	<p><textarea rows="5" cols="120" readonly="readonly">javascript:var d=document,w=window,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='press-this.php',l=d.location,e=encodeURIComponent,u=f+'?u='+e(l.href)+'&amp;t='+e(d.title)+'&amp;s='+e(s)+'&amp;v=4';a=function(){if(!w.open(u,'t','toolbar=0,resizable=1,scrollbars=1,status=1,width=720,height=570'))l.href=u;};if (/Firefox/.test(navigator.userAgent)) setTimeout(a, 0); else a();void(0)</textarea></p>
+	</div>
+</div>
+<div class="tool-box">
+    <h3 class="title">Categories and Tags Converter</h3>
+    <p>If you want to convert your categories to tags (or vice versa), use the <a href="import.html">Categories and Tags Converter</a> available from the Import screen.</p>
+</div>
+</div>
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="footer">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span></p>
+<p id="footer-upgrade" class="alignright"><strong><a href="update-core.php">Get Version 3.5.1</a></strong></p>
+<div class="clear"></div>
+</div>
+		<div id="wpadminbar" class="" role="navigation">
+			<div class="quicklinks">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+		<li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="about.php" title="About WordPress"><span class="ab-icon"></span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+		<li id="wp-admin-bar-about" class=""><a class="ab-item" tabindex="10" href="about.php">About WordPress</a>		</li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-wporg" class=""><a class="ab-item" tabindex="10" href="http://wordpress.org/">WordPress.org</a>		</li>
+		<li id="wp-admin-bar-documentation" class=""><a class="ab-item" tabindex="10" href="http://codex.wordpress.org/">Documentation</a>		</li>
+		<li id="wp-admin-bar-support-forums" class=""><a class="ab-item" tabindex="10" href="http://wordpress.org/support/">Support Forums</a>		</li>
+		<li id="wp-admin-bar-feedback" class=""><a class="ab-item" tabindex="10" href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="home-page.html">Test blog</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+		<li id="wp-admin-bar-view-site" class=""><a class="ab-item" tabindex="10" href="#">Visit Site</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-updates" class=""><a class="ab-item" tabindex="10" href="update-core.php" title="1 WordPress Update, 1 Plugin Update, 2 Theme Updates"><span class="ab-icon"></span><span class="ab-label">4</span></a>		</li>
+		<li id="wp-admin-bar-comments" class=""><a class="ab-item" tabindex="10" href="edit-comments.html" title="0 comments awaiting moderation"><span class="ab-icon"></span><span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a>		</li>
+		<li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="post-new.html" title="Add New"><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+		<li id="wp-admin-bar-new-post" class=""><a class="ab-item" tabindex="10" href="post-new.html">Post</a>		</li>
+		<li id="wp-admin-bar-new-media" class=""><a class="ab-item" tabindex="10" href="media-new.php">Media</a>		</li>
+		<li id="wp-admin-bar-new-link" class=""><a class="ab-item" tabindex="10" href="#">Link</a>		</li>
+		<li id="wp-admin-bar-new-page" class=""><a class="ab-item" tabindex="10" href="post-new.html?post_type=page">Page</a>		</li>
+		<li id="wp-admin-bar-new-user" class=""><a class="ab-item" tabindex="10" href="user-new.php">User</a>		</li></ul></div>		</li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" tabindex="10" aria-haspopup="true" href="profile.html" title="My Account">Howdy, admin<img alt="" src="./tools_files/64e1b8d34f425d19e1ee2ea7236d3028" class="avatar avatar-16 photo" height="16" width="16"></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class=" ab-submenu">
+		<li id="wp-admin-bar-user-info" class=""><a class="ab-item" tabindex="-1" href="profile.html"><img alt="" src="./tools_files/64e1b8d34f425d19e1ee2ea7236d3028(1)" class="avatar avatar-64 photo" height="64" width="64"><span class="display-name">admin</span></a>		</li>
+		<li id="wp-admin-bar-edit-profile" class=""><a class="ab-item" tabindex="10" href="profile.html">Edit My Profile</a>		</li>
+		<li id="wp-admin-bar-logout" class=""><a class="ab-item" tabindex="10" href="wp-login.html&_wpnonce=4571c091c3">Log Out</a>		</li></ul></div>		</li></ul>			</div>
+		</div>
+
+		
+<script type="text/javascript">
+/* <![CDATA[ */
+var commonL10n = {"warnDelete":"You are about to permanently delete the selected items.\n  'Cancel' to stop, 'OK' to delete."};/* ]]> */
+</script>
+<script type="text/javascript" src="./tools_files/load-scripts(1).php"></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+</body></html>

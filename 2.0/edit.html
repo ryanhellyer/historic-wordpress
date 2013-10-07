@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)edit.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Posts — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function addLoadEvent(func) {
+  if ( typeof wpOnload != 'function' ) {
+    wpOnload = func;
+  } else {
+    var oldonload = wpOnload;
+    wpOnload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
+
+//]]>
+</script>
+<script type="text/javascript" src="files/fat.js"></script>
+<script type="text/javascript" src="files/tw-sack.js"></script>
+<script type="text/javascript" src="files/list-manipulation.js"></script>
+
+<style type="text/css">* html { overflow-x: hidden; }</style>
+
+</head>
+
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Account</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html" class="current">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="import.html">Import</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="edit.html" class="current">Posts</a></li>
+	<li><a href="">Pages</a></li>
+	<li><a href="#">Categories</a></li>
+	<li><a href="edit-comments.html">Comments</a></li>
+	<li><a href="#">Awaiting Moderation (0)</a></li>
+	<li><a href="#">Files</a></li>
+</ul>
+
+<div class="wrap">
+<h2>
+Last 15 Posts</h2>
+
+<form name="searchform" action="" method="get" style="float: left; width: 16em; margin-right: 3em;"> 
+  <fieldset> 
+  <legend>Search Posts…</legend> 
+  <input type="text" name="s" value="" size="17"> 
+  <input type="submit" name="submit" value="Search"> 
+  </fieldset>
+</form>
+
+
+<form name="viewarc" action="" method="get" style="float: left; width: 20em; margin-bottom: 1em;">
+	<fieldset>
+	<legend>Browse Month…</legend>
+    <select name="m">
+	<option value="201305">May 2013</option>
+	</select>
+		<input type="submit" name="submit" value="Show Month"> 
+	</fieldset>
+</form>
+
+
+<br style="clear:both;">
+
+
+<table id="the-list-x" width="100%" cellpadding="3" cellspacing="3"> 
+	<tbody><tr>
+
+	<th scope="col">ID</th>
+	<th scope="col">When</th>
+	<th scope="col">Title</th>
+	<th scope="col">Categories</th>
+	<th scope="col">Comments</th>
+	<th scope="col">Author</th>
+	<th scope="col"></th>
+	<th scope="col"></th>
+	<th scope="col"></th>
+
+	</tr>
+ 
+	<tr id="post-1" class="alternate">
+
+		<th scope="row">1</th>
+				<td>2013-05-23 <br> 3:08:06 pm</td>
+				<td>Hello world!		</td>
+				<td><a href="#/?cat=1" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a></td>
+				<td><a href="#"> 
+      1 
+      </a></td>
+				<td>admin</td>
+				<td><a href="hello-world.html" rel="permalink" class="edit">View</a></td>
+				<td><a href="#" class="edit">Edit</a></td>
+				<td><a href="post.php?action=delete&post=1" class="delete" onclick="return deleteSomething( &#39;post&#39;, 1, &#39;You are about to delete this post &quot;Hello world!&quot;.\n&quot;OK&quot; to delete, &quot;Cancel&quot; to stop.&#39; );">Delete</a></td>
+			</tr> 
+ 
+</tbody></table>
+
+<div id="ajax-response"></div>
+
+<div class="navigation">
+<div class="alignleft"></div>
+<div class="alignright"></div>
+</div>
+
+ 
+<h3>Comments</h3> 
+<ol id="comments"> 
+ 
+
+<li>
+  2013-5-23 
+  @
+  3:05:06 pm 
+  [ <a href="post.php?action=editcomment&comment=1">Edit</a> - <a href="post.php?action=deletecomment&p=1&comment=1" onclick="return confirm(&#39;You are about to delete this comment by \&#39;Mr WordPress\&#39;\n  \&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39;)">Delete</a>  - <a href="post.php?action=unapprovecomment&p=1&comment=1">Unapprove</a> ] 
+  <br> 
+  <strong> 
+  Mr WordPress 
+  (
+   
+  /
+  <a href="http://wordpress.org/" rel="external">http://wordpress.org/</a> 
+  )</strong> (IP:
+   
+  )
+  <p>Hi, this is a comment.<br>To delete a comment, just log in, and view the posts’ comments, there you will have the option to edit or delete them.
+</p>
+ 
+
+</li> 
+<!-- /comment --> 
+</ol> 
+</div> 
+
+<div id="footer"><p><a href="http://wordpress.org/" id="wordpress-logo"><img src="files/wordpress-logo.png" alt="WordPress"></a></p>
+<p>
+<a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a> <br>
+2.0 — 0.10 seconds</p>
+
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+ 
+</body></html>

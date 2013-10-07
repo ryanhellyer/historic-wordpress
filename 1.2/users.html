@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Users</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html" class="current">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+<div class="wrap">
+  <h2>Authors</h2>
+  <table cellpadding="3" cellspacing="3" width="100%">
+	<tbody><tr>
+	<th>ID</th>
+	<th>Nickname</th>
+	<th>Name</th>
+	<th>E-mail</th>
+	<th>Website</th>
+	<th>Level</th>
+	<th>Posts</th>
+	</tr>
+	
+<tr class="alternate">
+	<td align="center">1</td>
+	<td><strong>site admin</strong></td>
+	<td> </td>
+	<td><a href="mailto:" title="e-mail: "></a></td>
+	<td><a href="" title="website: "></a></td>
+	<td align="center">10</td><td align="right"><a href="#" title="View posts">1</a></td></tr>	
+  </tbody></table>
+</div>
+
+<div class="wrap">
+<h2>Add User</h2>
+<p>Users can <a href="wp-register.php">register themselves</a> or you can manually create users here.</p><form action="" method="post" name="adduser" id="adduser">
+  <table class="editform" width="100%" cellspacing="2" cellpadding="5">
+    <tbody><tr>
+      <th scope="row" width="33%">Nickname      <input name="action" type="hidden" id="action" value="adduser"></th>
+      <td width="66%"><input name="user_login" type="text" id="user_login"></td>
+    </tr>
+    <tr>
+      <th scope="row">First Name </th>
+      <td><input name="firstname" type="text" id="firstname"></td>
+    </tr>
+    <tr>
+      <th scope="row">Last Name </th>
+      <td><input name="lastname" type="text" id="lastname"></td>
+    </tr>
+    <tr>
+      <th scope="row">E-mail</th>
+      <td><input name="email" type="text" id="email"></td>
+    </tr>
+    <tr>
+      <th scope="row">Website</th>
+      <td><input name="uri" type="text" id="uri"></td>
+    </tr>
+    <tr>
+      <th scope="row">Password (twice) </th>
+      <td><input name="pass1" type="password" id="pass1">
+      <br>
+      <input name="pass2" type="password" id="pass2"></td>
+    </tr>
+  </tbody></table>
+  <p class="submit">
+    <input name="adduser" type="submit" id="adduser" value="Add User »">
+  </p>
+  </form>
+</div>
+	
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.01 seconds</p>
+
+</body></html>

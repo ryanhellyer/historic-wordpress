@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)edit.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Posts ‹ Test blog — WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var userSettings = {
+		'url': '/historic-wordpress/3.3/',
+		'uid': '1',
+		'time':'1369317122'
+	},
+	ajaxurl = 'admin-ajax.php',
+	pagenow = 'edit-post',
+	typenow = 'post',
+	adminpage = 'edit-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<link rel="stylesheet" href="files/load-styles.php" type="text/css" media="all">
+<link rel="stylesheet" id="colors-css" href="files/colors-fresh.css" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='css/ie.css?ver=20111130' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="files/load-scripts.php"></script>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<style type="text/css"></style><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<body class="wp-admin js  edit-php admin-bar branch-3-3 version-3-3 admin-color-fresh">
+<script type="text/javascript">document.body.className = document.body.className.replace('no-js','js');</script>
+
+<div id="wpwrap">
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<div id="adminmenushadow"></div>
+<ul id="adminmenu" role="navigation">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<div class="wp-menu-image"><a href="dashboard.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="dashboard.html" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" tabindex="1" aria-haspopup="true">Dashboard</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Dashboard</div><ul><li class="wp-first-item"><a href="dashboard.html" class="wp-first-item" tabindex="1">Home</a></li><li><a href="update-core.php" tabindex="1">Updates <span class="update-plugins count-4" title="1 WordPress Update, 1 Plugin Update, 2 Theme Updates"><span class="update-count">4</span></span></a></li></ul></div></div></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
+	<div class="wp-menu-image"><a href="edit.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="edit.html" class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" tabindex="1">Posts</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Posts</div><ul><li class="wp-first-item current"><a href="edit.html" class="wp-first-item current" tabindex="1">All Posts</a></li><li><a href="post-new.html" tabindex="1">Add New</a></li><li><a href="edit-tags.php?taxonomy=category" tabindex="1">Categories</a></li><li><a href="edit-tags.php?taxonomy=post_tag" tabindex="1">Tags</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<div class="wp-menu-image"><a href="#"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="#" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" tabindex="1" aria-haspopup="true">Media</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Media</div><ul><li class="wp-first-item"><a href="#" class="wp-first-item" tabindex="1">Library</a></li><li><a href="media-new.php" tabindex="1">Add New</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-links" id="menu-links">
+	<div class="wp-menu-image"><a href=""><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-links" tabindex="1" aria-haspopup="true">Links</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Links</div><ul><li class="wp-first-item"><a href="" class="wp-first-item" tabindex="1">All Links</a></li><li><a href="#" tabindex="1">Add New</a></li><li><a href="edit-tags.php?taxonomy=link_category" tabindex="1">Link Categories</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<div class="wp-menu-image"><a href="edit.php?post_type=page"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="edit.php?post_type=page" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" tabindex="1" aria-haspopup="true">Pages</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Pages</div><ul><li class="wp-first-item"><a href="edit.php?post_type=page" class="wp-first-item" tabindex="1">All Pages</a></li><li><a href="post-new.html?post_type=page" tabindex="1">Add New</a></li></ul></div></div></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" id="menu-comments">
+	<div class="wp-menu-image"><a href="edit-comments.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="edit-comments.html" class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" tabindex="1">Comments <span class="awaiting-mod count-0"><span class="pending-count">0</span></span></a></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<div class="wp-menu-image"><a href="themes.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="themes.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" tabindex="1" aria-haspopup="true">Appearance</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Appearance</div><ul><li class="wp-first-item"><a href="themes.html" class="wp-first-item" tabindex="1">Themes</a></li><li><a href="#" tabindex="1">Widgets</a></li><li><a href="nav-menus.php" tabindex="1">Menus</a></li><li><a href="#page=theme_options" tabindex="1">Theme Options</a></li><li><a href="#page=custom-background" tabindex="1">Background</a></li><li><a href="#page=custom-header" tabindex="1">Header</a></li><li><a href="#" tabindex="1">Editor</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<div class="wp-menu-image"><a href="plugins.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="plugins.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" tabindex="1" aria-haspopup="true">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></div><ul><li class="wp-first-item"><a href="plugins.html" class="wp-first-item" tabindex="1">Installed Plugins</a></li><li><a href="plugin-install.php" tabindex="1">Add New</a></li><li><a href="#" tabindex="1">Editor</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<div class="wp-menu-image"><a href="users.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="users.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" tabindex="1" aria-haspopup="true">Users</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Users</div><ul><li class="wp-first-item"><a href="users.html" class="wp-first-item" tabindex="1">All Users</a></li><li><a href="user-new.php" tabindex="1">Add New</a></li><li><a href="profile.html" tabindex="1">Your Profile</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+	<div class="wp-menu-image"><a href="tools.php"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="tools.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" tabindex="1" aria-haspopup="true">Tools</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Tools</div><ul><li class="wp-first-item"><a href="tools.php" class="wp-first-item" tabindex="1">Available Tools</a></li><li><a href="import.html" tabindex="1">Import</a></li><li><a href="#" tabindex="1">Export</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<div class="wp-menu-image"><a href="options-general.html"><br></a></div><div class="wp-menu-arrow"><div></div></div><a href="options-general.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" tabindex="1" aria-haspopup="true">Settings</a>
+	<div class="wp-submenu"><div class="wp-submenu-wrap"><div class="wp-submenu-head">Settings</div><ul><li class="wp-first-item"><a href="options-general.html" class="wp-first-item" tabindex="1">General</a></li><li><a href="#" tabindex="1">Writing</a></li><li><a href="#" tabindex="1">Reading</a></li><li><a href="#" tabindex="1">Discussion</a></li><li><a href="options-media.php" tabindex="1">Media</a></li><li><a href="#" tabindex="1">Privacy</a></li><li><a href="#" tabindex="1">Permalinks</a></li></ul></div></div></li><li id="collapse-menu" class="hide-if-no-js"><div id="collapse-button"><div></div></div><span>Collapse menu</span></li></ul>
+</div>
+<div id="wpcontent">
+
+
+<div id="wpbody">
+
+<div id="wpbody-content">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-overview" class="active">
+								<a href="edit.php#tab-panel-overview">
+									Overview								</a>
+							</li>
+						
+							<li id="tab-link-screen-content" class="">
+								<a href="edit.php#tab-panel-screen-content">
+									Screen Content								</a>
+							</li>
+						
+							<li id="tab-link-action-links" class="">
+								<a href="edit.php#tab-panel-action-links">
+									Available Actions								</a>
+							</li>
+						
+							<li id="tab-link-bulk-actions" class="">
+								<a href="edit.php#tab-panel-bulk-actions">
+									Bulk Actions								</a>
+							</li>
+												</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Posts_Screen" target="_blank">Documentation on Managing Posts</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-overview" class="active help-tab-content">
+								<p>This screen provides access to all of your posts. You can customize the display of this screen to suit your workflow.</p>							</div>
+						
+							<div id="tab-panel-screen-content" class=" help-tab-content">
+								<p>You can customize the display of this screen’s contents in a number of ways:</p><ul><li>You can hide/display columns based on your needs and decide how many posts to list per screen using the Screen Options tab.</li><li>You can filter the list of posts by post status using the text links in the upper left to show All, Published, Draft, or Trashed posts. The default view is to show all posts.</li><li>You can view posts in a simple title list or with an excerpt. Choose the view you prefer by clicking on the icons at the top of the list on the right.</li><li>You can refine the list to show only posts in a specific category or from a specific month by using the dropdown menus above the posts list. Click the Filter button after making your selection. You also can refine the list by clicking on the post author, category or tag in the posts list.</li></ul>							</div>
+						
+							<div id="tab-panel-action-links" class=" help-tab-content">
+								<p>Hovering over a row in the posts list will display action links that allow you to manage your post. You can perform the following actions:</p><ul><li><strong>Edit</strong> takes you to the editing screen for that post. You can also reach that screen by clicking on the post title.</li><li><strong>Quick Edit</strong> provides inline access to the metadata of your post, allowing you to update post details without leaving this screen.</li><li><strong>Trash</strong> removes your post from this list and places it in the trash, from which you can permanently delete it.</li><li><strong>Preview</strong> will show you what your draft post will look like if you publish it. View will take you to your live site to view the post. Which link is available depends on your post’s status.</li></ul>							</div>
+						
+							<div id="tab-panel-bulk-actions" class=" help-tab-content">
+								<p>You can also edit or move multiple posts to the trash at once. Select the posts you want to act on using the checkboxes, then select the action you want to take from the Bulk Actions menu and click Apply.</p><p>When using Bulk Edit, you can change the metadata (categories, author, etc.) for all selected posts at once. To remove a post from the grouping, just click the x next to its name in the Bulk Edit area that appears.</p>							</div>
+											</div>
+				</div>
+			</div>
+				<div id="screen-options-wrap" class="hidden">
+		<form id="adv-settings" action="" method="post">
+					<h5>Show on screen</h5>
+			<div class="metabox-prefs">
+				<label for="author-hide"><input class="hide-column-tog" name="author-hide" type="checkbox" id="author-hide" value="author" checked="checked">Author</label>
+<label for="categories-hide"><input class="hide-column-tog" name="categories-hide" type="checkbox" id="categories-hide" value="categories" checked="checked">Categories</label>
+<label for="tags-hide"><input class="hide-column-tog" name="tags-hide" type="checkbox" id="tags-hide" value="tags" checked="checked">Tags</label>
+<label for="comments-hide"><input class="hide-column-tog" name="comments-hide" type="checkbox" id="comments-hide" value="comments" checked="checked">Comments</label>
+<label for="date-hide"><input class="hide-column-tog" name="date-hide" type="checkbox" id="date-hide" value="date" checked="checked">Date</label>
+				<br class="clear">
+			</div>
+				<h5>Show on screen</h5>
+		<div class="screen-options">
+							<input type="text" class="screen-per-page" name="wp_screen_options[value]" id="edit_post_per_page" maxlength="3" value="20">
+				<label for="edit_post_per_page">
+					Posts				</label>
+			<input type="submit" name="screen-options-apply" id="screen-options-apply" class="button" value="Apply">			<input type="hidden" name="wp_screen_options[option]" value="edit_post_per_page">
+		</div>
+				<div><input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="fc9762698f"></div>
+		</form>
+		</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="edit.php#contextual-help-wrap" id="contextual-help-link" class="show-settings">Help</a>
+			</div>
+					<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="edit.php#screen-options-wrap" id="show-settings-link" class="show-settings">Screen Options</a>
+			</div>
+				</div>
+		<div class="update-nag"><a href="http://codex.wordpress.org/Version_3.5.1">WordPress 3.5.1</a> is available! <a href="update-core.php">Please update now</a>.</div><div class="wrap">
+<div id="icon-edit" class="icon32 icon32-posts-post"><br></div><h2>Posts <a href="post-new.html" class="add-new-h2">Add New</a> </h2>
+
+
+<ul class="subsubsub">
+	<li class="all"><a href="edit.php?post_type=post" class="current">All <span class="count">(1)</span></a> |</li>
+	<li class="publish"><a href="edit.php?post_status=publish&post_type=post">Published <span class="count">(1)</span></a></li>
+</ul>
+<form id="posts-filter" action="" method="get">
+
+<p class="search-box">
+	<label class="screen-reader-text" for="post-search-input">Search Posts:</label>
+	<input type="text" id="post-search-input" name="s" value="">
+	<input type="submit" name="" id="search-submit" class="button" value="Search Posts"></p>
+
+<input type="hidden" name="post_status" class="post_status_page" value="all">
+<input type="hidden" name="post_type" class="post_type_page" value="post">
+
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="e347fa841e"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/3.3/wp-admin/edit.php">	<div class="tablenav top">
+
+		<div class="alignleft actions">
+			<select name="action">
+<option value="-1" selected="selected">Bulk Actions</option>
+	<option value="edit" class="hide-if-no-js">Edit</option>
+	<option value="trash">Move to Trash</option>
+</select>
+<input type="submit" name="" id="doaction" class="button-secondary action" value="Apply">
+		</div>
+		<div class="alignleft actions">
+		<select name="m">
+			<option selected="selected" value="0">Show all dates</option>
+<option value="201305">May 2013</option>
+		</select>
+<select name="cat" id="cat" class="postform">
+	<option value="0">View all categories</option>
+	<option class="level-0" value="1">Uncategorized</option>
+</select>
+<input type="submit" name="" id="post-query-submit" class="button-secondary" value="Filter">		</div>
+<div class="tablenav-pages one-page"><span class="displaying-num">1 item</span>
+<span class="pagination-links"><a class="first-page disabled" title="Go to the first page" href="edit.html">«</a>
+<a class="prev-page disabled" title="Go to the previous page" href="edit.php?paged=1">‹</a>
+<span class="paging-input"><input class="current-page" title="Current page" type="text" name="paged" value="1" size="1"> of <span class="total-pages">1</span></span>
+<a class="next-page disabled" title="Go to the next page" href="edit.php?paged=1">›</a>
+<a class="last-page disabled" title="Go to the last page" href="edit.php?paged=1">»</a></span></div>		<input type="hidden" name="mode" value="list">
+		<div class="view-switch">
+<a href="edit.php?mode=list" class="current"><img id="view-switch-list" src="files/blank.gif" width="20" height="20" title="List View" alt="List View"></a>
+<a href="edit.php?mode=excerpt"><img id="view-switch-excerpt" src="files/blank.gif" width="20" height="20" title="Excerpt View" alt="Excerpt View"></a>
+		</div>
+
+		<br class="clear">
+	</div>
+<table class="wp-list-table widefat fixed posts" cellspacing="0">
+	<thead>
+	<tr>
+		<th scope="col" id="cb" class="manage-column column-cb check-column" style=""><input type="checkbox"></th><th scope="col" id="title" class="manage-column column-title sortable desc" style=""><a href="edit.php?orderby=title&order=asc"><span>Title</span><span class="sorting-indicator"></span></a></th><th scope="col" id="author" class="manage-column column-author sortable desc" style=""><a href="edit.php?orderby=author&order=asc"><span>Author</span><span class="sorting-indicator"></span></a></th><th scope="col" id="categories" class="manage-column column-categories" style="">Categories</th><th scope="col" id="tags" class="manage-column column-tags" style="">Tags</th><th scope="col" id="comments" class="manage-column column-comments num sortable desc" style=""><a href="edit.php?orderby=comment_count&order=asc"><span><span class="vers"><img alt="Comments" src="files/comment-grey-bubble.png"></span></span><span class="sorting-indicator"></span></a></th><th scope="col" id="date" class="manage-column column-date sortable asc" style=""><a href="edit.php?orderby=date&order=desc"><span>Date</span><span class="sorting-indicator"></span></a></th>	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<th scope="col" class="manage-column column-cb check-column" style=""><input type="checkbox"></th><th scope="col" class="manage-column column-title sortable desc" style=""><a href="edit.php?orderby=title&order=asc"><span>Title</span><span class="sorting-indicator"></span></a></th><th scope="col" class="manage-column column-author sortable desc" style=""><a href="edit.php?orderby=author&order=asc"><span>Author</span><span class="sorting-indicator"></span></a></th><th scope="col" class="manage-column column-categories" style="">Categories</th><th scope="col" class="manage-column column-tags" style="">Tags</th><th scope="col" class="manage-column column-comments num sortable desc" style=""><a href="edit.php?orderby=comment_count&order=asc"><span><span class="vers"><img alt="Comments" src="files/comment-grey-bubble.png"></span></span><span class="sorting-indicator"></span></a></th><th scope="col" class="manage-column column-date sortable asc" style=""><a href="edit.php?orderby=date&order=desc"><span>Date</span><span class="sorting-indicator"></span></a></th>	</tr>
+	</tfoot>
+
+	<tbody id="the-list">
+				<tr id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized alternate iedit author-self" valign="top">
+				<th scope="row" class="check-column"><input type="checkbox" name="post[]" value="1"></th>
+						<td class="post-title page-title column-title"><strong><a class="row-title" href="post.php?post=1&action=edit" title="Edit “Hello world!”">Hello world!</a></strong>
+<div class="row-actions"><span class="edit"><a href="post.php?post=1&action=edit" title="Edit this item">Edit</a> | </span><span class="inline hide-if-no-js"><a href="edit.php#" class="editinline" title="Edit this item inline">Quick&nbsp;Edit</a> | </span><span class="trash"><a class="submitdelete" title="Move this item to the Trash" href="post.php?post=1&action=trash&_wpnonce=b05a6142ac">Trash</a> | </span><span class="view"><a href="hello-world.html" title="View “Hello world!”" rel="permalink">View</a></span></div>
+<div class="hidden" id="inline_1">
+	<div class="post_title">Hello world!</div>
+	<div class="post_name">hello-world</div>
+	<div class="post_author">1</div>
+	<div class="comment_status">open</div>
+	<div class="ping_status">open</div>
+	<div class="_status">publish</div>
+	<div class="jj">23</div>
+	<div class="mm">05</div>
+	<div class="aa">2013</div>
+	<div class="hh">13</div>
+	<div class="mn">51</div>
+	<div class="ss">37</div>
+	<div class="post_password"></div><div class="post_category" id="category_1">1</div><div class="tags_input" id="post_tag_1"></div><div class="sticky"></div><div class="post_format"></div></div></td>			<td class="author column-author"><a href="edit.php?post_type=post&author=1">admin</a></td>
+						<td class="categories column-categories"><a href="edit.php?post_type=post&category_name=uncategorized">Uncategorized</a></td>
+						<td class="tags column-tags">No Tags</td>
+						<td class="comments column-comments"><div class="post-com-count-wrapper">
+			<a href="edit-comments.php?p=1" title="0 pending" class="post-com-count"><span class="comment-count">1</span></a>			</div></td>
+			<td class="date column-date"><abbr title="2013/05/23 1:51:37 PM">1 min ago</abbr><br>Published</td>		</tr>
+		</tbody>
+</table>
+	<div class="tablenav bottom">
+
+		<div class="alignleft actions">
+			<select name="action2">
+<option value="-1" selected="selected">Bulk Actions</option>
+	<option value="edit" class="hide-if-no-js">Edit</option>
+	<option value="trash">Move to Trash</option>
+</select>
+<input type="submit" name="" id="doaction2" class="button-secondary action" value="Apply">
+		</div>
+		<div class="alignleft actions">
+		</div>
+<div class="tablenav-pages one-page"><span class="displaying-num">1 item</span>
+<span class="pagination-links"><a class="first-page disabled" title="Go to the first page" href="edit.html">«</a>
+<a class="prev-page disabled" title="Go to the previous page" href="edit.php?paged=1">‹</a>
+<span class="paging-input">1 of <span class="total-pages">1</span></span>
+<a class="next-page disabled" title="Go to the next page" href="edit.php?paged=1">›</a>
+<a class="last-page disabled" title="Go to the last page" href="edit.php?paged=1">»</a></span></div>
+		<br class="clear">
+	</div>
+
+</form>
+
+
+	<form method="get" action=""><table style="display: none"><tbody id="inlineedit">
+		
+		<tr id="inline-edit" class="inline-edit-row inline-edit-row-post inline-edit-post quick-edit-row quick-edit-row-post inline-edit-post" style="display: none"><td colspan="7" class="colspanchange">
+
+		<fieldset class="inline-edit-col-left"><div class="inline-edit-col">
+			<h4>Quick Edit</h4>
+	
+			<label>
+				<span class="title">Title</span>
+				<span class="input-text-wrap"><input type="text" name="post_title" class="ptitle" value=""></span>
+			</label>
+
+			<label>
+				<span class="title">Slug</span>
+				<span class="input-text-wrap"><input type="text" name="post_name" value=""></span>
+			</label>
+
+	
+				<label><span class="title">Date</span></label>
+			<div class="inline-edit-date">
+				<div class="timestamp-wrap"><select name="mm" tabindex="4">
+			<option value="01">01-Jan</option>
+			<option value="02">02-Feb</option>
+			<option value="03">03-Mar</option>
+			<option value="04">04-Apr</option>
+			<option value="05" selected="selected">05-May</option>
+			<option value="06">06-Jun</option>
+			<option value="07">07-Jul</option>
+			<option value="08">08-Aug</option>
+			<option value="09">09-Sep</option>
+			<option value="10">10-Oct</option>
+			<option value="11">11-Nov</option>
+			<option value="12">12-Dec</option>
+</select><input type="text" name="jj" value="23" size="2" maxlength="2" tabindex="4" autocomplete="off">, <input type="text" name="aa" value="2013" size="4" maxlength="4" tabindex="4" autocomplete="off"> @ <input type="text" name="hh" value="13" size="2" maxlength="2" tabindex="4" autocomplete="off"> : <input type="text" name="mn" value="51" size="2" maxlength="2" tabindex="4" autocomplete="off"></div><input type="hidden" id="ss" name="ss" value="37">			</div>
+			<br class="clear">
+	
+	<label class="inline-edit-author"><span class="title">Author</span><select name="post_author" class="authors">
+	<option value="1">admin</option>
+</select></label>
+			<div class="inline-edit-group">
+				<label class="alignleft">
+					<span class="title">Password</span>
+					<span class="input-text-wrap"><input type="text" name="post_password" class="inline-edit-password-input" value=""></span>
+				</label>
+
+				<em style="margin:5px 10px 0 0" class="alignleft">
+					–OR–				</em>
+				<label class="alignleft inline-edit-private">
+					<input type="checkbox" name="keep_private" value="private">
+					<span class="checkbox-title">Private</span>
+				</label>
+			</div>
+
+	
+		</div></fieldset>
+
+	
+		<fieldset class="inline-edit-col-center inline-edit-categories"><div class="inline-edit-col">
+
+	
+			<span class="title inline-edit-categories-label">Categories				<span class="catshow">[more]</span>
+				<span class="cathide" style="display:none;">[less]</span>
+			</span>
+			<input type="hidden" name="post_category[]" value="0">
+			<ul class="cat-checklist category-checklist">
+				
+<li id="category-1" class="popular-category"><label class="selectit"><input value="1" type="checkbox" name="post_category[]" id="in-category-1"> Uncategorized</label></li>
+			</ul>
+
+	
+		</div></fieldset>
+
+	
+		<fieldset class="inline-edit-col-right"><div class="inline-edit-col">
+
+	
+	
+						<label class="inline-edit-tags">
+				<span class="title">Tags</span>
+				<textarea cols="22" rows="1" name="tax_input[post_tag]" class="tax_input_post_tag"></textarea>
+			</label>
+		
+	
+	
+	
+			<div class="inline-edit-group">
+							<label class="alignleft">
+					<input type="checkbox" name="comment_status" value="open">
+					<span class="checkbox-title">Allow Comments</span>
+				</label>
+							<label class="alignleft">
+					<input type="checkbox" name="ping_status" value="open">
+					<span class="checkbox-title">Allow Pings</span>
+				</label>
+						</div>
+
+	
+			<div class="inline-edit-group">
+				<label class="inline-edit-status alignleft">
+					<span class="title">Status</span>
+					<select name="_status">
+												<option value="publish">Published</option>
+						<option value="future">Scheduled</option>
+												<option value="pending">Pending Review</option>
+						<option value="draft">Draft</option>
+					</select>
+				</label>
+
+	
+	
+				<label class="alignleft">
+					<input type="checkbox" name="sticky" value="sticky">
+					<span class="checkbox-title">Make this post sticky</span>
+				</label>
+
+	
+	
+			</div>
+
+				<div class="inline-edit-group">
+				<label class="alignleft" for="post_format">
+				<span class="title">Post Format</span>
+				<select name="post_format">
+									<option value="0">Standard</option>
+									<option value="aside">Aside</option>
+										<option value="chat" class="unsupported">Chat</option>
+										<option value="gallery">Gallery</option>
+										<option value="link">Link</option>
+										<option value="image">Image</option>
+										<option value="quote">Quote</option>
+										<option value="status">Status</option>
+										<option value="video" class="unsupported">Video</option>
+										<option value="audio" class="unsupported">Audio</option>
+									</select></label>
+			</div>
+			
+		</div></fieldset>
+
+			<p class="submit inline-edit-save">
+			<a accesskey="c" href="edit.php#inline-edit" title="Cancel" class="button-secondary cancel alignleft">Cancel</a>
+			<input type="hidden" id="_inline_edit" name="_inline_edit" value="0fc195bbeb">				<a accesskey="s" href="edit.php#inline-edit" title="Update" class="button-primary save alignright">Update</a>
+				<img class="waiting" style="display:none;" src="files/wpspin_light.gif" alt="">
+						<input type="hidden" name="post_view" value="list">
+			<input type="hidden" name="screen" value="edit-post">
+			<span class="error" style="display:none"></span>
+			<br class="clear">
+		</p>
+		</td></tr>
+	
+		<tr id="bulk-edit" class="inline-edit-row inline-edit-row-post inline-edit-post bulk-edit-row bulk-edit-row-post bulk-edit-post" style="display: none"><td colspan="7" class="colspanchange">
+
+		<fieldset class="inline-edit-col-left"><div class="inline-edit-col">
+			<h4>Bulk Edit</h4>
+				<div id="bulk-title-div">
+				<div id="bulk-titles"></div>
+			</div>
+
+	
+	
+	
+		</div></fieldset><fieldset class="inline-edit-col-center inline-edit-categories"><div class="inline-edit-col">
+
+	
+			<span class="title inline-edit-categories-label">Categories				<span class="catshow">[more]</span>
+				<span class="cathide" style="display:none;">[less]</span>
+			</span>
+			<input type="hidden" name="post_category[]" value="0">
+			<ul class="cat-checklist category-checklist">
+				
+<li id="category-1" class="popular-category"><label class="selectit"><input value="1" type="checkbox" name="post_category[]" id="in-category-1"> Uncategorized</label></li>
+			</ul>
+
+	
+		</div></fieldset>
+
+	
+		<fieldset class="inline-edit-col-right"><label class="inline-edit-tags">
+				<span class="title">Tags</span>
+				<textarea cols="22" rows="1" name="tax_input[post_tag]" class="tax_input_post_tag"></textarea>
+			</label><div class="inline-edit-col">
+
+	<label class="inline-edit-author"><span class="title">Author</span><select name="post_author" class="authors">
+	<option value="-1">— No Change —</option>
+	<option value="1">admin</option>
+</select></label>
+	
+	
+			<div class="inline-edit-group">
+					<label class="alignleft">
+				<span class="title">Comments</span>
+				<select name="comment_status">
+					<option value="">— No Change —</option>
+					<option value="open">Allow</option>
+					<option value="closed">Do not allow</option>
+				</select>
+			</label>
+					<label class="alignright">
+				<span class="title">Pings</span>
+				<select name="ping_status">
+					<option value="">— No Change —</option>
+					<option value="open">Allow</option>
+					<option value="closed">Do not allow</option>
+				</select>
+			</label>
+					</div>
+
+	
+			<div class="inline-edit-group">
+				<label class="inline-edit-status alignleft">
+					<span class="title">Status</span>
+					<select name="_status">
+							<option value="-1">— No Change —</option>
+												<option value="publish">Published</option>
+						
+							<option value="private">Private</option>
+												<option value="pending">Pending Review</option>
+						<option value="draft">Draft</option>
+					</select>
+				</label>
+
+	
+	
+				<label class="alignright">
+					<span class="title">Sticky</span>
+					<select name="sticky">
+						<option value="-1">— No Change —</option>
+						<option value="sticky">Sticky</option>
+						<option value="unsticky">Not Sticky</option>
+					</select>
+				</label>
+
+	
+	
+			</div>
+
+				<div class="inline-edit-group">
+				<label class="alignleft" for="post_format">
+				<span class="title">Post Format</span>
+				<select name="post_format">
+									<option value="-1">— No Change —</option>
+									<option value="0">Standard</option>
+									<option value="aside">Aside</option>
+										<option value="chat" class="unsupported">Chat</option>
+										<option value="gallery">Gallery</option>
+										<option value="link">Link</option>
+										<option value="image">Image</option>
+										<option value="quote">Quote</option>
+										<option value="status">Status</option>
+										<option value="video" class="unsupported">Video</option>
+										<option value="audio" class="unsupported">Audio</option>
+									</select></label>
+			</div>
+			
+		</div></fieldset>
+
+			<p class="submit inline-edit-save">
+			<a accesskey="c" href="edit.php#inline-edit" title="Cancel" class="button-secondary cancel alignleft">Cancel</a>
+			<input type="submit" name="bulk_edit" id="bulk_edit" class="button-primary alignright" value="Update" accesskey="s">			<input type="hidden" name="post_view" value="list">
+			<input type="hidden" name="screen" value="edit-post">
+			<span class="error" style="display:none"></span>
+			<br class="clear">
+		</p>
+		</td></tr>
+			</tbody></table></form>
+
+<div id="ajax-response"></div>
+<br class="clear">
+</div>
+
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="footer">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span></p>
+<p id="footer-upgrade" class="alignright"><strong><a href="update-core.php">Get Version 3.5.1</a></strong></p>
+<div class="clear"></div>
+</div>
+		<div id="wpadminbar" class="" role="navigation">
+			<div class="quicklinks">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+		<li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="about.php" title="About WordPress"><span class="ab-icon"></span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+		<li id="wp-admin-bar-about" class=""><a class="ab-item" tabindex="10" href="about.php">About WordPress</a>		</li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-wporg" class=""><a class="ab-item" tabindex="10" href="http://wordpress.org/">WordPress.org</a>		</li>
+		<li id="wp-admin-bar-documentation" class=""><a class="ab-item" tabindex="10" href="http://codex.wordpress.org/">Documentation</a>		</li>
+		<li id="wp-admin-bar-support-forums" class=""><a class="ab-item" tabindex="10" href="http://wordpress.org/support/">Support Forums</a>		</li>
+		<li id="wp-admin-bar-feedback" class=""><a class="ab-item" tabindex="10" href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="home-page.html">Test blog</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+		<li id="wp-admin-bar-view-site" class=""><a class="ab-item" tabindex="10" href="#">Visit Site</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-updates" class=""><a class="ab-item" tabindex="10" href="update-core.php" title="1 WordPress Update, 1 Plugin Update, 2 Theme Updates"><span class="ab-icon"></span><span class="ab-label">4</span></a>		</li>
+		<li id="wp-admin-bar-comments" class=""><a class="ab-item" tabindex="10" href="edit-comments.html" title="0 comments awaiting moderation"><span class="ab-icon"></span><span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a>		</li>
+		<li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="post-new.html" title="Add New"><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+		<li id="wp-admin-bar-new-post" class=""><a class="ab-item" tabindex="10" href="post-new.html">Post</a>		</li>
+		<li id="wp-admin-bar-new-media" class=""><a class="ab-item" tabindex="10" href="media-new.php">Media</a>		</li>
+		<li id="wp-admin-bar-new-link" class=""><a class="ab-item" tabindex="10" href="#">Link</a>		</li>
+		<li id="wp-admin-bar-new-page" class=""><a class="ab-item" tabindex="10" href="post-new.html?post_type=page">Page</a>		</li>
+		<li id="wp-admin-bar-new-user" class=""><a class="ab-item" tabindex="10" href="user-new.php">User</a>		</li></ul></div>		</li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" tabindex="10" aria-haspopup="true" href="profile.html" title="My Account">Howdy, admin<img alt="" src="files/64e1b8d34f425d19e1ee2ea7236d3028" class="avatar avatar-16 photo" height="16" width="16"></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class=" ab-submenu">
+		<li id="wp-admin-bar-user-info" class=""><a class="ab-item" tabindex="-1" href="profile.html"><img alt="" src="files/64e1b8d34f425d19e1ee2ea7236d3028(1)" class="avatar avatar-64 photo" height="64" width="64"><span class="display-name">admin</span></a>		</li>
+		<li id="wp-admin-bar-edit-profile" class=""><a class="ab-item" tabindex="10" href="profile.html">Edit My Profile</a>		</li>
+		<li id="wp-admin-bar-logout" class=""><a class="ab-item" tabindex="10" href="wp-login.html&_wpnonce=4571c091c3">Log Out</a>		</li></ul></div>		</li></ul>			</div>
+		</div>
+
+		
+<script type="text/javascript">
+/* <![CDATA[ */
+var commonL10n = {"warnDelete":"You are about to permanently delete the selected items.\n  'Cancel' to stop, 'OK' to delete."};var inlineEditL10n = {"error":"Error while saving the changes.","ntdeltitle":"Remove From Bulk Edit","notitle":"(no title)"};/* ]]> */
+</script>
+<script type="text/javascript" src="files/load-scripts(1).php"></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+</body></html>

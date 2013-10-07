@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)themes.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar" lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Manage Themes ‹ Test blog — WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/historic-wordpress/3.5/wp-admin/admin-ajax.php',
+	pagenow = 'themes',
+	typenow = '',
+	adminpage = 'themes-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<link rel="stylesheet" href="files/load-styles.php" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox-css" href="files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="colors-css" href="files/colors-fresh.min.css" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='css/ie.min.css?ver=3.5' type='text/css' media='all' />
+<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var userSettings = {"url":"\/historic-wordpress\/3.5\/","uid":"1","time":"1369317703"};/* ]]> */
+</script>
+<script type="text/javascript" src="files/load-scripts.php"></script>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<style type="text/css"></style><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<body class="wp-admin wp-core-ui js  themes-php auto-fold admin-bar branch-3-5 version-3-5 admin-color-fresh locale-en-us  customize-support">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+	<script type="text/javascript">
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+			request = true;
+
+			b[c] = b[c].replace( rcs, ' ' );
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+	
+<div id="wpwrap">
+<a tabindex="1" href="themes.php#wpbody-content" class="screen-reader-shortcut">Skip to main content</a>
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<div id="adminmenushadow"></div>
+<ul id="adminmenu" role="navigation">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<a href="dashboard.html" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Dashboard</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Dashboard</li><li class="wp-first-item"><a href="dashboard.html" class="wp-first-item">Home</a></li><li><a href="update-core.php">Updates <span class="update-plugins count-2" title="1 WordPress Update, 1 Plugin Update"><span class="update-count">2</span></span></a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
+	<a href="edit.html" class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Posts</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Posts</li><li class="wp-first-item"><a href="edit.html" class="wp-first-item">All Posts</a></li><li><a href="post-new.html">Add New</a></li><li><a href="edit-tags.php?taxonomy=category">Categories</a></li><li><a href="edit-tags.php?taxonomy=post_tag">Tags</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<a href="#" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Media</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Media</li><li class="wp-first-item"><a href="#" class="wp-first-item">Library</a></li><li><a href="media-new.php">Add New</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<a href="edit.php?post_type=page" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Pages</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Pages</li><li class="wp-first-item"><a href="edit.php?post_type=page" class="wp-first-item">All Pages</a></li><li><a href="post-new.html?post_type=page">Add New</a></li></ul></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" id="menu-comments">
+	<a href="edit-comments.html" class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Comments <span class="awaiting-mod count-0"><span class="pending-count">0</span></span></div></a></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<a href="themes.html" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Appearance</div></a>
+	<ul class="wp-submenu wp-submenu-wrap" style=""><li class="wp-submenu-head">Appearance</li><li class="wp-first-item current"><a href="themes.html" class="wp-first-item current">Themes</a></li><li><a href="#">Widgets</a></li><li><a href="nav-menus.php">Menus</a></li><li><a href="#page=custom-header">Header</a></li><li><a href="#page=custom-background">Background</a></li><li><a href="#">Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins opensub" id="menu-plugins">
+	<a href="plugins.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></div></a>
+	<ul class="wp-submenu wp-submenu-wrap" style=""><li class="wp-submenu-head">Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></li><li class="wp-first-item"><a href="plugins.html" class="wp-first-item">Installed Plugins</a></li><li><a href="plugin-install.php">Add New</a></li><li><a href="#">Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<a href="users.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Users</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Users</li><li class="wp-first-item"><a href="users.html" class="wp-first-item">All Users</a></li><li><a href="user-new.php">Add New</a></li><li><a href="profile.html">Your Profile</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+	<a href="tools.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Tools</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Tools</li><li class="wp-first-item"><a href="tools.php" class="wp-first-item">Available Tools</a></li><li><a href="import.html">Import</a></li><li><a href="#">Export</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<a href="options-general.html" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Settings</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Settings</li><li class="wp-first-item"><a href="options-general.html" class="wp-first-item">General</a></li><li><a href="#">Writing</a></li><li><a href="#">Reading</a></li><li><a href="#">Discussion</a></li><li><a href="options-media.php">Media</a></li><li><a href="#">Permalinks</a></li></ul></li><li id="collapse-menu" class="hide-if-no-js"><div id="collapse-button"><div></div></div><span>Collapse menu</span></li></ul>
+</div>
+<div id="wpcontent">
+
+		<div id="wpadminbar" class="" role="navigation">
+			<a class="screen-reader-shortcut" href="themes.php#wp-toolbar" tabindex="1">Skip to toolbar</a>
+			<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Top navigation toolbar." tabindex="0">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+		<li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="about.php" title="About WordPress"><span class="ab-icon"></span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+		<li id="wp-admin-bar-about"><a class="ab-item" href="about.php">About WordPress</a>		</li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-wporg"><a class="ab-item" href="http://wordpress.org/">WordPress.org</a>		</li>
+		<li id="wp-admin-bar-documentation"><a class="ab-item" href="http://codex.wordpress.org/">Documentation</a>		</li>
+		<li id="wp-admin-bar-support-forums"><a class="ab-item" href="http://wordpress.org/support/">Support Forums</a>		</li>
+		<li id="wp-admin-bar-feedback"><a class="ab-item" href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" aria-haspopup="true" href="home-page.html">Test blog</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+		<li id="wp-admin-bar-view-site"><a class="ab-item" href="#">Visit Site</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-updates"><a class="ab-item" href="update-core.php" title="1 WordPress Update, 1 Plugin Update"><span class="ab-icon"></span><span class="ab-label">2</span><span class="screen-reader-text">1 WordPress Update, 1 Plugin Update</span></a>		</li>
+		<li id="wp-admin-bar-comments"><a class="ab-item" href="edit-comments.html" title="0 comments awaiting moderation"><span class="ab-icon"></span><span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a>		</li>
+		<li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" aria-haspopup="true" href="post-new.html" title="Add New"><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+		<li id="wp-admin-bar-new-post"><a class="ab-item" href="post-new.html">Post</a>		</li>
+		<li id="wp-admin-bar-new-media"><a class="ab-item" href="media-new.php">Media</a>		</li>
+		<li id="wp-admin-bar-new-page"><a class="ab-item" href="post-new.html?post_type=page">Page</a>		</li>
+		<li id="wp-admin-bar-new-user"><a class="ab-item" href="user-new.php">User</a>		</li></ul></div>		</li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" aria-haspopup="true" href="profile.html" title="My Account">Howdy, admin<img alt="" src="files/64e1b8d34f425d19e1ee2ea7236d3028" class="avatar avatar-16 photo" height="16" width="16"></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu">
+		<li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="profile.html"><img alt="" src="files/64e1b8d34f425d19e1ee2ea7236d3028(1)" class="avatar avatar-64 photo" height="64" width="64"><span class="display-name">admin</span></a>		</li>
+		<li id="wp-admin-bar-edit-profile"><a class="ab-item" href="profile.html">Edit My Profile</a>		</li>
+		<li id="wp-admin-bar-logout"><a class="ab-item" href="wp-login.html&_wpnonce=57eec4a19e">Log Out</a>		</li></ul></div>		</li></ul>			</div>
+			<a class="screen-reader-shortcut" href="wp-login.html&_wpnonce=57eec4a19e">Log Out</a>
+		</div>
+
+		
+<div id="wpbody">
+
+<div id="wpbody-content" aria-label="Main content" tabindex="0">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden" tabindex="-1" aria-label="Contextual Help Tab">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-overview" class="active">
+								<a href="themes.php#tab-panel-overview" aria-controls="tab-panel-overview">
+									Overview								</a>
+							</li>
+						
+							<li id="tab-link-adding-themes">
+								<a href="themes.php#tab-panel-adding-themes" aria-controls="tab-panel-adding-themes">
+									Adding Themes								</a>
+							</li>
+						
+							<li id="tab-link-customize-preview-themes">
+								<a href="themes.php#tab-panel-customize-preview-themes" aria-controls="tab-panel-customize-preview-themes">
+									Previewing and Customizing								</a>
+							</li>
+												</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Using_Themes" target="_blank">Documentation on Using Themes</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-overview" class="help-tab-content active">
+								<p>Aside from the default theme included with your WordPress installation, themes are designed and developed by third parties.</p><p>You can see your active theme at the top of the screen. Below are the other themes you have installed that are not currently in use. You can see what your site would look like with one of these themes by clicking the Live Preview link (see "Previewing and Customizing" help tab). To change themes, click the Activate link.</p>							</div>
+						
+							<div id="tab-panel-adding-themes" class="help-tab-content">
+								<p>If you would like to see more themes to choose from, click on the “Install Themes” tab and you will be able to browse or search for additional themes from the <a href="http://wordpress.org/extend/themes/" target="_blank">WordPress.org Theme Directory</a>. Themes in the WordPress.org Theme Directory are designed and developed by third parties, and are compatible with the license WordPress uses. Oh, and they’re free!</p>							</div>
+						
+							<div id="tab-panel-customize-preview-themes" class="help-tab-content">
+								<p>Click on the "Live Preview" link under any theme to preview that theme and change theme options in a separate, full-screen view. Any installed theme can be previewed and customized in this way.</p><p>The theme being previewed is fully interactive — navigate to different pages to see how the theme handles posts, archives, and other page templates.</p><p>In the left-hand pane you can edit the theme settings. The settings will differ, depending on what theme features the theme being previewed supports. To accept the new settings and activate the theme all in one step, click the "Save &amp; Activate" button at the top of the left-hand pane.</p><p>When previewing on smaller monitors, you can use the "Collapse" icon at the bottom of the left-hand pane. This will hide the pane, giving you more room to preview your site in the new theme. To bring the pane back, click on the Collapse icon again.</p>							</div>
+											</div>
+				</div>
+			</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="themes.php#contextual-help-wrap" id="contextual-help-link" class="show-settings" aria-controls="contextual-help-wrap" aria-expanded="false">Help</a>
+			</div>
+				</div>
+		<div class="update-nag"><a href="http://codex.wordpress.org/Version_3.5.1">WordPress 3.5.1</a> is available! <a href="update-core.php">Please update now</a>.</div>
+<div class="wrap"><div id="icon-themes" class="icon32"><br></div><h2 class="nav-tab-wrapper">
+<a href="themes.html" class="nav-tab nav-tab-active">Manage Themes</a><a href="theme-install.php" class="nav-tab">Install Themes</a>
+</h2>
+<div id="current-theme" class="has-screenshot">
+					<a href="customize.php" class="load-customize hide-if-no-customize" title="Customize “Twenty Twelve”">
+			<img src="files/screenshot.png" alt="Current theme preview">
+		</a>
+				<img class="hide-if-customize" src="files/screenshot.png" alt="Current theme preview">
+	
+	<h3>Current Theme</h3>
+	<h4>
+		Twenty Twelve	</h4>
+
+	<div>
+		<ul class="theme-info">
+			<li>By <a href="http://wordpress.org/" title="Visit author homepage">the WordPress team</a></li>
+			<li>Version 1.1</li>
+		</ul>
+		<p class="theme-description">The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.</p>
+					</div>
+
+		<div class="theme-options">
+				<a id="customize-current-theme-link" href="customize.php" class="load-customize hide-if-no-customize" title="Customize “Twenty Twelve”">Customize</a>
+				<span>Options:</span>
+		<ul>
+							<li><a href="#">Widgets</a></li>
+							<li><a href="nav-menus.php">Menus</a></li>
+							<li><a href="#page=custom-header">Header</a></li>
+							<li><a href="#page=custom-background">Background</a></li>
+					</ul>
+			</div>
+	
+</div>
+
+<br class="clear">
+
+<form class="search-form filter-form" action="" method="get">
+
+<h3 class="available-themes">Available Themes</h3>
+
+
+<p class="search-box">
+	<label class="screen-reader-text" for="theme-search-input">Search Installed Themes:</label>
+	<input type="search" id="theme-search-input" name="s" value="">
+	<input type="submit" name="" id="search-submit" class="button" value="Search Installed Themes">	<a id="filter-click" href="#filter=1">Feature Filter</a>
+</p>
+
+<div id="filter-box" style="display: none;">
+	<div class="feature-filter">
+		<p class="install-help">Theme filters</p>
+		
+		<div class="feature-container">
+			<div class="feature-name">Colors</div>
+
+			<ol class="feature-group">
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-black" value="black">
+					<label for="feature-id-black">Black</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-blue" value="blue">
+					<label for="feature-id-blue">Blue</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-brown" value="brown">
+					<label for="feature-id-brown">Brown</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-gray" value="gray">
+					<label for="feature-id-gray">Gray</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-green" value="green">
+					<label for="feature-id-green">Green</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-orange" value="orange">
+					<label for="feature-id-orange">Orange</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-pink" value="pink">
+					<label for="feature-id-pink">Pink</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-purple" value="purple">
+					<label for="feature-id-purple">Purple</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-red" value="red">
+					<label for="feature-id-red">Red</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-silver" value="silver">
+					<label for="feature-id-silver">Silver</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-tan" value="tan">
+					<label for="feature-id-tan">Tan</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-white" value="white">
+					<label for="feature-id-white">White</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-yellow" value="yellow">
+					<label for="feature-id-yellow">Yellow</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-dark" value="dark">
+					<label for="feature-id-dark">Dark</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-light" value="light">
+					<label for="feature-id-light">Light</label>
+				</li>
+							</ol>
+		</div>
+	
+		<div class="feature-container">
+			<div class="feature-name">Columns</div>
+
+			<ol class="feature-group">
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-one-column" value="one-column">
+					<label for="feature-id-one-column">One Column</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-two-columns" value="two-columns">
+					<label for="feature-id-two-columns">Two Columns</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-three-columns" value="three-columns">
+					<label for="feature-id-three-columns">Three Columns</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-four-columns" value="four-columns">
+					<label for="feature-id-four-columns">Four Columns</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-left-sidebar" value="left-sidebar">
+					<label for="feature-id-left-sidebar">Left Sidebar</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-right-sidebar" value="right-sidebar">
+					<label for="feature-id-right-sidebar">Right Sidebar</label>
+				</li>
+							</ol>
+		</div>
+	
+		<div class="feature-container">
+			<div class="feature-name">Width</div>
+
+			<ol class="feature-group">
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-fixed-width" value="fixed-width">
+					<label for="feature-id-fixed-width">Fixed Width</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-flexible-width" value="flexible-width">
+					<label for="feature-id-flexible-width">Flexible Width</label>
+				</li>
+							</ol>
+		</div>
+	
+		<div class="feature-container">
+			<div class="feature-name">Features</div>
+
+			<ol class="feature-group">
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-blavatar" value="blavatar">
+					<label for="feature-id-blavatar">Blavatar</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-buddypress" value="buddypress">
+					<label for="feature-id-buddypress">BuddyPress</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-custom-background" value="custom-background">
+					<label for="feature-id-custom-background">Custom Background</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-custom-colors" value="custom-colors">
+					<label for="feature-id-custom-colors">Custom Colors</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-custom-header" value="custom-header">
+					<label for="feature-id-custom-header">Custom Header</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-custom-menu" value="custom-menu">
+					<label for="feature-id-custom-menu">Custom Menu</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-editor-style" value="editor-style">
+					<label for="feature-id-editor-style">Editor Style</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-featured-image-header" value="featured-image-header">
+					<label for="feature-id-featured-image-header">Featured Image Header</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-featured-images" value="featured-images">
+					<label for="feature-id-featured-images">Featured Images</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-flexible-header" value="flexible-header">
+					<label for="feature-id-flexible-header">Flexible Header</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-front-page-post-form" value="front-page-post-form">
+					<label for="feature-id-front-page-post-form">Front Page Posting</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-full-width-template" value="full-width-template">
+					<label for="feature-id-full-width-template">Full Width Template</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-microformats" value="microformats">
+					<label for="feature-id-microformats">Microformats</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-post-formats" value="post-formats">
+					<label for="feature-id-post-formats">Post Formats</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-rtl-language-support" value="rtl-language-support">
+					<label for="feature-id-rtl-language-support">RTL Language Support</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-sticky-post" value="sticky-post">
+					<label for="feature-id-sticky-post">Sticky Post</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-theme-options" value="theme-options">
+					<label for="feature-id-theme-options">Theme Options</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-threaded-comments" value="threaded-comments">
+					<label for="feature-id-threaded-comments">Threaded Comments</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-translation-ready" value="translation-ready">
+					<label for="feature-id-translation-ready">Translation Ready</label>
+				</li>
+							</ol>
+		</div>
+	
+		<div class="feature-container">
+			<div class="feature-name">Subject</div>
+
+			<ol class="feature-group">
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-holiday" value="holiday">
+					<label for="feature-id-holiday">Holiday</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-photoblogging" value="photoblogging">
+					<label for="feature-id-photoblogging">Photoblogging</label>
+				</li>
+								<li>
+					<input type="checkbox" name="features[]" id="feature-id-seasonal" value="seasonal">
+					<label for="feature-id-seasonal">Seasonal</label>
+				</li>
+							</ol>
+		</div>
+	
+	<div class="feature-container">
+		<input type="submit" name="" id="filter-submit" class="button submitter" value="Apply Filters">		&nbsp;
+		<a id="mini-filter-click" href="themes.html">Close filters</a>
+	</div>
+	<br>
+	</div>
+	<br class="clear">
+</div>
+
+
+<br class="clear">
+
+<input type="hidden" id="_ajax_fetch_list_nonce" name="_ajax_fetch_list_nonce" value="fc90d049f8"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/3.5/wp-admin/themes.php">		
+		<div id="availablethemes">
+			<div class="available-theme">
+			<a href="#/?preview=1&template=twentyeleven&stylesheet=twentyeleven&preview_iframe=1&TB_iframe=true" class="screenshot hide-if-customize">
+									<img src="files/screenshot2.png" alt="">
+							</a>
+			<a href="customize.php?theme=twentyeleven" class="screenshot load-customize hide-if-no-customize">
+									<img src="files/screenshot2.png" alt="">
+							</a>
+
+			<h3>Twenty Eleven</h3>
+			<div class="theme-author">By <a href="http://wordpress.org/" title="Visit author homepage">the WordPress team</a></div>
+			<div class="action-links">
+				<ul>
+											<li><a href="#action=activate&template=twentyeleven&stylesheet=twentyeleven&_wpnonce=4d88229b64" class="activatelink" title="Activate “Twenty Eleven”">Activate</a></li>
+											<li><a href="#/?preview=1&template=twentyeleven&stylesheet=twentyeleven&preview_iframe=1&TB_iframe=true" class="hide-if-customize" title="Preview “Twenty Eleven”">Preview</a><a href="customize.php?theme=twentyeleven" class="load-customize hide-if-no-customize">Live Preview</a></li>
+										<li class="hide-if-no-js"><a href="themes.php#" class="theme-detail">Details</a></li>
+				</ul>
+				<div class="delete-theme"><a class="submitdelete deletion" href="#action=delete&stylesheet=twentyeleven&_wpnonce=a2ed8065db" onclick="return confirm( &#39;You are about to delete this theme \&#39;Twenty Eleven\&#39;\n  \&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );">Delete</a></div>
+							</div>
+
+			<div class="themedetaildiv hide-if-js">
+				<p><strong>Version: </strong>1.5</p>
+				<p>The 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background — then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom “Ephemera” widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured “sticky” posts), and special styles for six different post formats.</p>
+							</div>
+
+			</div>
+				</div>
+
+		
+</form>
+<br class="clear">
+
+</div>
+
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="wpfooter">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span></p>
+<p id="footer-upgrade" class="alignright"><strong><a href="update-core.php">Get Version 3.5.1</a></strong></p>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">var theme_list_args = {"search":"","features":[],"paged":1,"total_pages":1};</script>
+<script type="text/javascript">list_args = {"class":"WP_Themes_List_Table","screen":{"id":"themes","base":"themes"}};</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var commonL10n = {"warnDelete":"You are about to permanently delete the selected items.\n  'Cancel' to stop, 'OK' to delete."};var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-includes\/js\/thickbox\/tb-close.png"};var _wpCustomizeLoaderSettings = {"url":"http:\/\/localhost\/historic-wordpress\/3.5\/wp-admin\/customize.php","isCrossDomain":false,"browser":{"mobile":false,"ios":false}};/* ]]> */
+</script>
+<script type="text/javascript" src="files/load-scripts(1).php"></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+<div id="customize-container"></div></body></html>

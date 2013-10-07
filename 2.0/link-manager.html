@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0065)link-manager.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Manage Links — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function addLoadEvent(func) {
+  if ( typeof wpOnload != 'function' ) {
+    wpOnload = func;
+  } else {
+    var oldonload = wpOnload;
+    wpOnload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
+
+//]]>
+</script>
+<script type="text/javascript" src="files/fat.js"></script>
+<script type="text/javascript" src="files/tw-sack.js"></script>
+<script type="text/javascript" src="files/list-manipulation.js"></script>
+
+
+</head>
+
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Account</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="links-manager.html" class="current">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="import.html">Import</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="links-manager.html" class="current">Manage Links</a></li>
+	<li><a href="#">Add Link</a></li>
+	<li><a href="#">Link Categories</a></li>
+	<li><a href="#">Import Links</a></li>
+</ul>
+<script type="text/javascript">
+<!--
+function checkAll(form)
+{
+	for (i = 0, n = form.elements.length; i < n; i++) {
+		if(form.elements[i].type == "checkbox") {
+			if(form.elements[i].checked == true)
+				form.elements[i].checked = false;
+			else
+				form.elements[i].checked = true;
+		}
+	}
+}
+//-->
+</script>
+
+<div class="wrap">
+    <form name="cats" method="post" action="">
+    <table width="75%" cellpadding="3" cellspacing="3">
+      <tbody><tr>
+        <td>
+        <strong>Show</strong> links in category:<br>
+        </td>
+        <td>
+          <strong>Order</strong> by:        </td>
+		<td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+        <select name="cat_id">
+          <option value="All" selected="selected"> All</option>
+          <option value="1">1: Blogroll</option>
+        </select>
+        </td>
+        <td>
+          <select name="order_by">
+            <option value="order_id">Link ID</option>
+            <option value="order_name" selected="selected">Name</option>
+            <option value="order_url">URI</option>
+            <option value="order_desc">Description</option>
+            <option value="order_owner">Owner</option>
+            <option value="order_rating">Rating</option>
+          </select>
+        </td>
+        <td>
+          <input type="submit" name="action" value="Show">
+        </td>
+      </tr>
+    </tbody></table>
+    </form>
+
+</div>
+
+<form name="links" id="links" method="post" action="">
+<div class="wrap">
+
+    <input type="hidden" name="link_id" value="">
+    <input type="hidden" name="action" value="">
+    <input type="hidden" name="order_by" value="order_name">
+    <input type="hidden" name="cat_id" value="0">
+  <table id="the-list-x" width="100%" cellpadding="3" cellspacing="3">
+    <tbody><tr>
+      <th width="15%">Name</th>
+      <th>URI</th>
+      <th>Category</th>
+      <th>rel</th>
+      <th>Image</th>
+      <th>Visible</th>
+      <th colspan="2">Action</th>
+      <th>&nbsp;</th>
+  </tr>
+    <tr id="link-6" valign="middle" class="alternate">
+		<td><strong>Alex</strong><br>
+Description: </td><td><a href="http://www.alexking.org/" title="Visit Alex">alexking.org</a></td>        <td>Blogroll</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td><td><a href="#link_id=6&action=linkedit" class="edit">Edit</a></td><td><a href="#link_id=6&action=Delete" onclick="return deleteSomething( &#39;link&#39;, 6 , &#39;You are about to delete the &quot;Alex&quot; link to http://www.alexking.org/.\n&quot;Cancel&quot; to stop, &quot;OK&quot; to delete.&#39; );" class="delete">Delete</a></td><td><input type="checkbox" name="linkcheck[]" value="6"></td>
+    </tr>
+    <tr id="link-1" valign="middle">
+		<td><strong>Donncha</strong><br>
+Description: </td><td><a href="http://blogs.linux.ie/xeer/" title="Visit Donncha">blogs.linux.ie/xeer</a></td>        <td>Blogroll</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td><td><a href="#link_id=1&action=linkedit" class="edit">Edit</a></td><td><a href="#link_id=1&action=Delete" onclick="return deleteSomething( &#39;link&#39;, 1 , &#39;You are about to delete the &quot;Donncha&quot; link to http://blogs.linux.ie/xeer/.\n&quot;Cancel&quot; to stop, &quot;OK&quot; to delete.&#39; );" class="delete">Delete</a></td><td><input type="checkbox" name="linkcheck[]" value="1"></td>
+    </tr>
+    <tr id="link-7" valign="middle" class="alternate">
+		<td><strong>Dougal</strong><br>
+Description: </td><td><a href="http://dougal.gunters.org/" title="Visit Dougal">dougal.gunters.org</a></td>        <td>Blogroll</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td><td><a href="#link_id=7&action=linkedit" class="edit">Edit</a></td><td><a href="#link_id=7&action=Delete" onclick="return deleteSomething( &#39;link&#39;, 7 , &#39;You are about to delete the &quot;Dougal&quot; link to http://dougal.gunters.org/.\n&quot;Cancel&quot; to stop, &quot;OK&quot; to delete.&#39; );" class="delete">Delete</a></td><td><input type="checkbox" name="linkcheck[]" value="7"></td>
+    </tr>
+    <tr id="link-4" valign="middle">
+		<td><strong>Matt</strong><br>
+Description: </td><td><a href="http://photomatt.net/" title="Visit Matt">photomatt.net</a></td>        <td>Blogroll</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td><td><a href="#link_id=4&action=linkedit" class="edit">Edit</a></td><td><a href="#link_id=4&action=Delete" onclick="return deleteSomething( &#39;link&#39;, 4 , &#39;You are about to delete the &quot;Matt&quot; link to http://photomatt.net/.\n&quot;Cancel&quot; to stop, &quot;OK&quot; to delete.&#39; );" class="delete">Delete</a></td><td><input type="checkbox" name="linkcheck[]" value="4"></td>
+    </tr>
+    <tr id="link-2" valign="middle" class="alternate">
+		<td><strong>Michel</strong><br>
+Description: </td><td><a href="http://zengun.org/weblog/" title="Visit Michel">zengun.org/weblog</a></td>        <td>Blogroll</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td><td><a href="#link_id=2&action=linkedit" class="edit">Edit</a></td><td><a href="#link_id=2&action=Delete" onclick="return deleteSomething( &#39;link&#39;, 2 , &#39;You are about to delete the &quot;Michel&quot; link to http://zengun.org/weblog/.\n&quot;Cancel&quot; to stop, &quot;OK&quot; to delete.&#39; );" class="delete">Delete</a></td><td><input type="checkbox" name="linkcheck[]" value="2"></td>
+    </tr>
+    <tr id="link-5" valign="middle">
+		<td><strong>Mike</strong><br>
+Description: </td><td><a href="http://zed1.com/journalized/" title="Visit Mike">zed1.com/journalized</a></td>        <td>Blogroll</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td><td><a href="#link_id=5&action=linkedit" class="edit">Edit</a></td><td><a href="#link_id=5&action=Delete" onclick="return deleteSomething( &#39;link&#39;, 5 , &#39;You are about to delete the &quot;Mike&quot; link to http://zed1.com/journalized/.\n&quot;Cancel&quot; to stop, &quot;OK&quot; to delete.&#39; );" class="delete">Delete</a></td><td><input type="checkbox" name="linkcheck[]" value="5"></td>
+    </tr>
+    <tr id="link-3" valign="middle" class="alternate">
+		<td><strong>Ryan</strong><br>
+Description: </td><td><a href="http://boren.nu/" title="Visit Ryan">boren.nu</a></td>        <td>Blogroll</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td><td><a href="#link_id=3&action=linkedit" class="edit">Edit</a></td><td><a href="#link_id=3&action=Delete" onclick="return deleteSomething( &#39;link&#39;, 3 , &#39;You are about to delete the &quot;Ryan&quot; link to http://boren.nu/.\n&quot;Cancel&quot; to stop, &quot;OK&quot; to delete.&#39; );" class="delete">Delete</a></td><td><input type="checkbox" name="linkcheck[]" value="3"></td>
+    </tr>
+</tbody></table>
+
+<div id="ajax-response"></div>
+
+</div>
+
+<div class="wrap">
+  <table width="100%" cellpadding="3" cellspacing="3">
+    <tbody><tr><th colspan="4">Manage Multiple Links:</th></tr>
+    <tr><td colspan="4">Use the checkboxes on the right to select multiple links and choose an action below:</td></tr>
+    <tr>
+        <td>
+          Assign ownership to:          <select name="newowner" size="1">
+            <option value="1">admin</option>
+          </select>
+        <input name="assign" type="submit" id="assign" value="Go">
+        </td>
+        <td>
+          <input name="visibility" type="submit" id="visibility" value="Toggle Visibility">
+        </td>
+        <td>
+          Move to category:
+<select name="category" size="1">
+
+	<option value="1">1 : Blogroll</option>
+</select>
+ <input name="move" type="submit" id="move" value="Go">
+        </td>
+        <td align="right">
+          <a href="link-manager.php#" onclick="checkAll(document.getElementById(&#39;links&#39;)); return false; ">Toggle Checkboxes</a>
+        </td>
+    </tr>
+</tbody></table>
+
+</div>
+</form>
+
+
+
+
+<div id="footer"><p><a href="http://wordpress.org/" id="wordpress-logo"><img src="files/wordpress-logo.png" alt="WordPress"></a></p>
+<p>
+<a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a> <br>
+2.0 — 0.08 seconds</p>
+
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

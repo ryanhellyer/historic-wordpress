@@ -1,0 +1,172 @@
+<body><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)users.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › Users — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+ 
+<script type="text/javascript">
+//<![CDATA[
+function addLoadEvent(func) {if ( typeof wpOnload!='function'){wpOnload=func;}else{ var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}}
+//]]>
+</script>
+<style type="text/css">* html { overflow-x: hidden; }</style>
+<script type="text/javascript" src="files/fat.js"></script>
+<script type="text/javascript" src="files/prototype.js"></script>
+<script type="text/javascript" src="files/wp-ajax-js.php"></script>
+<script type="text/javascript" src="files/list-manipulation-js.php"></script>
+<script type="text/javascript" src="files/users.js"></script><style type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Profile</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="edit-comments.html">Comments</a></li>
+	<li><a href="link-manager.html">Blogroll</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="users.html" class="current">Users</a></li>
+	<li><a href="options-general.html">Options</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="users.html" class="current">Authors &amp; Users</a></li>
+	<li><a href="profile.html">Your Profile</a></li>
+</ul>
+
+
+<div class="wrap">
+
+			<h2>User List by Role</h2>
+	
+	<form action="" method="get" name="search" id="search">
+		<p><input type="text" name="usersearch" id="usersearch" value=""> <input type="submit" value="Search 	users »" class="button"></p>
+	</form>
+
+	
+
+
+	
+	<h3>1 shown below</h3>
+
+	
+<form action="" method="post" name="updateusers" id="updateusers">
+<input type="hidden" name="_wpnonce" value="60eb930517"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.1/wp-admin/users.html"><table class="widefat">
+<tbody>
+<tr>
+	<th colspan="7"><h3>Administrator</h3></th>
+</tr>
+<tr class="thead">
+	<th>ID</th>
+	<th>Username</th>
+	<th>Name</th>
+	<th>E-mail</th>
+	<th>Website</th>
+	<th colspan="2" style="text-align: center">Actions</th>
+</tr>
+</tbody>
+<tbody id="role-administrator"><tr id="user-1" class="alternate">
+		<td><input type="checkbox" name="users[]" id="user_1" value="1"> <label for="user_1">1</label></td>
+		<td><label for="user_1"><strong>admin</strong></label></td>
+		<td><label for="user_1"> </label></td>
+		<td><a href="mailto:admin@admin.com" title="e-mail: admin@admin.com">admin@admin.com</a></td>
+		<td><a href="" title="website: "></a></td>
+		<td align="center"><a href="#" title="View posts by this author" class="edit">View 1 post</a></td>
+		<td><a href="#?user_id=1&wp_http_referer=%2Fhistoric-wordpress%2F2.1%2Fwp-admin%2Fusers.html" class="edit">Edit</a></td>
+	</tr></tbody>
+</table>
+
+
+	<h3>Update Selected</h3>
+	<ul style="list-style:none;">
+		<li><input type="radio" name="action" id="action0" value="delete"> <label for="action0">Delete checked users.</label></li>
+		<li>
+			<input type="radio" name="action" id="action1" value="promote"> <label for="action1">Set the Role of checked users to:</label>
+			<select name="new_role" onchange="getElementById(&#39;action1&#39;).checked = &#39;true&#39;">
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option>
+	<option value="subscriber">Subscriber</option></select>
+		</li>
+	</ul>
+	<p class="submit" style="width: 420px">
+		<input type="hidden" name="wp_http_referer" value="/historic-wordpress/2.1/wp-admin/users.html">		<input type="submit" value="Bulk Update »">
+	</p>
+</form>
+</div>
+
+
+<div class="wrap">
+<h2 id="add-new-user">Add New User</h2>
+
+<div id="ajax-response"></div>
+
+<div class="narrow">
+
+<p>Users can <a href="#wp-register.php">register themselves</a> or you can manually create users here.</p><form action="users.html#add-new-user" method="post" name="adduser" id="adduser">
+<input type="hidden" name="_wpnonce" value="f75daaf826"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.1/wp-admin/users.html"><table class="editform" width="100%" cellspacing="2" cellpadding="5">
+	<tbody><tr>
+		<th scope="row" width="33%">Username (required)<input name="action" type="hidden" id="action" value="adduser"></th>
+		<td width="66%"><input name="user_login" type="text" id="user_login" value=""></td>
+	</tr>
+	<tr>
+		<th scope="row">First Name </th>
+		<td><input name="first_name" type="text" id="first_name" value=""></td>
+	</tr>
+	<tr>
+		<th scope="row">Last Name </th>
+		<td><input name="last_name" type="text" id="last_name" value=""></td>
+	</tr>
+	<tr>
+		<th scope="row">E-mail (required)</th>
+		<td><input name="email" type="text" id="email" value=""></td>
+	</tr>
+	<tr>
+		<th scope="row">Website</th>
+		<td><input name="url" type="text" id="url" value=""></td>
+	</tr>
+
+	<tr>
+		<th scope="row">Password (twice) </th>
+		<td><input name="pass1" type="password" id="pass1">
+		<br>
+		<input name="pass2" type="password" id="pass2"></td>
+	</tr>
+
+	<tr>
+		<th scope="row">Role</th>
+		<td><select name="role" id="role">
+			
+	<option selected="selected" value="subscriber">Subscriber</option>
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option>			</select>
+		</td>
+	</tr>
+</tbody></table>
+<p class="submit">
+	<input type="hidden" name="wp_http_referer" value="/historic-wordpress/2.1/wp-admin/users.html">	<input name="adduser" type="submit" id="addusersub" value="Add User »">
+</p>
+</form>
+
+</div>
+</div>
+
+
+<div id="footer">
+<p class="logo"><a href="http://wordpress.org/" id="wordpress-logo"><img src="files/wordpress-logo.png" alt="WordPress"></a></p>
+<p class="docs"><a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a><br>
+2.1 — 0.06 seconds</p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

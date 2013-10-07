@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Posts</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html" class="current">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+ <ul id="adminmenu2"> 
+  <li><a href="edit.html" class="current">Posts</a></li> 
+  <li><a href="#">Comments</a></li> 
+  <li class="last"><a href="#">Awaiting Moderation</a></li> 
+</ul> 
+ 
+<div class="wrap"> 
+
+<form name="viewarc" action="" method="get" style="float: left; width: 20em;">
+	<fieldset>
+	<legend>Show Posts From Month of...</legend>
+    <select name="m">
+	<option value="201305">May 2013</option>
+	</select>
+		<input type="submit" name="submit" value="Show Month"> 
+	</fieldset>
+</form>
+<form name="searchform" action="" method="get" style="float: left; width: 20em; margin-left: 3em;"> 
+  <fieldset> 
+  <legend>Show Posts That Contain...</legend> 
+  <input type="text" name="s" value="" size="17"> 
+  <input type="submit" name="submit" value="Search"> 
+  </fieldset>
+</form>
+
+<br style="clear:both;">
+
+<table width="100%" cellpadding="3" cellspacing="3"> 
+  <tbody><tr> 
+    <th scope="col">ID</th> 
+    <th scope="col">When</th> 
+    <th scope="col">Title</th> 
+    <th scope="col">Categories</th> 
+    <th scope="col">Comments</th> 
+    <th scope="col">Author</th> 
+    <th scope="col">Edit</th> 
+    <th scope="col">Delete</th> 
+  </tr> 
+ 
+  <tr style="background-color: #eee"> 
+    <th scope="row">1</th> 
+    <td>2013-05-23 <br> 9:33:59 am</td> 
+    <td><a href="hello-world.html" rel="permalink"> 
+      Hello world! 
+      </a> 
+    </td> 
+    <td><a href="#" title="View all posts in General">General</a></td> 
+    <td><a href="#"> 
+      1 comment 
+      </a></td> 
+    <td>site admin</td> 
+    <td><a href="#" class="edit">Edit</a></td> 
+    <td><a href="#" class="delete" onclick="return confirm(&#39;You are about to delete this post \&#39;Hello world!\&#39;\n  \&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39;)">Delete</a></td> 
+  </tr> 
+ 
+</tbody></table> 
+ 
+<h3>Comments</h3> 
+<ol id="comments"> 
+ 
+
+<li>
+  2013-5-23 
+  @
+  9:05:59 am 
+  [ <a href="#">Edit</a> - <a href="#" onclick="return confirm(&#39;You are about to delete this comment by \&#39;Mr WordPress\&#39;\n  \&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39;)">Delete</a>  - <a href="#">Unapprove</a> ] 
+  <br> 
+  <strong> 
+  Mr WordPress 
+  (
+  <a href="mailto:mr@wordpress.org">mr@wordpress.org</a> 
+  /
+  <a href="http://wordpress.org/" rel="external">http://wordpress.org</a> 
+  )</strong> (IP:
+  127.0.0.1 
+  )
+  	<p>Hi, this is a comment.To delete a comment, just log in, and view the posts’ comments, there you will have the option to edit or delete them.
+</p>
+ 
+
+</li> 
+<!-- /comment --> 
+</ol> 
+</div> 
+
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.05 seconds</p>
+
+ 
+</body></html>

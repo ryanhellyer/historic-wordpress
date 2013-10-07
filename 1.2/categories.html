@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Categories</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html" class="current">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>
+	<li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="#" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+
+<div class="wrap">
+     <h2>Current Categories (<a href="categories.html#addcat">add new</a>) </h2>
+<table width="100%" cellpadding="3" cellspacing="3">
+	<tbody><tr>
+		<th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col"># Posts</th>
+        <th colspan="2">Action</th>
+	</tr>
+<tr style="background-color: #eee"><th scope="row">1</th><td> General</td>
+				<td></td>
+				<td>1</td>
+				<td><a href="#" class="edit">Edit</a></td><td><a href="#" onclick="return confirm(&#39;You are about to delete the category \&#39;General\&#39;.  All of its posts will go to the default category.\n  \&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39;)" class="delete">Delete</a></td>
+				</tr></tbody></table>
+
+</div>
+
+<div class="wrap">
+    <p><strong>Note:</strong><br>
+Deleting a category does not delete posts from that category, it will just
+set them back to the default category <strong>General</strong>.  </p>
+</div>
+
+<div class="wrap">
+    <h2>Add New Category</h2>
+    <form name="addcat" id="addcat" action="#" method="post">
+        
+        <p>Name:<br>
+        <input type="text" name="cat_name" value=""></p>
+        <p>Category parent:<br>
+        <select name="cat" class="postform">
+        <option value="0">None</option>
+        
+	<option value="1">General</option>
+        </select>
+        </p><p>Description: (optional) <br>
+        <textarea name="category_description" rows="5" cols="50" style="width: 97%;"></textarea></p>
+        <p class="submit"><input type="hidden" name="action" value="addcat"><input type="submit" name="submit" value="Add Category »"></p>
+    </form>
+</div>
+
+    
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.02 seconds</p>
+
+</body></html>

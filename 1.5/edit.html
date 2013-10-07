@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Posts — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function customToggleLink() {
+	// TODO: Only show link if there's a hidden row
+	document.write('<small>(<a href="javascript:;" id="customtoggle" onclick="toggleHidden()">Show hidden</a>)</small>');
+	// TODO: Rotate link to say "show" or "hide"
+	// TODO: Use DOM
+}
+
+function toggleHidden() {
+	var allElements = document.getElementsByTagName('tr');
+	for (i = 0; i < allElements.length; i++) {
+		if ( allElements[i].className.indexOf('hidden') != -1 ) {
+			 allElements[i].className = allElements[i].className.replace('hidden', '');
+		}
+	}
+}
+
+
+//]]>
+</script>
+
+</head>
+<body>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html" class="current">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (Administrator)</a></li>
+</ul>
+
+<ul id="adminmenu2">
+
+	<li><a href="edit.html" class="current">Posts</a></li>
+	<li><a href="#">Pages</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="#">Comments</a></li>
+	<li><a href="#">Awaiting Moderation (0)</a></li>
+	<li><a href="templates.html">Files</a></li>
+</ul>
+
+<div class="wrap">
+<h2>
+Last 15 Posts</h2>
+
+<form name="searchform" action="" method="get" style="float: left; width: 16em; margin-right: 3em;"> 
+  <fieldset> 
+  <legend>Search Posts…</legend> 
+  <input type="text" name="s" value="" size="17"> 
+  <input type="submit" name="submit" value="Search"> 
+  </fieldset>
+</form>
+
+<form name="viewarc" action="" method="get" style="float: left; width: 20em; margin-bottom: 1em;">
+	<fieldset>
+	<legend>Browse Month…</legend>
+    <select name="m">
+	<option value="201305">May 2013</option>
+	</select>
+		<input type="submit" name="submit" value="Show Month"> 
+	</fieldset>
+</form>
+
+<br style="clear:both;">
+
+
+<table width="100%" cellpadding="3" cellspacing="3"> 
+	<tbody><tr>
+
+	<th scope="col">ID</th>
+	<th scope="col">When</th>
+	<th scope="col">Title</th>
+	<th scope="col">Categories</th>
+	<th scope="col">Comments</th>
+	<th scope="col">Author</th>
+	<th scope="col"></th>
+	<th scope="col"></th>
+	<th scope="col"></th>
+
+	</tr>
+ 
+	<tr class="alternate">
+
+		<th scope="row">1</th>
+				<td>2013-05-23 <br> 10:51:47 am</td>
+				<td>Hello world!		</td>
+				<td><a href="#" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a></td>
+				<td><a href="edit.html?p=1&c=1"> 
+      1 
+      </a></td>
+				<td>Administrator</td>
+				<td><a href="hello-world.html" rel="permalink" class="edit">View</a></td>
+				<td><a href="#" class="edit">Edit</a></td>
+				<td><a href="#" class="delete" onclick="return confirm(&#39;You are about to delete this post \&#39;Hello world!\&#39;\n  \&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39;)">Delete</a></td>
+			</tr> 
+ 
+</tbody></table> 
+ 
+<h3>Comments</h3> 
+<ol id="comments"> 
+ 
+
+<li>
+  2013-5-23 
+  @
+  10:05:47 am 
+  [ <a href="#">Edit</a> - <a href="#" onclick="return confirm(&#39;You are about to delete this comment by \&#39;Mr WordPress\&#39;\n  \&#39;OK\&#39; to delete, \&#39;Cancel\&#39; to stop.&#39;)">Delete</a>  - <a href="#">Unapprove</a> ] 
+  <br> 
+  <strong> 
+  Mr WordPress 
+  (
+   
+  /
+  <a href="http://wordpress.org/" rel="external">http://wordpress.org</a> 
+  )</strong> (IP:
+  127.0.0.1 
+  )
+  	<p>Hi, this is a comment.<br>To delete a comment, just log in, and view the posts’ comments, there you will have the option to edit or delete them.
+</p>
+ 
+
+</li> 
+<!-- /comment --> 
+</ol> 
+</div> 
+
+<div id="footer"><p><a href="http://wordpress.org/"><img src="files/wp-small.png" alt="WordPress"></a><br>
+1.5 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.06 seconds</p>
+
+<p><a href="http://spreadfirefox.com/community/?q=affiliates&id=2490&t=1" title="WordPress recommends the open-source Firefox browser"><img src="files/get-firefox.png" alt="Get Firefox"></a></p>
+</div>
+
+
+
+ 
+</body></html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › General Options</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html" class="current">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+
+ <ul id="adminmenu2"> 
+ 	<li><a class="current" href="options-general.html">General</a></li>
+	<li><a href="#">Writing</a></li>
+	<li><a href="#">Reading</a></li>
+	<li><a href="#">Discussion</a></li>
+	<li><a href="#">Miscellaneous</a></li>
+	<li><a href="#">Permalinks</a></li>
+<li><a href="#" title="Posts per page etc. Original options page">Other Options</a></li>
+<li><a href="#" title="Things you" ll="" probably="" want="" to="" tweak'="">General blog settings</a></li>
+<li><a href="#" title="Settings for RSS/RDF Feeds, Track/ping-backs">RSS/RDF Feeds, Track/Ping-backs</a></li>
+<li><a href="#" title="Settings for file uploads">File uploads</a></li>
+<li><a href="#" title="Settings for blogging via email">Blog-by-Email settings</a></li>
+<li><a href="#" title="Basic settings required to get your blog working">Base settings</a></li>
+<li><a href="#" title="Default settings for new posts.">Default post options</a></li>
+<li><a href="#" title="Various settings for the link manager.">Link Manager Settings</a></li>
+<li><a href="#" title="Settings which control the posting and display of Geo Options">Geo Options</a></li>
+</ul>  
+
+<br clear="all">
+
+ 
+<div class="wrap"> 
+  <h2>General Options</h2> 
+  <form name="form1" method="post" action="#"> 
+    <input type="hidden" name="action" value="update"> 
+	<input type="hidden" name="action" value="update"> <input type="hidden" name="page_options" value="&#39;blogname&#39;,&#39;blogdescription&#39;,&#39;siteurl&#39;,&#39;admin_email&#39;,&#39;users_can_register&#39;,&#39;new_users_can_blog&#39;,&#39;gmt_offset&#39;,&#39;date_format&#39;,&#39;time_format&#39;,&#39;home&#39;"> 
+    <table width="100%" cellspacing="2" cellpadding="5" class="editform"> 
+      <tbody><tr valign="top"> 
+        <th width="33%" scope="row">Weblog title:</th> 
+        <td><input name="blogname" type="text" id="blogname" value="my weblog" size="40"></td> 
+      </tr> 
+      <tr valign="top"> 
+        <th scope="row">Tagline:</th> 
+        <td><input name="blogdescription" type="text" id="blogdescription" style="width: 95%" value="babblings!" size="45">
+        <br>
+In a few words, explain what this weblog is about.</td> 
+      </tr> 
+      <tr valign="top"> 
+        <th scope="row">WordPress address (URI):</th> 
+        <td><input name="siteurl" type="text" id="siteurl" value="#" size="40" class="code"></td> 
+      </tr> 
+      <tr valign="top">
+      	<th scope="row">Blog address (URI):</th>
+      	<td><input name="home" type="text" id="home" value="#" size="40" class="code"><br>If you want your blog homepage to be different than the directory you installed WordPress in, enter that address here. </td>
+      	</tr>
+      <tr valign="top"> 
+        <th scope="row">E-mail address: </th> 
+        <td><input name="admin_email" type="text" id="admin_email" value="you@example.com" size="40" class="code">
+        <br>
+This address is used only for admin purposes.</td> 
+      </tr>
+      <tr valign="top"> 
+        <th scope="row">Membership:</th> 
+        <td> <label for="users_can_register"> 
+          <input name="users_can_register" type="checkbox" id="users_can_register" value="1" checked="checked"> 
+          Anyone can register</label> 
+          <br> 
+          <label for="new_users_can_blog"> 
+          <input name="new_users_can_blog" type="checkbox" id="new_users_can_blog" value="1"> 
+          Any registered member can publish articles </label></td> 
+      </tr> 
+    </tbody></table> 
+    <fieldset class="options"> 
+    <legend>Date and Time</legend> 
+	    <table width="100%" cellspacing="2" cellpadding="5" class="editform"> 
+      <tbody><tr> 
+          <th scope="row" width="33%"><acronym title="Greenwich Meridian Time">GMT</acronym> time is: </th> 
+        <td><code>2013-05-23 7:38:11 am</code></td> 
+      </tr>
+      <tr>
+        <th scope="row">Times in the weblog should differ by: </th>
+        <td><input name="gmt_offset" type="text" id="gmt_offset" size="2" value=""> 
+        hours </td>
+      </tr>
+      <tr>
+      	<th scope="row">&nbsp;</th>
+      	<td>The following use the same syntax as the <a href="http://php.net/date">PHP <code>date()</code> function</a>. Save option to update sample output. </td>
+      	</tr>
+      <tr>
+      	<th scope="row">Default date format:</th>
+      	<td><input name="date_format" type="text" id="date_format" size="30" value="n/j/Y"><br>
+Output: <strong>5/23/2013</strong></td>
+      	</tr>
+      <tr>
+        <th scope="row">Default time format:</th>
+      	<td><input name="time_format" type="text" id="time_format" size="30" value="g:i a"><br>
+Output: <strong>7:38 am</strong></td>
+      	</tr> 
+</tbody></table>
+
+    </fieldset> 
+    <p class="submit">
+      <input type="submit" name="Submit" value="Update Options »">
+    </p>
+  </form> 
+</div> 
+
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.01 seconds</p>
+
+</body></html>

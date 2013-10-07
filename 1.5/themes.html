@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0059)themes.html --><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test blog › Manage Themes — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function customToggleLink() {
+	// TODO: Only show link if there's a hidden row
+	document.write('<small>(<a href="javascript:;" id="customtoggle" onclick="toggleHidden()">Show hidden</a>)</small>');
+	// TODO: Rotate link to say "show" or "hide"
+	// TODO: Use DOM
+}
+
+function toggleHidden() {
+	var allElements = document.getElementsByTagName('tr');
+	for (i = 0; i < allElements.length; i++) {
+		if ( allElements[i].className.indexOf('hidden') != -1 ) {
+			 allElements[i].className = allElements[i].className.replace('hidden', '');
+		}
+	}
+}
+
+
+//]]>
+</script>
+</head>
+<body>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="themes.html" class="current">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="profile.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (Administrator)</a></li>
+</ul>
+
+<ul id="adminmenu2">
+
+	<li><a href="themes.html" class="current">Themes</a></li>
+	<li><a href="#">Theme Editor</a></li>
+</ul>
+
+
+<div class="wrap">
+<h2>Current Theme</h2>
+<div id="currenttheme">
+<h3><a href="http://wordpress.org/" title="Visit theme homepage">WordPress Default</a>  1.5 by <a href="http://binarybonsai.com/" title="Visit author homepage"> Michael Heilemann</a></h3>
+<p> The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.</p>
+	<p>The active theme is <strong>WordPress Default</strong>.  The template files are located in <code>wp-content/themes/default</code>.  The stylesheet files are located in <code>wp-content/themes/default</code>.</p>
+</div>
+
+<h2>Other Themes</h2>
+<p>Themes are usually downloaded separately from WordPress. To install a theme you generally just need to put the theme file or files into your <code>wp-content/themes</code> directory. Once a theme is installed, you may select it here.</p>
+
+<table width="100%" cellpadding="3" cellspacing="3">
+	<tbody><tr>
+		<th>Name</th>
+		<th>Author</th>
+		<th>Description</th>
+		<th></th>
+	</tr>
+
+	  <tr class="alternate"><td><a href="http://wordpress.org/" title="Visit theme homepage">WordPress Classic</a>  1.5</td>
+	     <td align="center"> Dave Shea</td>
+	     <td> The original WordPress theme that graced versions 1.2.x and prior.</td>
+	     <td align="center"><a href="#" title="Select this theme" class="edit">Select</a></td>
+	  </tr>
+	  <tr><td><strong><a href="http://wordpress.org/" title="Visit theme homepage">WordPress Default</a>  1.5</strong></td>
+	     <td align="center"><a href="http://binarybonsai.com/" title="Visit author homepage"> Michael Heilemann</a></td>
+	     <td> The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.</td>
+	     <td align="center"><strong>Active Theme</strong></td>
+	  </tr>
+</tbody></table>
+
+
+</div>
+
+
+<div id="footer"><p><a href="http://wordpress.org/"><img src="files/wp-small.png" alt="WordPress"></a><br>
+1.5 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.05 seconds</p>
+
+<p><a href="http://spreadfirefox.com/community/?q=affiliates&id=2490&t=1" title="WordPress recommends the open-source Firefox browser"><img src="files/get-firefox.png" alt="Get Firefox"></a></p>
+</div>
+
+
+
+</body></html>

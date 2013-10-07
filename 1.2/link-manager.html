@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Manage Links</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="" class="current">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+<script type="text/javascript">
+<!--
+function checkAll(form)
+{
+	for (i = 0, n = form.elements.length; i < n; i++) {
+		if(form.elements[i].type == "checkbox") {
+			if(form.elements[i].checked == true)
+				form.elements[i].checked = false;
+			else
+				form.elements[i].checked = true;
+		}
+	}
+}
+//-->
+</script>
+<ul id="adminmenu2">
+    <li><a href="" class="current">Manage Links</a></li>
+    <li><a href="#">Add Link</a></li>
+    <li><a href="#">Link Categories</a></li>
+    <li class="last"><a href="#">Import Blogroll</a></li>
+</ul>
+<div class="wrap">
+    <form name="cats" method="post" action="">
+    <table width="75%" cellpadding="3" cellspacing="3">
+      <tbody><tr>
+        <td>
+          <strong>Show</strong> links in category: <a href="http://wordpress.org/docs/reference/links/#link_categories" title="Click here for help">?</a><br>
+        </td>
+        <td>
+          <strong>Order</strong> by: <a href="http://wordpress.org/docs/reference/links/#order_by" title="Click here for help">?</a>        </td>
+		<td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+        <select name="cat_id">
+          <option value="All" selected="selected"> All</option>
+          <option value="1">1: Links</option>
+        </select>
+        </td>
+        <td>
+          <select name="order_by">
+            <option value="order_id">Link ID</option>
+            <option value="order_name" selected="selected">Name</option>
+            <option value="order_url">URI</option>
+            <option value="order_desc">Description</option>
+            <option value="order_owner">Owner</option>
+            <option value="order_rating">Rating</option>
+          </select>
+        </td>
+        <td>
+          <input type="submit" name="action" value="Show">
+           <a href="http://wordpress.org/docs/reference/links/#show" title="Click here for help">?</a>        </td>
+      </tr>
+    </tbody></table>
+    </form>
+
+</div>
+
+<div class="wrap">
+
+    <form name="links" id="links" method="post" action="">
+    <input type="hidden" name="link_id" value="">
+    <input type="hidden" name="action" value="">
+    <input type="hidden" name="order_by" value="order_name">
+    <input type="hidden" name="cat_id" value="All">
+  <table width="100%" cellpadding="3" cellspacing="3">
+    <tbody><tr>
+      <th width="15%"> <a href="http://wordpress.org/docs/reference/links/#list_o_links" title="Click here for help">?</a> Name</th>
+      <th>URI</th>
+      <th>Category</th>
+      <th>rel</th>
+      <th>Image</th>
+      <th>Visible</th>
+      <th colspan="2">Action</th>
+      <th>&nbsp;</th>
+  </tr>
+ 
+ 
+    <tr valign="middle" class="alternate">
+        <td><strong>Alex</strong><br>
+        Description: </td>
+        <td><a href="http://www.alexking.org/" title="Visit Alex">alexking.org</a></td>
+        <td>Links</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td>        <td><a href="#" class="edit">Edit</a></td>
+        <td><a href="#" onclick="return confirm(&#39;You are about to delete this link.\n  \&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;);" class="delete">Delete</a></td>
+        <td><input type="checkbox" name="linkcheck[]" value="4"></td>
+	</tr> 
+ 
+    <tr valign="middle">
+        <td><strong>Dougal</strong><br>
+        Description: </td>
+        <td><a href="http://dougal.gunters.org/" title="Visit Dougal">dougal.gunters.org</a></td>
+        <td>Links</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td>        <td><a href="#" class="edit">Edit</a></td>
+        <td><a href="#" onclick="return confirm(&#39;You are about to delete this link.\n  \&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;);" class="delete">Delete</a></td>
+        <td><input type="checkbox" name="linkcheck[]" value="5"></td>
+	</tr> 
+ 
+    <tr valign="middle" class="alternate">
+        <td><strong>Matt</strong><br>
+        Description: </td>
+        <td><a href="http://photomatt.net/" title="Visit Matt">photomatt.net</a></td>
+        <td>Links</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td>        <td><a href="#" class="edit">Edit</a></td>
+        <td><a href="#" onclick="return confirm(&#39;You are about to delete this link.\n  \&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;);" class="delete">Delete</a></td>
+        <td><input type="checkbox" name="linkcheck[]" value="2"></td>
+	</tr> 
+ 
+    <tr valign="middle">
+        <td><strong>Mike</strong><br>
+        Description: </td>
+        <td><a href="http://zed1.com/journalized/" title="Visit Mike">zed1.com/journalized</a></td>
+        <td>Links</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td>        <td><a href="#" class="edit">Edit</a></td>
+        <td><a href="#" onclick="return confirm(&#39;You are about to delete this link.\n  \&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;);" class="delete">Delete</a></td>
+        <td><input type="checkbox" name="linkcheck[]" value="3"></td>
+	</tr> 
+ 
+    <tr valign="middle" class="alternate">
+        <td><strong>WordPress</strong><br>
+        Description: </td>
+        <td><a href="http://wordpress.org/" title="Visit WordPress">wordpress.org</a></td>
+        <td>Links</td>
+        <td></td>
+        <td align="center">No</td>
+        <td align="center">Yes</td>        <td><a href="#" class="edit">Edit</a></td>
+        <td><a href="#" onclick="return confirm(&#39;You are about to delete this link.\n  \&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;);" class="delete">Delete</a></td>
+        <td><input type="checkbox" name="linkcheck[]" value="1"></td>
+	</tr></tbody></table>
+
+</form></div>
+
+<div class="wrap">
+  <table width="100%" cellpadding="3" cellspacing="3">
+    <tbody><tr><th colspan="4">Manage Multiple Links:</th></tr>
+    <tr><td colspan="4">Use the checkboxes on the right to select multiple links and choose an action below:</td></tr>
+    <tr>
+        <td>
+          Assign ownership to:  <a href="http://wordpress.org/docs/reference/links/#assign_ownership" title="Click here for help">?</a>          <select name="newowner" size="1">
+            <option value="1">admin</option>
+          </select>
+        <input name="assign" type="submit" id="assign" value="Go">
+        </td>
+        <td>
+          <input name="visibility" type="submit" id="visibility" value="Toggle Visibility"> <a href="http://wordpress.org/docs/reference/links/#toggle_visibility" title="Click here for help">?</a>        </td>
+        <td>
+          Move to category:  <a href="http://wordpress.org/docs/reference/links/#move_to_cat" title="Click here for help">?</a>
+<select name="category" size="1">
+	<option value="1">1: Links</option>
+
+</select>
+ <input name="move" type="submit" id="move" value="Go">
+        </td>
+        <td align="right">
+          <a href="#" onclick="checkAll(document.getElementById(&#39;links&#39;)); return false; ">Toggle Checkboxes</a> <a href="http://wordpress.org/docs/reference/links/#toggle_checkboxes" title="Click here for help">?</a>        </td>
+    </tr>
+</tbody></table>
+
+
+</div>
+
+
+
+
+
+
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.01 seconds</p>
+
+</body></html>

@@ -1,0 +1,115 @@
+<body><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0065)# -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › Manage Blogroll — WordPress</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+ 
+<script type="text/javascript">
+//<![CDATA[
+function addLoadEvent(func) {if ( typeof wpOnload!='function'){wpOnload=func;}else{ var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}}
+//]]>
+</script>
+<script type="text/javascript" src="files/fat.js"></script>
+<script type="text/javascript" src="files/prototype.js"></script>
+<script type="text/javascript" src="files/wp-ajax-js.php"></script>
+<script type="text/javascript" src="files/list-manipulation-js.php"></script>
+</head>
+
+<div id="wphead">
+<h1>Test blog <span>(<a href="home-page.html">View site »</a>)</span></h1>
+</div>
+<div id="user_info"><p>Howdy, <strong>admin</strong>. [<a href="wp-login.html" title="Log out of this account">Sign Out</a>, <a href="profile.html">My Profile</a>] </p></div>
+
+<ul id="adminmenu">
+
+	<li><a href="dashboard.html">Dashboard</a></li>
+	<li><a href="post-new.html">Write</a></li>
+	<li><a href="edit.html">Manage</a></li>
+	<li><a href="edit-comments.html">Comments</a></li>
+	<li><a href="link-manager.html" class="current">Blogroll</a></li>
+	<li><a href="themes.html">Presentation</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li></ul>
+
+<ul id="submenu">
+
+	<li><a href="link-manager.html" class="current">Manage Blogroll</a></li>
+	<li><a href="#">Add Link</a></li>
+	<li><a href="#">Import Links</a></li>
+</ul>
+<script type="text/javascript">
+<!--
+function checkAll(form)
+{
+	for (i = 0, n = form.elements.length; i < n; i++) {
+		if(form.elements[i].type == "checkbox") {
+			if(form.elements[i].checked == true)
+				form.elements[i].checked = false;
+			else
+				form.elements[i].checked = true;
+		}
+	}
+}
+//-->
+</script>
+
+
+<div class="wrap">
+
+<h2>Blogroll Management</h2>
+<p>Here you <a href="#">add links</a> to sites that you visit often and share them on your blog. When you have a list of links in your sidebar to other blogs, it’s called a “blogroll.”</p>
+<form id="cats" method="get" action="">
+<p>Currently showing <select name="cat_id">
+<option value="all" selected="selected">All</option>
+<option value="2">Blogroll</option>
+</select>
+ links ordered by <select name="order_by">
+<option value="order_id">Link ID</option>
+<option value="order_name" selected="selected">Name</option>
+<option value="order_url">Address</option>
+<option value="order_rating">Rating</option>
+</select>
+<input type="submit" name="action" value="Update »"></p>
+</form>
+
+
+<form id="links" method="post" action="#">
+<input type="hidden" name="_wpnonce" value="9bc9962ac6"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.1/wp-admin/#"><input type="hidden" name="link_id" value="">
+<input type="hidden" name="action" value="">
+<input type="hidden" name="order_by" value="order_name">
+<input type="hidden" name="cat_id" value="0">
+<table class="widefat">
+	<thead>
+	<tr>
+<th width="15%">Name</th><th>URL</th><th>Categories</th><th style="text-align: center">rel</th><th style="text-align: center">Visible</th><th colspan="2" style="text-align: center">Action</th>	<th style="text-align: center"><input type="checkbox" onclick="checkAll(document.getElementById(&#39;links&#39;));"></th>
+	</tr>
+	</thead>
+	<tbody id="the-list"><tr id="link-6" valign="middle"><td><strong>Alex</strong><br></td><td><a href="http://www.alexking.org/" title="Visit Alex">alexking.org</a></td><td><a href="#?cat_id=2">Blogroll</a> </td><td></td><td align="center">Yes</td><td><a href="#?link_id=6&action=edit" class="edit">Edit</a></td><td><a href="#?link_id=6&action=delete&_wpnonce=e2bfc84f67" onclick="return deleteSomething( &#39;link&#39;, 6 , &#39;You are about to delete the \&#39;Alex\&#39; link to http://www.alexking.org/.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );" class="delete">Delete</a></td><td align="center"><input type="checkbox" name="linkcheck[]" value="6"></td>
+    </tr><tr id="link-1" valign="middle" class="alternate"><td><strong>Donncha</strong><br></td><td><a href="http://inphotos.org/" title="Visit Donncha">inphotos.org</a></td><td><a href="#?cat_id=2">Blogroll</a> </td><td></td><td align="center">Yes</td><td><a href="#?link_id=1&action=edit" class="edit">Edit</a></td><td><a href="#?link_id=1&action=delete&_wpnonce=09015db73d" onclick="return deleteSomething( &#39;link&#39;, 1 , &#39;You are about to delete the \&#39;Donncha\&#39; link to http://inphotos.org/.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );" class="delete">Delete</a></td><td align="center"><input type="checkbox" name="linkcheck[]" value="1"></td>
+    </tr><tr id="link-7" valign="middle"><td><strong>Dougal</strong><br></td><td><a href="http://dougal.gunters.org/" title="Visit Dougal">dougal.gunters.org</a></td><td><a href="#?cat_id=2">Blogroll</a> </td><td></td><td align="center">Yes</td><td><a href="#?link_id=7&action=edit" class="edit">Edit</a></td><td><a href="#?link_id=7&action=delete&_wpnonce=be72707b6c" onclick="return deleteSomething( &#39;link&#39;, 7 , &#39;You are about to delete the \&#39;Dougal\&#39; link to http://dougal.gunters.org/.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );" class="delete">Delete</a></td><td align="center"><input type="checkbox" name="linkcheck[]" value="7"></td>
+    </tr><tr id="link-4" valign="middle" class="alternate"><td><strong>Matt</strong><br></td><td><a href="http://photomatt.net/" title="Visit Matt">photomatt.net</a></td><td><a href="#?cat_id=2">Blogroll</a> </td><td></td><td align="center">Yes</td><td><a href="#?link_id=4&action=edit" class="edit">Edit</a></td><td><a href="#?link_id=4&action=delete&_wpnonce=0ba850ddf5" onclick="return deleteSomething( &#39;link&#39;, 4 , &#39;You are about to delete the \&#39;Matt\&#39; link to http://photomatt.net/.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );" class="delete">Delete</a></td><td align="center"><input type="checkbox" name="linkcheck[]" value="4"></td>
+    </tr><tr id="link-2" valign="middle"><td><strong>Michel</strong><br></td><td><a href="http://zengun.org/weblog/" title="Visit Michel">zengun.org/weblog</a></td><td><a href="#?cat_id=2">Blogroll</a> </td><td></td><td align="center">Yes</td><td><a href="#?link_id=2&action=edit" class="edit">Edit</a></td><td><a href="#?link_id=2&action=delete&_wpnonce=71337b4ddc" onclick="return deleteSomething( &#39;link&#39;, 2 , &#39;You are about to delete the \&#39;Michel\&#39; link to http://zengun.org/weblog/.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );" class="delete">Delete</a></td><td align="center"><input type="checkbox" name="linkcheck[]" value="2"></td>
+    </tr><tr id="link-5" valign="middle" class="alternate"><td><strong>Mike</strong><br></td><td><a href="http://zed1.com/journalized/" title="Visit Mike">zed1.com/journalized</a></td><td><a href="#?cat_id=2">Blogroll</a> </td><td></td><td align="center">Yes</td><td><a href="#?link_id=5&action=edit" class="edit">Edit</a></td><td><a href="#?link_id=5&action=delete&_wpnonce=76036e865e" onclick="return deleteSomething( &#39;link&#39;, 5 , &#39;You are about to delete the \&#39;Mike\&#39; link to http://zed1.com/journalized/.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );" class="delete">Delete</a></td><td align="center"><input type="checkbox" name="linkcheck[]" value="5"></td>
+    </tr><tr id="link-3" valign="middle"><td><strong>Ryan</strong><br></td><td><a href="http://boren.nu/" title="Visit Ryan">boren.nu</a></td><td><a href="#?cat_id=2">Blogroll</a> </td><td></td><td align="center">Yes</td><td><a href="#?link_id=3&action=edit" class="edit">Edit</a></td><td><a href="#?link_id=3&action=delete&_wpnonce=f9116fe638" onclick="return deleteSomething( &#39;link&#39;, 3 , &#39;You are about to delete the \&#39;Ryan\&#39; link to http://boren.nu/.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39; );" class="delete">Delete</a></td><td align="center"><input type="checkbox" name="linkcheck[]" value="3"></td>
+    </tr></tbody>
+</table>
+
+<div id="ajax-response"></div>
+
+<p class="submit"><input type="submit" class="button" name="deletebookmarks" id="deletebookmarks" value="Delete Checked Links »" onclick="return confirm(&#39;You are about to delete these links permanently.\n\&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;)"></p>
+</form>
+
+
+</div>
+
+
+<div id="footer">
+<p class="logo"><a href="http://wordpress.org/" id="wordpress-logo"><img src="files/wordpress-logo.png" alt="WordPress"></a></p>
+<p class="docs"><a href="http://codex.wordpress.org/">Documentation</a> — <a href="http://wordpress.org/support/">Support Forums</a><br>
+2.1 — 0.08 seconds</p>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

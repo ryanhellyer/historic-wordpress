@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WordPress › my weblog › Edit</title>
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css">
+<link rel="shortcut icon" href="wp-images/wp-favicon.png">
+</head>
+<body>
+<div id="wphead">
+<h1><a href="http://wordpress.org/" rel="external" title="Visit WordPress.org">WordPress</a></h1>
+</div>
+
+
+<ul id="adminmenu">
+
+	<li><a href="post.html" class="current">Write</a></li>
+	<li><a href="edit.html">Edit</a></li>
+	<li><a href="categories.html">Categories</a></li>
+	<li><a href="">Links</a></li>
+	<li><a href="users.html">Users</a></li>
+	<li><a href="options-general.html">Options</a></li>
+	<li><a href="plugins.html">Plugins</a></li>
+	<li><a href="templates.html">Templates</a></li>
+	<li><a href="profile.html">Profile</a></li>    <li><a href="home-page.html" title="View your site">View site »</a></li>
+	<li class="last"><a href="wp-login.html" title="Log out of this account">Logout (site admin)</a></li>
+</ul>
+<div class="wrap">
+
+<form name="post" action="#" method="post" id="post">
+<input type="hidden" name="user_ID" value="1">
+<input type="hidden" name="action" value="editpost">
+<input type="hidden" name="post_ID" value="1"><div id="poststuff">
+    <fieldset id="titlediv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#title" title="Help on titles">Title</a></legend> 
+	  <div><input type="text" name="post_title" size="30" tabindex="1" value="Hello world!" id="title"></div>
+    </fieldset>
+
+    <fieldset id="categorydiv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#category" title="Help on categories">Categories</a></legend> 
+	  <div><label for="category-1" class="selectit"><input value="1" type="checkbox" name="post_category[]" id="category-1" checked="checked"> General</label>
+</div>
+    </fieldset>
+
+    <fieldset id="poststatusdiv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#post_status" title="Help on post status">Post Status</a></legend>
+	  <div><label for="post_status_publish" class="selectit"><input id="post_status_publish" name="post_status" type="radio" value="publish" checked="checked"> Publish</label> 
+	  <label for="post_status_draft" class="selectit"><input id="post_status_draft" name="post_status" type="radio" value="draft"> Draft</label> 
+	  <label for="post_status_private" class="selectit"><input id="post_status_private" name="post_status" type="radio" value="private"> Private</label></div>
+    </fieldset>
+    <fieldset id="commentstatusdiv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#comments" title="Help on comment status">Discussion</a></legend> 
+	  <div><label for="comment_status" class="selectit">
+	      <input name="comment_status" type="checkbox" id="comment_status" value="open" checked="checked">
+         Allow Comments</label> 
+		 <label for="ping_status" class="selectit"><input name="ping_status" type="checkbox" id="ping_status" value="open" checked="checked"> Allow Pings</label>
+</div>
+</fieldset>
+<fieldset id="slugdiv">
+<legend>Post Slug</legend>
+<div><input name="post_name" type="text" size="17" id="post_name" value="hello-world"></div>
+</fieldset>
+    <fieldset id="postpassworddiv">
+      <legend><a href="http://wordpress.org/docs/reference/post/#post_password" title="Help on post password">Post Password</a></legend> 
+	  <div><input name="post_password" type="text" size="13" id="post_password" value=""></div>
+    </fieldset>
+
+<br>
+<fieldset style="clear:both">
+<legend><a href="http://wordpress.org/docs/reference/post/#excerpt" title="Help with excerpts">Excerpt</a></legend>
+<div><textarea rows="1" cols="40" name="excerpt" tabindex="4" id="excerpt"></textarea></div>
+</fieldset>
+
+<fieldset id="postdiv">
+       <legend><a href="http://wordpress.org/docs/reference/post/#post" title="Help with post field">Post</a></legend>
+		<div id="quicktags">
+<a href="http://wordpress.org/docs/reference/post/#quicktags" title="Help with quicktags">Quicktags</a>: <script src="files/quicktags.js" language="JavaScript" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">edToolbar();</script><div id="ed_toolbar"><input type="button" id="ed_strong" accesskey="b" class="ed_button" onclick="edInsertTag(edCanvas, 0);" value="str"><input type="button" id="ed_em" accesskey="i" class="ed_button" onclick="edInsertTag(edCanvas, 1);" value="em"><input type="button" id="ed_link" accesskey="a" class="ed_button" onclick="edInsertLink(edCanvas, 2);" value="link"><input type="button" id="ed_block" accesskey="q" class="ed_button" onclick="edInsertTag(edCanvas, 3);" value="b-quote"><input type="button" id="ed_del" accesskey="d" class="ed_button" onclick="edInsertTag(edCanvas, 4);" value="del"><input type="button" id="ed_ins" accesskey="d" class="ed_button" onclick="edInsertTag(edCanvas, 5);" value="ins"><input type="button" id="ed_img" accesskey="m" class="ed_button" onclick="edInsertImage(edCanvas);" value="img"><input type="button" id="ed_ul" accesskey="u" class="ed_button" onclick="edInsertTag(edCanvas, 7);" value="ul"><input type="button" id="ed_ol" accesskey="o" class="ed_button" onclick="edInsertTag(edCanvas, 8);" value="ol"><input type="button" id="ed_li" accesskey="l" class="ed_button" onclick="edInsertTag(edCanvas, 9);" value="li"><input type="button" id="ed_pre" accesskey="undefined" class="ed_button" onclick="edInsertTag(edCanvas, 10);" value="code"><input type="button" id="ed_more" accesskey="t" class="ed_button" onclick="edInsertTag(edCanvas, 11);" value="more"><input type="button" id="ed_next" accesskey="p" class="ed_button" onclick="edInsertTag(edCanvas, 12);" value="page"><input type="button" id="ed_spell" class="ed_button" onclick="edSpell(edCanvas);" title="Dictionary lookup" value="Dict."><input type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" title="Close all open tags" value="Close Tags"></div></div>
+<div><textarea rows="9" cols="40" name="content" tabindex="5" id="content">Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!</textarea></div>
+</fieldset>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+edCanvas = document.getElementById('content');
+//-->
+</script>
+
+<input type="checkbox" class="checkbox" name="post_pingback" value="1" checked="checked" tabindex="7" id="pingback"> <label for="pingback"><strong>PingBack</strong> the <abbr title="Universal Resource Identifier">URI</abbr>s in this post</label> <a href="http://wordpress.org/docs/reference/post/#pingback" title="Help on Pingbacks">?</a><br><input type="hidden" name="prev_status" value="publish"><p><label for="trackback"><a href="http://wordpress.org/docs/reference/post/#trackback" title="Help on trackbacks"><strong>TrackBack</strong> an <abbr title="Universal Resource Identifier">URI</abbr></a></label> (Separate multiple <abbr title="Universal Resource Identifier">URI</abbr>s with spaces.)<br>
+	<input type="text" name="trackback_url" style="width: 415px" id="trackback" tabindex="7" value=""></p>
+
+
+<p class="submit"><input name="save" type="submit" id="save" tabindex="6" value="Save and Continue Editing"> <input type="submit" name="submit" value="Save" style="font-weight: bold;" tabindex="6"> 
+	<input name="referredby" type="hidden" id="referredby" value="edit.html">
+</p>
+<p><input type="checkbox" class="checkbox" name="edit_date" value="1" id="timestamp"> <label for="timestamp">Edit timestamp</label> <a href="http://wordpress.org/docs/reference/post/#edit_timestamp" title="Help on changing the timestamp">?</a><br><input type="text" name="jj" value="23" size="2" maxlength="2">
+<select name="mm">
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5" selected="selected">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+</select>
+<input type="text" name="aa" value="2013" size="4" maxlength="5"> @ 
+<input type="text" name="hh" value="09" size="2" maxlength="2"> : 
+<input type="text" name="mn" value="33" size="2" maxlength="2"> : 
+<input type="text" name="ss" value="59" size="2" maxlength="2"> </p>
+	<fieldset id="postcustom">
+<legend>Custom Fields</legend>
+<h3>Add a new custom field to this post:</h3>
+<table cellspacing="3" cellpadding="3">
+	<tbody><tr>
+<th colspan="2">Key</th>
+<th>Value</th>
+</tr>
+	<tr valign="top">
+		<td align="right" width="18%">
+</td>
+<td><input type="text" id="metakeyinput" name="metakeyinput" tabindex="7"></td>
+		<td><textarea id="metavalue" name="metavalue" rows="3" cols="25" tabindex="7"></textarea></td>
+	</tr>
+
+</tbody></table>
+<p class="submit"><input type="submit" name="updatemeta" tabindex="7" value="Add Custom Field »"></p>
+</fieldset>
+</div>
+</form>
+
+<p><a class="delete" href="#" onclick="return confirm(&#39;You are about to delete this post \&#39;Hello world!\&#39;\n  \&#39;Cancel\&#39; to stop, \&#39;OK\&#39; to delete.&#39;)">Delete this post</a></p></div>
+<div id="preview" class="wrap">
+	 <h2>Post Preview (updated when post is saved)</h2>
+																		<h3 class="storytitle" id="post-"><a href="hello-world.html" rel="bookmark" title="Hello world!Permanent Link: ">Hello world!</a></h3>
+																																																																					<div class="meta">Filed under: <a href="#" title="View all posts in General">General</a> — site admin @ 9:33 am</div>
+
+<div class="storycontent">
+	<p>Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!
+</p>
+</div>
+		</div>
+
+<p id="footer"><a href="http://wordpress.org/">WordPress</a> 1.2 — <a href="http://wordpress.org/support/">Support Forums</a><br>
+0.02 seconds</p>
+
+</body></html>
