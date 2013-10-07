@@ -1,0 +1,5 @@
+1.0
+	Functional
+	Missing some minor templates
+1.2
+	Done
