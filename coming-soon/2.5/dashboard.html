@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Test blog › Dashboard — WordPress</title>
-<link rel="stylesheet" href="./dashboard_files/global.css" type="text/css">
+<link rel="stylesheet" href="./files/global.css" type="text/css">
 <link rel="stylesheet" href="files/wp-admin.css" type="text/css">
-<link rel="stylesheet" href="./dashboard_files/colors-fresh.css" type="text/css">
+<link rel="stylesheet" href="./files/colors-fresh.css" type="text/css">
 <!--[if gte IE 6]>
 <link rel='stylesheet' href='css/ie.css?version=2.5' type='text/css' />
 <![endif]-->
@@ -26,8 +26,8 @@ addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document
 	}
 </style>
 <script type="text/javascript" src="files/jquery.js"></script>
-<script type="text/javascript" src="./dashboard_files/common.js"></script>
-<script type="text/javascript" src="./dashboard_files/jquery.color.js"></script>
+<script type="text/javascript" src="./files/common.js"></script>
+<script type="text/javascript" src="./files/jquery.color.js"></script>
 <script type="text/javascript">
 	jQuery(function() {
 		jQuery('#dashboard_incoming_links div.dashboard-widget-content').not( '.dashboard-widget-control' ).find( '.widget-loading' ).parent().load('index-extra.php?jax=incominglinks');
@@ -36,8 +36,8 @@ addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document
 		jQuery('#dashboard_plugins div.dashboard-widget-content').not( '.dashboard-widget-control' ).find( '.widget-loading' ).parent().load('index-extra.php?jax=plugins');
 	});
 </script>
-<link rel="stylesheet" href="./dashboard_files/dashboard.css" type="text/css">
-<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+<link rel="stylesheet" href="./files/dashboard.css" type="text/css">
+</head>
 <body class="wp-admin ">
 <div id="wpwrap">
 <div id="wpcontent">
@@ -114,7 +114,7 @@ addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document
 
 		<div class="dashboard-widget">
 
-			<h3 class="dashboard-widget-title"><span>Incoming Links</span><small><a href="http://blogsearch.google.com/blogsearch?hl=en&scoring=d&partner=wordpress&q=link:#/">See&nbsp;All</a>&nbsp;|&nbsp;<a href="?edit=dashboard_incoming_links#dashboard_incoming_links">Edit</a>&nbsp;|&nbsp;<img class="rss-icon" src="./dashboard_files/rss.png" alt="rss icon"> <a href="http://blogsearch.google.com/blogsearch_feeds?hl=en&scoring=d&ie=utf-8&num=10&output=rss&partner=wordpress&q=link:#/">RSS</a></small><br class="clear"></h3>
+			<h3 class="dashboard-widget-title"><span>Incoming Links</span><small><a href="http://blogsearch.google.com/blogsearch?hl=en&scoring=d&partner=wordpress&q=link:#/">See&nbsp;All</a>&nbsp;|&nbsp;<a href="?edit=dashboard_incoming_links#dashboard_incoming_links">Edit</a>&nbsp;|&nbsp;<img class="rss-icon" src="./files/rss.png" alt="rss icon"> <a href="http://blogsearch.google.com/blogsearch_feeds?hl=en&scoring=d&ie=utf-8&num=10&output=rss&partner=wordpress&q=link:#/">RSS</a></small><br class="clear"></h3>
 
 			<div class="dashboard-widget-content"><ul>
 	<li><strong>Kevin McGuire</strong> linked here <a href="http://www.planeteclipse.org/">saying</a>, "This blog post is part of a series on things you s ..."</li>
@@ -133,7 +133,7 @@ addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document
 
 		<div class="dashboard-widget">
 
-			<h3 class="dashboard-widget-title"><span>WordPress Development Blog</span><small><a href="http://wordpress.org/development/">See&nbsp;All</a>&nbsp;|&nbsp;<a href="?edit=dashboard_primary#dashboard_primary">Edit</a>&nbsp;|&nbsp;<img class="rss-icon" src="./dashboard_files/rss.png" alt="rss icon"> <a href="http://wordpress.org/development/feed/">RSS</a></small><br class="clear"></h3>
+			<h3 class="dashboard-widget-title"><span>WordPress Development Blog</span><small><a href="http://wordpress.org/development/">See&nbsp;All</a>&nbsp;|&nbsp;<a href="?edit=dashboard_primary#dashboard_primary">Edit</a>&nbsp;|&nbsp;<img class="rss-icon" src="./files/rss.png" alt="rss icon"> <a href="http://wordpress.org/development/feed/">RSS</a></small><br class="clear"></h3>
 
 			<div class="dashboard-widget-content"><ul><li><a class="rsswidget" href="http://wordpress.org/news/2013/05/wordpress-3-6-beta-3/" title="">WordPress 3.6 Beta 3</a><span class="rss-date">May 11, 2013</span><div class="rssSummary">WordPress 3.6 Beta 3 is now available! This is software still in development and&nbsp;we really&nbsp;don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version.&nbsp;To test WordPress 3.6, try the&nbsp;WordPress Beta Tester&nbsp;plugin (you’ll want “bleeding edge nightlies”). Or you can&nbsp;download the beta here&nbsp;(zip). Beta […]</div></li><li><a class="rsswidget" href="http://wordpress.org/news/2013/04/wordpress-3-6-beta-2/" title="">WordPress 3.6 Beta 2</a><span class="rss-date">April 30, 2013</span><div class="rssSummary">WordPress 3.6 Beta 2 is now available! This is software still in development and&nbsp;we really&nbsp;don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version.&nbsp;To test WordPress 3.6, try the&nbsp;WordPress Beta Tester&nbsp;plugin (you’ll want “bleeding edge nightlies”). Or you can&nbsp;download the beta here&nbsp;(zip). The […]</div></li></ul></div>
 
@@ -145,7 +145,7 @@ addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document
 
 		<div class="dashboard-widget">
 
-			<h3 class="dashboard-widget-title"><span>Plugins</span><small><a href="http://wordpress.org/extend/plugins/">See&nbsp;All</a>&nbsp;|&nbsp;<img class="rss-icon" src="./dashboard_files/rss.png" alt="rss icon"> <a href="http://wordpress.org/extend/plugins/rss/topics/">RSS</a></small><br class="clear"></h3>
+			<h3 class="dashboard-widget-title"><span>Plugins</span><small><a href="http://wordpress.org/extend/plugins/">See&nbsp;All</a>&nbsp;|&nbsp;<img class="rss-icon" src="./files/rss.png" alt="rss icon"> <a href="http://wordpress.org/extend/plugins/rss/topics/">RSS</a></small><br class="clear"></h3>
 
 			<div class="dashboard-widget-content">
 
@@ -159,7 +159,7 @@ addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document
 
 		<div class="dashboard-widget">
 
-			<h3 class="dashboard-widget-title"><span>Other WordPress News</span><small><a href="http://planet.wordpress.org/">See&nbsp;All</a>&nbsp;|&nbsp;<a href="?edit=dashboard_secondary#dashboard_secondary">Edit</a>&nbsp;|&nbsp;<img class="rss-icon" src="./dashboard_files/rss.png" alt="rss icon"> <a href="http://planet.wordpress.org/feed/">RSS</a></small><br class="clear"></h3>
+			<h3 class="dashboard-widget-title"><span>Other WordPress News</span><small><a href="http://planet.wordpress.org/">See&nbsp;All</a>&nbsp;|&nbsp;<a href="?edit=dashboard_secondary#dashboard_secondary">Edit</a>&nbsp;|&nbsp;<img class="rss-icon" src="./files/rss.png" alt="rss icon"> <a href="http://planet.wordpress.org/feed/">RSS</a></small><br class="clear"></h3>
 
 			<div class="dashboard-widget-content"><ul id="planetnews">
 	<li><a href="http://feedproxy.google.com/~r/WordpressTavern/~3/umlgyjF8rs8/wordpress-nostalgia"><span class="post"> WordPress Nostalgia</span><span class="hidden"> - </span><cite>WPTavern</cite></a></li>
