@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0068)options-general.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Test blog › General Settings — WordPress</title>
+<script type="text/javascript">
+//<![CDATA[
+addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document).ready(func); else if (typeof wpOnload!='function'){wpOnload=func;} else {var oldonload=wpOnload; wpOnload=function(){oldonload();func();}}};
+
+function convertEntities(o) {
+	var c = function(s) {
+		if (/&[^;]+;/.test(s)) {
+			var e = document.createElement("div");
+			e.innerHTML = s;
+			return !e.firstChild ? s : e.firstChild.nodeValue;
+		}
+		return s;
+	}
+
+	if ( typeof o === 'string' )
+		return c(o);
+	else if ( typeof o === 'object' )
+		for (var v in o) {
+			if ( typeof o[v] === 'string' )
+				o[v] = c(o[v]);
+		}
+	return o;
+};
+//]]>
+</script>
+<link rel="stylesheet" href="files/global.css" type="text/css" media="all">
+<link rel="stylesheet" href="files/wp-admin.css" type="text/css" media="all">
+<link rel="stylesheet" href="files/colors-fresh.css" type="text/css" media="all">
+<!--[if gte IE 6]>
+<link rel='stylesheet' href='css/ie.css?ver=20081210' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="files/jquery.js"></script>
+<script type="text/javascript" src="files/hoverIntent.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	userSettings = {
+		url: "/historic-wordpress/2.7/",
+		uid: "1",
+		time: "1369315876"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="files/common.js"></script>
+<script type="text/javascript" src="files/jquery.color.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	jQuery(document).ready(function($){
+		$("input[name='date_format']").click(function(){
+			if ( "date_format_custom_radio" != $(this).attr("id") )
+				$("input[name='date_format_custom']").val( $(this).val() );
+		});
+		$("input[name='date_format_custom']").focus(function(){
+			$("#date_format_custom_radio").attr("checked", "checked");
+		});
+
+		$("input[name='time_format']").click(function(){
+			if ( "time_format_custom_radio" != $(this).attr("id") )
+				$("input[name='time_format_custom']").val( $(this).val() );
+		});
+		$("input[name='time_format_custom']").focus(function(){
+			$("#time_format_custom_radio").attr("checked", "checked");
+		});
+	});
+//]]>
+</script>
+</head>
+<body class="wp-admin ">
+
+<div id="wpwrap">
+<div id="wpcontent">
+<div id="wphead">
+
+<img id="header-logo" src="files/blank.gif" alt="" width="32" height="32"> <h1><a href="#" title="Visit site">Test blog <span>← Visit site</span></a></h1>
+
+<div id="wphead-info">
+<div id="user_info">
+<p>Howdy, <a href="profile.html" title="Edit your profile">admin</a><span class="turbo-nag hidden" style="display: inline;"> | <a href="#">Turbo</a></span> |
+<a href="wp-login.html&_wpnonce=ba240263bc" title="Log Out">Log Out</a></p>
+</div>
+
+<div id="favorite-actions"><div id="favorite-first"><a href="post-new.html">New Post</a></div><div id="favorite-toggle"><br></div><div id="favorite-inside" style="width: 126px;"><div class="favorite-action"><a href="edit.php?post_status=draft">Drafts</a></div>
+<div class="favorite-action"><a href="#">New Page</a></div>
+<div class="favorite-action"><a href="media-new.php">Upload</a></div>
+<div class="favorite-action"><a href="edit-comments.html">Comments</a></div>
+</div></div>
+</div>
+</div>
+
+
+<div id="wpbody">
+
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item menu-top menu-top-first menu-top-last" id="menu-dashboard">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle" style="display: none;"><br></div><a href="dashboard.html" class="wp-first-item menu-top menu-top-first menu-top-last" tabindex="1">Dashboard</a></li>
+	<li class="wp-menu-separator"><br></li>
+	<li class="wp-has-submenu wp-menu-open menu-top menu-top-first" id="menu-posts">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="edit.html" class="wp-has-submenu wp-menu-open menu-top menu-top-first" tabindex="1">Posts</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Posts</div><ul><li class="wp-first-item"><a href="edit.html" class="wp-first-item" tabindex="1">Edit</a></li><li><a href="post-new.html" tabindex="1">Add New</a></li><li><a href="edit-tags.php" tabindex="1">Tags</a></li><li><a href="#" tabindex="1">Categories</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-media">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="upload.html" class="wp-has-submenu menu-top" tabindex="1">Media</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Media</div><ul><li class="wp-first-item"><a href="upload.html" class="wp-first-item" tabindex="1">Library</a></li><li><a href="media-new.php" tabindex="1">Add New</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-links">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="link-manager.html" class="wp-has-submenu menu-top" tabindex="1">Links</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Links</div><ul><li class="wp-first-item"><a href="" class="wp-first-item" tabindex="1">Edit</a></li><li><a href="#" tabindex="1">Add New</a></li><li><a href="edit-#" tabindex="1">Link Categories</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-pages">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="edit-pages.html" class="wp-has-submenu menu-top" tabindex="1">Pages</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Pages</div><ul><li class="wp-first-item"><a href="" class="wp-first-item" tabindex="1">Edit</a></li><li><a href="#" tabindex="1">Add New</a></li></ul></div></li>
+	<li class="menu-top menu-top-last" id="menu-comments">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle" style="display: none;"><br></div><a href="edit-comments.html" class="menu-top menu-top-last" tabindex="1">Comments <span id="awaiting-mod" class="count-0"><span class="pending-count">0</span></span></a></li>
+	<li class="wp-menu-separator"><br></li>
+	<li class="wp-has-submenu menu-top menu-top-first" id="menu-appearance">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="themes.html" class="wp-has-submenu menu-top menu-top-first" tabindex="1">Appearance</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Appearance</div><ul><li class="wp-first-item"><a href="themes.html" class="wp-first-item" tabindex="1">Themes</a></li><li><a href="#" tabindex="1">Widgets</a></li><li><a href="#" tabindex="1">Editor</a></li><li><a href="#" tabindex="1">Header Image and Color</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-plugins">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="plugins.html" class="wp-has-submenu menu-top" tabindex="1">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></div><ul><li class="wp-first-item"><a href="plugins.html" class="wp-first-item" tabindex="1">Installed</a></li><li><a href="plugin-install.php" tabindex="1">Add New</a></li><li><a href="#" tabindex="1">Editor</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-users">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="users.html" class="wp-has-submenu menu-top" tabindex="1">Users</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Users</div><ul><li class="wp-first-item"><a href="users.html" class="wp-first-item" tabindex="1">Authors &amp; Users</a></li><li><a href="user-new.php" tabindex="1">Add New</a></li><li><a href="profile.html" tabindex="1">Your Profile</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-tools">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="#" class="wp-has-submenu menu-top" tabindex="1">Tools</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Tools</div><ul><li class="wp-first-item"><a href="#" class="wp-first-item" tabindex="1">Tools</a></li><li><a href="import.html" tabindex="1">Import</a></li><li><a href="#" tabindex="1">Export</a></li><li><a href="#" tabindex="1">Upgrade</a></li></ul></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-last" id="menu-settings">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="options-general.html" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-last" tabindex="1">Settings</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Settings</div><ul><li class="wp-first-item current"><a href="options-general.html" class="wp-first-item current" tabindex="1">General</a></li><li><a href="#" tabindex="1">Writing</a></li><li><a href="#" tabindex="1">Reading</a></li><li><a href="#" tabindex="1">Discussion</a></li><li><a href="#" tabindex="1">Media</a></li><li><a href="#" tabindex="1">Privacy</a></li><li><a href="#" tabindex="1">Permalinks</a></li><li><a href="#" tabindex="1">Miscellaneous</a></li></ul></div></li>
+	<li class="wp-menu-separator-last"><br></li></ul>
+<div id="wpbody-content">
+<div id="screen-meta">
+	<div id="contextual-help-wrap" class="hidden">
+	<h5>Get help with "General Settings"</h5><div class="metabox-prefs"><a href="http://codex.wordpress.org/Settings_General_SubPanel" target="_blank">General Settings</a></div>
+<h5>Other Help</h5><div class="metabox-prefs"><a href="http://codex.wordpress.org/" target="_blank">Documentation</a><br><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></div>
+	</div>
+
+<div id="screen-meta-links">
+<div id="contextual-help-link-wrap" class="screen-meta-toggle">
+<a href="options-general.php#contextual-help" id="contextual-help-link" class="show-settings">Help</a>
+</div>
+</div>
+</div>
+<div id="update-nag">WordPress 3.5.1 is available! <a href="#">Please update now</a>.</div>
+
+<div class="wrap">
+	<div id="icon-options-general" class="icon32"><br></div>
+<h2>General Settings</h2>
+
+<form method="post" action="#">
+<input type="hidden" name="option_page" value="general"><input type="hidden" name="action" value="update"><input type="hidden" id="_wpnonce" name="_wpnonce" value="9bd4774cbd"><input type="hidden" name="_wp_http_referer" value="/historic-wordpress/2.7/wp-admin/options-general.php">
+<table class="form-table">
+<tbody><tr valign="top">
+<th scope="row"><label for="blogname">Blog Title</label></th>
+<td><input name="blogname" type="text" id="blogname" value="Test blog" class="regular-text"></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="blogdescription">Tagline</label></th>
+<td><input name="blogdescription" type="text" id="blogdescription" value="Just another WordPress weblog" class="regular-text">
+<span class="setting-description">In a few words, explain what this blog is about.</span></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="siteurl">WordPress address (URL)</label></th>
+<td><input name="siteurl" type="text" id="siteurl" value="#" class="regular-text code"></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="home">Blog address (URL)</label></th>
+<td><input name="home" type="text" id="home" value="#" class="regular-text code">
+<span class="setting-description">Enter the address here if you want your blog homepage <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">to be different from the directory</a> you installed WordPress.</span></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="admin_email">E-mail address </label></th>
+<td><input name="admin_email" type="text" id="admin_email" value="admin@admin.com" class="regular-text code">
+<span class="setting-description">This address is used for admin purposes, like new user notification.</span></td>
+</tr>
+<tr valign="top">
+<th scope="row">Membership</th>
+<td> <fieldset><legend class="hidden">Membership</legend><label for="users_can_register">
+<input name="users_can_register" type="checkbox" id="users_can_register" value="1">
+Anyone can register</label>
+</fieldset></td>
+</tr>
+<tr valign="top">
+<th scope="row"><label for="default_role">New User Default Role</label></th>
+<td>
+<select name="default_role" id="default_role">
+	<option selected="selected" value="subscriber">Subscriber</option>
+	<option value="administrator">Administrator</option>
+	<option value="editor">Editor</option>
+	<option value="author">Author</option>
+	<option value="contributor">Contributor</option></select>
+</td>
+</tr>
+<tr>
+<th scope="row"><label for="gmt_offset">Timezone </label></th>
+<td>
+<select name="gmt_offset" id="gmt_offset">
+<option value="-12">UTC -12</option><option value="-11.5">UTC -11:30</option><option value="-11">UTC -11</option><option value="-10.5">UTC -10:30</option><option value="-10">UTC -10</option><option value="-9.5">UTC -9:30</option><option value="-9">UTC -9</option><option value="-8.5">UTC -8:30</option><option value="-8">UTC -8</option><option value="-7.5">UTC -7:30</option><option value="-7">UTC -7</option><option value="-6.5">UTC -6:30</option><option value="-6">UTC -6</option><option value="-5.5">UTC -5:30</option><option value="-5">UTC -5</option><option value="-4.5">UTC -4:30</option><option value="-4">UTC -4</option><option value="-3.5">UTC -3:30</option><option value="-3">UTC -3</option><option value="-2.5">UTC -2:30</option><option value="-2">UTC -2</option><option value="-1.5">UTC -1:30</option><option value="-1">UTC -1</option><option value="-0.5">UTC -0:30</option><option value="0">UTC </option><option value="0.5">UTC +0:30</option><option value="1">UTC +1</option><option value="1.5">UTC +1:30</option><option value="2" selected="selected">UTC +2</option><option value="2.5">UTC +2:30</option><option value="3">UTC +3</option><option value="3.5">UTC +3:30</option><option value="4">UTC +4</option><option value="4.5">UTC +4:30</option><option value="5">UTC +5</option><option value="5.5">UTC +5:30</option><option value="5.75">UTC +5:45</option><option value="6">UTC +6</option><option value="6.5">UTC +6:30</option><option value="7">UTC +7</option><option value="7.5">UTC +7:30</option><option value="8">UTC +8</option><option value="8.5">UTC +8:30</option><option value="8.75">UTC +8:45</option><option value="9">UTC +9</option><option value="9.5">UTC +9:30</option><option value="10">UTC +10</option><option value="10.5">UTC +10:30</option><option value="11">UTC +11</option><option value="11.5">UTC +11:30</option><option value="12">UTC +12</option><option value="12.75">UTC +12:45</option><option value="13">UTC +13</option><option value="13.75">UTC +13:45</option><option value="14">UTC +14</option></select>
+hours<span id="utc-time"><abbr title="Coordinated Universal Time">UTC</abbr> time is <code>2013-05-23 13:31:16</code></span>
+	<span id="local-time">UTC +2 is <code>2013-05-23 15:31:16</code></span>
+<br>
+<span class="setting-description">Unfortunately, you have to manually update this for Daylight Savings Time. Lame, we know, but will be fixed in the future.</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Date Format</th>
+<td>
+	<fieldset><legend class="hidden">Date Format</legend>
+	<label title="F j, Y"><input type="radio" name="date_format" value="F j, Y" checked="checked"> May 23, 2013</label><br>
+	<label title="Y/m/d"><input type="radio" name="date_format" value="Y/m/d"> 2013/05/23</label><br>
+	<label title="m/d/Y"><input type="radio" name="date_format" value="m/d/Y"> 05/23/2013</label><br>
+	<label title="d/m/Y"><input type="radio" name="date_format" value="d/m/Y"> 23/05/2013</label><br>
+	<label><input type="radio" name="date_format" id="date_format_custom_radio" value="\c\u\s\t\o\m"> Custom: </label><input type="text" name="date_format_custom" value="F j, Y" class="small-text"> May 23, 2013
+	<p><a href="http://codex.wordpress.org/Formatting_Date_and_Time">Documentation on date formatting</a>. Click "Save Changes" to update sample output.</p>
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row">Time Format</th>
+<td>
+	<fieldset><legend class="hidden">Time Format</legend>
+	<label title="g:i a"><input type="radio" name="time_format" value="g:i a" checked="checked"> 3:31 pm</label><br>
+	<label title="g:i A"><input type="radio" name="time_format" value="g:i A"> 3:31 PM</label><br>
+	<label title="H:i"><input type="radio" name="time_format" value="H:i"> 15:31</label><br>
+	<label><input type="radio" name="time_format" id="time_format_custom_radio" value="\c\u\s\t\o\m"> Custom: </label><input type="text" name="time_format_custom" value="g:i a" class="small-text"> 3:31 pm
+	</fieldset>
+</td>
+</tr>
+<tr>
+<th scope="row"><label for="start_of_week">Week Starts On</label></th>
+<td><select name="start_of_week" id="start_of_week">
+
+	<option value="0">Sunday</option>
+	<option value="1" selected="selected">Monday</option>
+	<option value="2">Tuesday</option>
+	<option value="3">Wednesday</option>
+	<option value="4">Thursday</option>
+	<option value="5">Friday</option>
+	<option value="6">Saturday</option></select></td>
+</tr>
+</tbody></table>
+
+
+<p class="submit">
+<input type="submit" name="Submit" class="button-primary" value="Save Changes">
+</p>
+</form>
+
+</div>
+
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+</div><!-- wpwrap -->
+
+<div id="footer">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a></p>
+<p id="footer-upgrade" class="alignright"><strong><a href="#">Get Version 3.5.1</a></strong></p>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+</body></html>

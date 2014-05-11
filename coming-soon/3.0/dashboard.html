@@ -20,8 +20,8 @@ var userSettings = {
 	isRtl = 0;
 //]]>
 </script>
-<link rel="stylesheet" href="./dashboard_files/load-styles.php" type="text/css" media="all">
-<link rel="stylesheet" id="thickbox-css" href="./dashboard_files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" href="files/load-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox-css" href="files/thickbox.css" type="text/css" media="all">
 <link rel="stylesheet" id="colors-css" href="files/colors-fresh.css" type="text/css" media="all">
 <!--[if lte IE 7]>
 <link rel='stylesheet' id='ie-css'  href='css/ie.css?ver=20100610' type='text/css' media='all' />
@@ -59,7 +59,7 @@ document.body.className = c;
 <div id="wpcontent">
 <div id="wphead">
 
-<img id="header-logo" src="./dashboard_files/blank.gif" alt="" width="32" height="32">
+<img id="header-logo" src="files/blank.gif" alt="" width="32" height="32">
 <h1 id="site-heading">
 	<a href="#" title="Visit Site">
 		<span id="site-title">Test blog</span>
@@ -87,7 +87,7 @@ document.body.className = c;
 
 	<li class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
 	<div class="wp-menu-image"><a href="dashboard.html"><br></a></div><div class="wp-menu-toggle"><br></div><a href="dashboard.html" class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last" tabindex="1">Dashboard</a>
-	<div class="wp-submenu"><div class="wp-submenu-head">Dashboard</div><ul><li class="wp-first-item current"><a href="dashboard.html" class="wp-first-item current" tabindex="1">Dashboard</a></li><li><a href="update-core.php" tabindex="1">Updates <span class="update-plugins count-4" title="1 WordPress Update, 2 Plugin Updates, 1 Theme Update"><span class="update-count">4</span></span></a></li></ul></div></li>
+	<div class="wp-submenu"><div class="wp-submenu-head">Dashboard</div><ul><li class="wp-first-item current"><a href="dashboard.html" class="wp-first-item current" tabindex="1">Dashboard</a></li><li><a href="#" tabindex="1">Updates <span class="update-plugins count-4" title="1 WordPress Update, 2 Plugin Updates, 1 Theme Update"><span class="update-count">4</span></span></a></li></ul></div></li>
 	<li class="wp-menu-separator"><a class="separator" href="?unfoldmenu=1"><br></a></li>
 	<li class="wp-has-submenu open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
 	<div class="wp-menu-image"><a href="edit.html"><br></a></div><div class="wp-menu-toggle"><br></div><a href="edit.html" class="wp-has-submenu open-if-no-js menu-top menu-icon-post menu-top-first" tabindex="1">Posts</a>
@@ -114,11 +114,11 @@ document.body.className = c;
 	<div class="wp-menu-image"><a href="users.html"><br></a></div><div class="wp-menu-toggle"><br></div><a href="users.html" class="wp-has-submenu menu-top menu-icon-users" tabindex="1">Users</a>
 	<div class="wp-submenu"><div class="wp-submenu-head">Users</div><ul><li class="wp-first-item"><a href="users.html" class="wp-first-item" tabindex="1">Users</a></li><li><a href="user-new.php" tabindex="1">Add New</a></li><li><a href="profile.html" tabindex="1">Your Profile</a></li></ul></div></li>
 	<li class="wp-has-submenu menu-top menu-icon-tools" id="menu-tools">
-	<div class="wp-menu-image"><a href="tools.php"><br></a></div><div class="wp-menu-toggle"><br></div><a href="tools.php" class="wp-has-submenu menu-top menu-icon-tools" tabindex="1">Tools</a>
-	<div class="wp-submenu"><div class="wp-submenu-head">Tools</div><ul><li class="wp-first-item"><a href="tools.php" class="wp-first-item" tabindex="1">Tools</a></li><li><a href="import.html" tabindex="1">Import</a></li><li><a href="#" tabindex="1">Export</a></li></ul></div></li>
+	<div class="wp-menu-image"><a href="tools.html"><br></a></div><div class="wp-menu-toggle"><br></div><a href="tools.html" class="wp-has-submenu menu-top menu-icon-tools" tabindex="1">Tools</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Tools</div><ul><li class="wp-first-item"><a href="tools.html" class="wp-first-item" tabindex="1">Tools</a></li><li><a href="import.html" tabindex="1">Import</a></li><li><a href="#" tabindex="1">Export</a></li></ul></div></li>
 	<li class="wp-has-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
 	<div class="wp-menu-image"><a href="options-general.html"><br></a></div><div class="wp-menu-toggle"><br></div><a href="options-general.html" class="wp-has-submenu menu-top menu-icon-settings menu-top-last" tabindex="1">Settings</a>
-	<div class="wp-submenu"><div class="wp-submenu-head">Settings</div><ul><li class="wp-first-item"><a href="options-general.html" class="wp-first-item" tabindex="1">General</a></li><li><a href="#" tabindex="1">Writing</a></li><li><a href="#" tabindex="1">Reading</a></li><li><a href="#" tabindex="1">Discussion</a></li><li><a href="options-media.php" tabindex="1">Media</a></li><li><a href="#" tabindex="1">Privacy</a></li><li><a href="#" tabindex="1">Permalinks</a></li></ul></div></li>
+	<div class="wp-submenu"><div class="wp-submenu-head">Settings</div><ul><li class="wp-first-item"><a href="options-general.html" class="wp-first-item" tabindex="1">General</a></li><li><a href="#" tabindex="1">Writing</a></li><li><a href="#" tabindex="1">Reading</a></li><li><a href="#" tabindex="1">Discussion</a></li><li><a href="#" tabindex="1">Media</a></li><li><a href="#" tabindex="1">Privacy</a></li><li><a href="#" tabindex="1">Permalinks</a></li></ul></div></li>
 	<li class="wp-menu-separator-last"><a class="separator" href="?unfoldmenu=1"><br></a></li></ul>
 
 <div id="wpbody-content" style="overflow: hidden;">
@@ -161,7 +161,7 @@ document.body.className = c;
 </div>
 </div>
 </div>
-<div class="update-nag"><a href="http://codex.wordpress.org/Version_3.5.1">WordPress 3.5.1</a> is available! <a href="update-core.php">Please update now</a>.</div>
+<div class="update-nag"><a href="http://codex.wordpress.org/Version_3.5.1">WordPress 3.5.1</a> is available! <a href="#">Please update now</a>.</div>
 <div class="wrap">
 	<div id="icon-index" class="icon32"><br></div>
 <h2>Dashboard</h2>
@@ -189,7 +189,7 @@ document.body.className = c;
 	</tbody></table>
 	</div>
 	<div class="versions">
-	<p><a href="themes.html" class="button rbutton">Change Theme</a>Theme <span class="b"><a href="themes.html">Twenty Ten</a></span> with <span class="b"><a href="#">6 Widgets</a></span></p><span id="wp-version-message">You are using <span class="b">WordPress 3.0</span>. <a href="update-core.php" class="button">Update to 3.5.1</a></span>
+	<p><a href="themes.html" class="button rbutton">Change Theme</a>Theme <span class="b"><a href="themes.html">Twenty Ten</a></span> with <span class="b"><a href="#">6 Widgets</a></span></p><span id="wp-version-message">You are using <span class="b">WordPress 3.0</span>. <a href="#" class="button">Update to 3.5.1</a></span>
 	<br class="clear"></div></div>
 </div>
 <div id="dashboard_recent_comments" class="postbox ">
@@ -363,7 +363,7 @@ There are no drafts at the moment</div>
 
 <div id="footer">
 <p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a></p>
-<p id="footer-upgrade" class="alignright"><strong><a href="update-core.php">Get Version 3.5.1</a></strong></p>
+<p id="footer-upgrade" class="alignright"><strong><a href="#">Get Version 3.5.1</a></strong></p>
 <div class="clear"></div>
 </div>
 <script type="text/javascript">

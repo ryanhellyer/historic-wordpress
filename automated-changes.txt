@@ -1,0 +1,3 @@
+files/thickbox.css	files/thickbox.css
+./files/thickbox.css	files/thickbox.css
+files/load-styles.css	./dashboard_files/load-styles.css
